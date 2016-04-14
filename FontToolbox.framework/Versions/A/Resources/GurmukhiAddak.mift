@@ -1,0 +1,262 @@
+###############################################################
+#
+#	File:		GurmukhiAddak.mift
+# 
+#	Contains:	MIF templates for Gurmukhi addak support
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GurmukhiAddak.mift,v $
+#	Revision 1.2  2006/04/12 22:15:50  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gurmukhi MIF
+//	     1. Addak support
+//			N.B., Unicode 4.0 specifies that ADDAK should
+//			be explicitly used for geminate consonants; this
+//			feature allows the use of the ISCII version 
+//			(consonant + virama + consonant ==> addak + consonant)
+//			for compatibility
+//====================================================
+
+Type		Contextual
+Name		NULL
+Namecode	8
+Setting		NULL
+Settingcode	4
+Default		yes
+Orientation	HV
+Forward		yes
+Exclusive	no
+
+KA		$kagurmukhi
+KHA		$khagurmukhi
+GA		$gagurmukhi
+GHA		$ghagurmukhi
+NGA		$ngagurmukhi
+CA		$cagurmukhi
+CHA		$chagurmukhi
+JA		$jagurmukhi
+JHA		$jhagurmukhi
+TTA		$ttagurmukhi
+TTHA	$tthagurmukhi
+DDA		$ddagurmukhi
+DDHA	$ddhagurmukhi
+NNA		$nnagurmukhi
+TA		$tagurmukhi
+THA		$thagurmukhi
+DA		$dagurmukhi
+DHA		$dhagurmukhi
+NA		$nagurmukhi
+PA		$pagurmukhi
+PHA		$phagurmukhi
+BA		$bagurmukhi
+BHA		$bhagurmukhi
+MA		$magurmukhi
+LA		$lagurmukhi
+SA		$sagurmukhi
+INV		
+Halant	$halantgurmukhi
+
+				EOT	OOB	DEL	EOL	KA	KHA	GA	GHA	NGA	CA	CHA	JA	JHA	TTA	TTHA	DDA	DDHA	NNA	TA	THA	DA	DHA	NA	PA	PHA	BA	BHA	MA	LA	SA	INV	Halant	
+SOT				1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SOL				1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawKA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	28
+SawKAHalant		1	1	1	1	29	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawKHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	30
+SawKHAHalant	1	1	1	1	2	31	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawGA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	32
+SawGAHalant		1	1	1	1	2	3	33	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawGHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	34
+SawGHAHalant	1	1	1	1	2	3	4	35	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawCA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	36
+SawCAHalant		1	1	1	1	2	3	4	5	1	37	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawCHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	38
+SawCHAHalant	1	1	1	1	2	3	4	5	1	6	39	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawJA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	40
+SawJAHalant		1	1	1	1	2	3	4	5	1	6	7	41	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawJHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	42
+SawJHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	43	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawTTA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	44
+SawTTAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	45	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawTTHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	46
+SawTTHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	47		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawDDA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	48
+SawDDAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		49	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawDDHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	50
+SawDDHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	51		14	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawNNA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	52
+SawNNAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		53	15	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawTA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	54
+SawTAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	55	16	17	18	19	20	21	22	23	24	25	26	27	1
+SawTHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	56
+SawTHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	57	17	18	19	20	21	22	23	24	25	26	27	1
+SawDA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	58
+SawDAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	59	18	19	20	21	22	23	24	25	26	27	1
+SawDHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	60
+SawDHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	61	19	20	21	22	23	24	25	26	27	1
+SawNA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	62
+SawNAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	63	20	21	22	23	24	25	26	27	1
+SawPA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	64
+SawPAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	65	21	22	23	24	25	26	27	1
+SawPHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	66
+SawPHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	67	22	23	24	25	26	27	1
+SawBA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	68
+SawBAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	69	23	24	25	26	27	1
+SawBHA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	70
+SawBHAHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	71	24	25	26	27	1
+SawMA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	72
+SawMAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	73	25	26	27	1
+SawLA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	74
+SawLAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	75	26	27	1
+SawSA			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	76
+SawSAHalant		1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	77	27	1
+SawINV			1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	27	78
+SawINVHalant	1	1	1	1	2	3	4	5	1	6	7	8	9	10	11		12	13		14	15	16	17	18	19	20	21	22	23	24	25	26	79	1
+	
+	GoTo			Mark?	Advance?	SubstMark	SubstCurrent
+1	SOT				no		yes			none		none
+2	SawKA			yes		yes			none		none
+3	SawKHA			yes		yes			none		none
+4	SawGA			yes		yes			none		none
+5	SawGHA			yes		yes			none		none
+6	SawCA			yes		yes			none		none
+7	SawCHA			yes		yes			none		none
+8	SawJA			yes		yes			none		none
+9	SawJHA			yes		yes			none		none
+10	SawTTA			yes		yes			none		none
+11	SawTTHA			yes		yes			none		none
+12	SawDDA			yes		yes			none		none
+13	SawDDHA			yes		yes			none		none
+14	SawNNA			yes		yes			none		none
+15	SawTA			yes		yes			none		none
+16	SawTHA			yes		yes			none		none
+17	SawDA			yes		yes			none		none
+18	SawDHA			yes		yes			none		none
+19	SawNA			yes		yes			none		none
+20	SawPA			yes		yes			none		none
+21	SawPHA			yes		yes			none		none
+22	SawBA			yes		yes			none		none
+23	SawBHA			yes		yes			none		none
+24	SawMA			yes		yes			none		none
+25	SawLA			yes		yes			none		none
+26	SawSA			yes		yes			none		none
+27	SawINV			yes		yes			none		none
+28	SawKAHalant		yes		yes			none		none
+29	SOT				no		no			none		Substitution1
+30	SawKHAHalant	yes		yes			none		none
+31	SOT				no		no			none		Substitution1
+32	SawGAHalant		yes		yes			none		none
+33	SOT				no		no			none		Substitution1
+34	SawGHAHalant	yes		yes			none		none
+35	SOT				no		no			none		Substitution1
+36	SawCAHalant		yes		yes			none		none
+37	SOT				no		no			none		Substitution1
+38	SawCHAHalant	yes		yes			none		none
+39	SOT				no		no			none		Substitution1
+40	SawJAHalant		yes		yes			none		none
+41	SOT				no		no			none		Substitution1
+42	SawJHAHalant	yes		yes			none		none
+43	SOT				no		no			none		Substitution1
+44	SawTTAHalant	yes		yes			none		none
+45	SOT				no		no			none		Substitution1
+46	SawTTHAHalant	yes		yes			none		none
+47	SOT				no		no			none		Substitution1
+48	SawDDAHalant	yes		yes			none		none
+49	SOT				no		no			none		Substitution1
+50	SawDDHAHalant	yes		yes			none		none
+51	SOT				no		no			none		Substitution1
+52	SawNNAHalant	yes		yes			none		none
+53	SOT				no		no			none		Substitution1
+54	SawTAHalant		yes		yes			none		none
+55	SOT				no		no			none		Substitution1
+56	SawTHAHalant	yes		yes			none		none
+57	SOT				no		no			none		Substitution1
+58	SawDAHalant		yes		yes			none		none
+59	SOT				no		no			none		Substitution1
+60	SawDHAHalant	yes		yes			none		none
+61	SOT				no		no			none		Substitution1
+62	SawNAHalant		yes		yes			none		none
+63	SOT				no		no			none		Substitution1
+64	SawPAHalant		yes		yes			none		none
+65	SOT				no		no			none		Substitution1
+66	SawPHAHalant	yes		yes			none		none
+67	SOT				no		no			none		Substitution1
+68	SawBAHalant		yes		yes			none		none
+69	SOT				no		no			none		Substitution1
+70	SawBHAHalant	yes		yes			none		none
+71	SOT				no		no			none		Substitution1
+72	SawMAHalant		yes		yes			none		none
+73	SOT				no		no			none		Substitution1
+74	SawLAHalant		yes		yes			none		none
+75	SOT				no		no			none		Substitution1
+76	SawSAHalant		yes		yes			none		none
+77	SOT				no		no			none		Substitution1
+78	SawINVHalant	yes		yes			none		none
+79	SOT				no		no			none		Substitution1
+
+Substitution1
+!	$kagurmukhi			$addakgurmukhi
+!	$khagurmukhi		$addakgurmukhi
+!	$gagurmukhi			$addakgurmukhi
+!	$ghagurmukhi		$addakgurmukhi
+!	$cagurmukhi			$addakgurmukhi
+!	$chagurmukhi		$addakgurmukhi
+!	$jagurmukhi			$addakgurmukhi
+!	$jhagurmukhi		$addakgurmukhi
+!	$ttagurmukhi		$addakgurmukhi
+!	$tthagurmukhi		$addakgurmukhi
+!	$ddagurmukhi		$addakgurmukhi
+!	$ddhagurmukhi		$addakgurmukhi
+!	$nnagurmukhi		$addakgurmukhi
+!	$tagurmukhi			$addakgurmukhi
+!	$thagurmukhi		$addakgurmukhi
+!	$dagurmukhi			$addakgurmukhi
+!	$dhagurmukhi		$addakgurmukhi
+!	$nagurmukhi			$addakgurmukhi
+!	$pagurmukhi			$addakgurmukhi
+!	$phagurmukhi		$addakgurmukhi
+!	$bagurmukhi			$addakgurmukhi
+!	$bhagurmukhi		$addakgurmukhi
+!	$magurmukhi			$addakgurmukhi
+!	$lagurmukhi			$addakgurmukhi
+!	$sagurmukhi			$addakgurmukhi
+
+Type        LigatureList
+Name		NULL
+Namecode	8
+Setting		NULL
+Settingcode	4
+Default		yes
+Orientation	HV
+Forward		yes
+Exclusive	no
+
+List
+!	$addakgurmukhi		$addakgurmukhi $halantgurmukhi
+
+

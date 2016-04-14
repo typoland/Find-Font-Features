@@ -1,0 +1,60 @@
+###############################################################
+#
+#	File:		Latin.mift
+# 
+#	Contains:	MIF templates for Latin
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2011 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+# 
+###############################################################
+//==================================================================
+// Medial long-s
+//==================================================================
+
+Type 			Contextual
+Name			Smart Swashes
+Namecode		8
+Setting			Archaic Long s Swash
+Settingcode		8
+Default			no
+Orientation		HV
+Forward			yes
+Exclusive		no
+
+s				$s
+Punctuation		$nonmarkingreturn $exclam $quotedbl $quotesingle $parenleft $parenright $asterisk $comma $hyphen $period $slash $colon $semicolon $question $bracketleft $bracketright $underscore $braceleft $braceright $dagger $bullet $paragraph $questiondown $exclamdown $guillemotleft $guillemotright $ellipsis $endash $emdash $quotedblleft $quotedblright $quoteleft $quoteright $fraction $guilsinglleft $guilsinglright $daggerdbl $quotesinglbase $quotedblbase
+space			$space
+
+				EOT		OOB		DEL		EOL		s		Punctuation		space
+StartText		1		2		1		1		5		1				1
+StartLine		1		2		1		1		5		1				1
+SawLetter		1		2		2		1		5		1				1
+SawEss			1		4		3		1		6		1				1
+
+	GoTo		Mark?	Advance?	SubstMark	SubstCurrent
+1	StartText	no		yes			none		none
+2	SawLetter	no		yes			none		none
+3	SawEss		no		yes			none		none
+4	SawLetter	no		yes			ChangeEss	none
+5	SawEss		yes		yes			none		none
+6	SawEss		yes		yes			ChangeEss	none
+
+ChangeEss
+!	$s	$slong
+	

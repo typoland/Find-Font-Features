@@ -1,0 +1,325 @@
+###############################################################
+#
+#	File:		DevanagariPostforms.mift
+# 
+#	Contains:	MIF template for contextual formation of various post-forms (e.g.,
+#				la on the bottom, some of the ya post-forms).
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: DevanagariPostforms.mift,v $
+#	Revision 1.3  2006/04/12 22:15:46  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <2>	 6/19/03	JHJ		Removed an extraneous asterisk.
+#		 <1>	 5/28/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Devanagari MIF
+//	     6. Middle contextual forms
+//====================================================
+Type          Contextual
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   10
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+c4		$viramadeva
+c5		$badeva
+c6		$bhadeva
+c7		$chadeva
+c8		$daghadeva
+c9		$ddadeva
+c10		$ddaghadeva
+c11		$dddhadeva
+c12		$ddhadeva
+c13		$gadeva
+c14		$kadeva
+c15		$katadeva
+c16		$ladeva
+c17		$nadeva
+c18		$ngadeva
+c19		$ngagadeva
+c20		$ngaghadeva
+c21		$ngakadeva $ngakhadeva
+c22		$ngakatadeva
+c23
+c24		$nnadeva
+c25		$nyadeva
+c26		$padeva
+c27		$phadeva
+c28		$radeva
+c29		$rhadeva
+c30		$ssadeva
+c31		$ssattadeva
+c32		$ssatthadeva
+c33		$thadeva
+c34		$ttadeva
+c35		$ttattadeva
+c36		$ttatthadeva
+c37		$tthadeva
+c38		$tthatthadeva
+c39		$vadeva
+c40		$yadeva
+c41		$zerowidthnonjoiner
+
+				EOT	OOB	DEL	EOL	c4	c5	c6	c7	c8	c9	c10	c11	c12	c13	c14	c15	c16	c17	c18	c19	c20	c21	c22	c23	c24	c25	c26	c27	c28	c29	c30	c31	c32	c33	c34	c35	c36	c37	c38	c39	c40	c41	
+AtStartOfText	1	1	1	1	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	1	25	26	27	28	29	30	31	32	33	34	35	36	37
+AtStartOfLine	1	1	1	1	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	1	25	26	27	28	29	30	31	32	33	34	35	36	37
+s2				1	1	2	1	38	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s3				1	1	74	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s4				1	1	3	1	39	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s5				1	1	76	1	1	1	1	1	1	1	1	1	1	1	1	1	75	77	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s6				1	1	4	1	40	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s7				1	1	78	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1
+s8				1	1	5	1	41	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s9				1	1	82	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1
+s10				1	1	6	1	42	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s11				1	1	83	1	1	1	1	1	1	1	1	1	1	84	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	81	85	1
+s12				1	1	7	1	45	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s13				1	1	88	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	1	85	1
+s14				1	1	8	1	43	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s15				1	1	86	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	85	1
+s16				1	1	9	1	44	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s17				1	1	87	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	85	1
+s18				1	1	10	1	46	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s19				1	1	90	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s20				1	1	11	1	47	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s21				1	1	91	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s22				1	1	12	1	48	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s23				1	1	92	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	81	79	1
+s24				1	1	13	1	49	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s25				1	1	93	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s26				1	1	14	1	50	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s27				1	1	95	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s28				1	1	15	1	51	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s29				1	1	96	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	1	97	1
+s30				1	1	16	1	52	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s31				1	1	98	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	1	97	1
+s32				1	1	17	1	53	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s33				1	1	99	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	1	97	1
+s34				1	1	18	1	54	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s35				1	1	100	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	1	97	1
+s36				1	1	19	1	55	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s37				1	1	101	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	81	97	1
+s38				1	1	20	1	56	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s39				1	1	102	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	89	1	1	1	1	1	1	1	1	1	1	1	97	1
+s40				1	1	21	1	57	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s41				1	1	103	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s42				1	1	22	1	58	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s43				1	1	104	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s44				1	1	23	1	59	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s45				1	1	105	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s46				1	1	24	1	60	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s47				1	1	106	1	1	1	1	1	1	1	1	1	1	1	1	1	1	77	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s48				1	1	25	1	61	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s49				1	1	107	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	79	1
+s50				1	1	26	1	62	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s51				1	1	108	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s52				1	1	27	1	63	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s53				1	1	109	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1
+s54				1	1	28	1	64	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s55				1	1	110	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1
+s56				1	1	29	1	65	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s57				1	1	111	1	1	1	1	1	1	1	1	1	1	1	1	1	1	77	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s58				1	1	30	1	66	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s59				1	1	112	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	81	79	1
+s60				1	1	31	1	67	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s61				1	1	90	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	79	1
+s62				1	1	32	1	68	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s63				1	1	113	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	79	1
+s64				1	1	33	1	69	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s65				1	1	114	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1
+s66				1	1	34	1	70	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s67				1	1	115	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	79	1
+s68				1	1	35	1	71	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s69				1	1	116	1	1	1	1	1	1	1	1	1	1	1	1	1	75	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s70				1	1	36	1	72	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s71				1	1	117	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	94	1	1	1	1	1	1	1	1	1	1	1	1	1
+s72				1	1	37	1	73	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+s73				1	1	37	1	1	1	1	1	1	1	1	1	1	84	1	1	75	77	1	1	1	1	1	1	1	1	1	1	80	1	1	1	1	1	1	1	1	1	1	81	79	1				</stateTable>
+
+	GoTo			Mark?	Advance?	SubstMark	SubstCurrent
+1	AtStartOfText	no		yes			none		none
+2	s2           	no		yes			none		none
+3	s4           	no		yes			none		none
+4	s6           	no		yes			none		none
+5	s8           	no		yes			none		none
+6	s10          	no		yes			none		none
+7	s12          	no		yes			none		none
+8	s14          	no		yes			none		none
+9	s16          	no		yes			none		none
+10	s18          	no		yes			none		none
+11	s20          	no		yes			none		none
+12	s22          	no		yes			none		none
+13	s24          	no		yes			none		none
+14	s26          	no		yes			none		none
+15	s28          	no		yes			none		none
+16	s30          	no		yes			none		none
+17	s32          	no		yes			none		none
+18	s34          	no		yes			none		none
+19	s36          	no		yes			none		none
+20	s38          	no		yes			none		none
+21	s40          	no		yes			none		none
+22	s42          	no		yes			none		none
+23	s44          	no		yes			none		none
+24	s46          	no		yes			none		none
+25	s48          	no		yes			none		none
+26	s50          	no		yes			none		none
+27	s52          	no		yes			none		none
+28	s54          	no		yes			none		none
+29	s56          	no		yes			none		none
+30	s58          	no		yes			none		none
+31	s60          	no		yes			none		none
+32	s62          	no		yes			none		none
+33	s64          	no		yes			none		none
+34	s66          	no		yes			none		none
+35	s68          	no		yes			none		none
+36	s70          	no		yes			none		none
+37	s72          	no		yes			none		none
+38	s3           	yes		yes			none		none
+39	s5           	yes		yes			none		none
+40	s7           	yes		yes			none		none
+41	s9           	yes		yes			none		none
+42	s11          	yes		yes			none		none
+43	s15          	yes		yes			none		none
+44	s17          	yes		yes			none		none
+45	s13          	yes		yes			none		none
+46	s19          	yes		yes			none		none
+47	s21          	yes		yes			none		none
+48	s23          	yes		yes			none		none
+49	s25          	yes		yes			none		none
+50	s27          	yes		yes			none		none
+51	s29          	yes		yes			none		none
+52	s31          	yes		yes			none		none
+53	s33          	yes		yes			none		none
+54	s35          	yes		yes			none		none
+55	s37          	yes		yes			none		none
+56	s39          	yes		yes			none		none
+57	s41          	yes		yes			none		none
+58	s43          	yes		yes			none		none
+59	s45          	yes		yes			none		none
+60	s47          	yes		yes			none		none
+61	s49          	yes		yes			none		none
+62	s51          	yes		yes			none		none
+63	s53          	yes		yes			none		none
+64	s55          	yes		yes			none		none
+65	s57          	yes		yes			none		none
+66	s59          	yes		yes			none		none
+67	s61          	yes		yes			none		none
+68	s63          	yes		yes			none		none
+69	s65          	yes		yes			none		none
+70	s67          	yes		yes			none		none
+71	s69          	yes		yes			none		none
+72	s71          	yes		yes			none		none
+73	s73          	yes		yes			none		none
+74	s3           	no		yes			none		none
+75	AtStartOfText	no		yes			sub75		sub75
+76	s5           	no		yes			none		none
+77	AtStartOfText	no		yes			sub77		sub77
+78	s7           	no		yes			none		none
+79	AtStartOfText	no		yes			sub79		sub79
+80	AtStartOfText	no		yes			sub80		sub80
+81	AtStartOfText	no		yes			sub81		sub81
+82	s9           	no		yes			none		none
+83	s11          	no		yes			none		none
+84	AtStartOfText	no		yes			sub84		sub84
+85	AtStartOfText	no		yes			sub85		sub85
+86	s15          	no		yes			none		none
+87	s17          	no		yes			none		none
+88	s13          	no		yes			none		none
+89	AtStartOfText	no		yes			sub89		sub89
+90	s19          	no		yes			none		none
+91	s21          	no		yes			none		none
+92	s23          	no		yes			none		none
+93	s25          	no		yes			none		none
+94	AtStartOfText	no		yes			sub94		sub94
+95	s27          	no		yes			none		none
+96	s29          	no		yes			none		none
+97	AtStartOfText	no		yes			sub97		sub97
+98	s31          	no		yes			none		none
+99	s33          	no		yes			none		none
+100	s35          	no		yes			none		none
+101	s37          	no		yes			none		none
+102	s39          	no		yes			none		none
+103	s41          	no		yes			none		none
+104	s43          	no		yes			none		none
+105	s45          	no		yes			none		none
+106	s47          	no		yes			none		none
+107	s49          	no		yes			none		none
+108	s51          	no		yes			none		none
+109	s53          	no		yes			none		none
+110	s55          	no		yes			none		none
+111	s57          	no		yes			none		none
+112	s59          	no		yes			none		none
+113	s63          	no		yes			none		none
+114	s65          	no		yes			none		none
+115	s67          	no		yes			none		none
+116	s69          	no		yes			none		none
+117	s71          	no		yes			none		none
+
+sub75
+!	$viramadeva	$labottomstackdeva
+!	$ladeva		DEL
+
+sub77
+!	$viramadeva	$nastemdeva
+!	$nadeva		DEL
+
+sub79
+!	$viramadeva	$yapostformdeva
+!	$yadeva		DEL
+
+sub80
+!	$viramadeva	$racaretdeva
+!	$radeva		DEL
+
+sub81
+!	$viramadeva	$vabottomstackdeva
+!	$vadeva		DEL
+
+sub84
+!	$viramadeva	$gapoststackdeva
+!	$gadeva		DEL
+
+sub85
+!	$viramadeva	$yapostformhighdeva
+!	$yadeva		DEL
+
+sub89
+!	$viramadeva	$rastemdeepdeva
+!	$radeva		DEL
+
+sub94
+!	$viramadeva	$rastemdeva
+!	$radeva		DEL
+
+sub97
+!	$viramadeva	$yapostformlowdeva
+!	$yadeva		DEL
+

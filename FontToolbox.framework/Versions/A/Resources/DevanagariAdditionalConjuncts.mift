@@ -1,0 +1,95 @@
+###############################################################
+#
+#	File:		DevanagariAdditionalConjuncts.mift
+# 
+#	Contains:	MIF templates for the extended set of Devanagari conjuncts (e.g., for Sanskrit)
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+# 
+#	$Log: DevanagariAdditionalConjuncts.mift,v $
+#	Revision 1.5  2006/04/12 22:15:45  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Revision 1.4  2003/09/10 16:57:25  jenkins
+#	Make a number of -ra conjuncts required.
+#	
+#	Change History (most recent first):
+#
+#		 <2>	 6/19/03	JHJ		Consolidation with other sets of optional conjuncts. 
+#		 <1>	 5/28/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Devanagari MIF
+//	     4. Additional conjuncts
+//====================================================
+
+Type          LigatureList
+Name          Conjuncts
+Namecode      1
+Setting       Additional Conjuncts
+Settingcode   4
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+List
+!	$ngakadeva		$ngadeva $viramadeva $kadeva
+!	$katadeva		$kadeva $viramadeva $tadeva
+!	$nanadeva		$nadeva $viramadeva $nadeva
+!	$patadeva		$padeva $viramadeva $tadeva
+!	$janyadeva		$jadeva $viramadeva $nyadeva
+!	$rephdeva		$rephdeva $viramadeva
+!	$kakadeva		$kadeva $viramadeva $kadeva
+!	$kanadeva		$kadeva $viramadeva $nadeva
+!	$kavadeva		$kadeva $viramadeva $vadeva
+!	$kassadeva		$kadeva $viramadeva $ssadeva
+!	$khanadeva		$khadeva $viramadeva $nadeva
+!	$ghanadeva		$ghadeva $viramadeva $nadeva
+!	$ngakatadeva	$ngadeva $viramadeva $kadeva $viramadeva $tadeva
+!	$ngakhadeva		$ngadeva $viramadeva $khadeva
+!	$ngagadeva		$ngadeva $viramadeva $gadeva
+!	$ngaghadeva		$ngadeva $viramadeva $ghadeva
+!	$ngamadeva		$ngadeva $viramadeva $madeva
+!	$jajadeva		$jadeva $viramadeva $jadeva
+!	$nyajadeva		$nyadeva $viramadeva $jadeva
+!	$tthatthadeva	$tthadeva $viramadeva $tthadeva
+!	$ddaghadeva		$ddadeva $viramadeva $ghadeva
+!	$ddamadeva		$ddadeva $viramadeva $madeva
+!	$ddhaddhadeva	$ddhadeva $viramadeva $ddhadeva
+!	$tanadeva		$tadeva $viramadeva $nadeva
+!	$daghadeva		$dadeva $viramadeva $ghadeva
+!	$dadayadeva		$dadeva $viramadeva $dadeva $viramadeva $yadeva
+!	$dadavadeva		$dadeva $viramadeva $dadeva $viramadeva $vadeva
+!	$danadeva		$dadeva $viramadeva $nadeva
+!	$dabadeva		$dadeva $viramadeva $badeva
+!	$dabhayadeva	$dadeva $viramadeva $bhadeva $viramadeva $yadeva
+!	$dhanadeva		$dhadeva $viramadeva $nadeva
+!	$panadeva		$padeva $viramadeva $nadeva
+!	$banadeva		$badeva $viramadeva $nadeva
+!	$manadeva		$madeva $viramadeva $nadeva
+!	$vanadeva		$vadeva $viramadeva $nadeva
+!	$vayadeva		$vadeva $viramadeva $yadeva
+!	$shanadeva		$shadeva $viramadeva $nadeva
+!	$shaladeva		$shadeva $viramadeva $ladeva
+!	$hannadeva		$hadeva $viramadeva $nnadeva
+

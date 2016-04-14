@@ -1,0 +1,93 @@
+###############################################################
+#
+#	File:		GujaratiLastLigatures.mift
+# 
+#	Contains:	MIF templates for the final set of Gujarati ligatures
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GujaratiLastLigatures.mift,v $
+#	Revision 1.2  2006/04/12 22:15:48  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gujarati MIF
+//	     6. Last (required) ligatures
+//====================================================
+
+Type          LigatureList
+Name          NULL
+Namecode      1
+Setting       NULL
+Settingcode   16
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+List
+!	$ivowelsignrephanusvaragujarati		$ivowelsigngujarati $rephgujarati $anusvaragujarati
+!	$iivowelsignrephanusvaragujarati		$iivowelsigngujarati $rephgujarati $anusvaragujarati
+!	$ovowelsignrephanusvaragujarati		$ovowelsigngujarati $rephgujarati $anusvaragujarati
+!	$auvowelsignrephanusvaragujarati		$auvowelsigngujarati $rephgujarati $anusvaragujarati
+!	$evowelsignrephanusvaragujarati		$evowelsigngujarati $rephgujarati $anusvaragujarati
+!	$aivowelsignrephanusvaragujarati		$aivowelsigngujarati $rephgujarati $anusvaragujarati
+!	$aavowelsignrephanusvaragujarati		$aavowelsigngujarati $rephgujarati $anusvaragujarati
+!	$ecandravowelsignrephanusvaragujarati		$ecandravowelsigngujarati $rephgujarati $anusvaragujarati
+!	$ocandravowelsignrephanusvaragujarati		$ocandravowelsigngujarati $rephgujarati $anusvaragujarati
+!	$rephanusvaragujarati		$rephgujarati $anusvaragujarati
+!	$ianusvaragujarati		$igujarati $anusvaragujarati
+!	$iianusvaragujarati		$iigujarati $anusvaragujarati
+!	$uanusvaragujarati		$ugujarati $anusvaragujarati
+!	$uuanusvaragujarati		$uugujarati $anusvaragujarati
+!	$ivowelsignanusvaragujarati		$ivowelsigngujarati $anusvaragujarati
+!	$iivowelsignanusvaragujarati		$iivowelsigngujarati $anusvaragujarati
+!	$ovowelsignanusvaragujarati		$ovowelsigngujarati $anusvaragujarati
+!	$auvowelsignanusvaragujarati		$auvowelsigngujarati $anusvaragujarati
+!	$evowelsignanusvaragujarati		$evowelsigngujarati $anusvaragujarati
+!	$aivowelsignanusvaragujarati		$aivowelsigngujarati $anusvaragujarati
+!	$aavowelsignanusvaragujarati		$aavowelsigngujarati $anusvaragujarati
+!	$ecandravowelsignanusvaragujarati		$ecandravowelsigngujarati $anusvaragujarati
+!	$ocandravowelsignanusvaragujarati		$ocandravowelsigngujarati $anusvaragujarati
+!	$evowelsignrephanusvaragujarati		$evowelsignrephgujarati $anusvaragujarati
+!	$ivowelsignrephgujarati		$ivowelsigngujarati $rephgujarati
+!	$iivowelsignrephgujarati		$iivowelsigngujarati $rephgujarati
+!	$ovowelsignrephgujarati		$ovowelsigngujarati $rephgujarati
+!	$auvowelsignrephgujarati		$auvowelsigngujarati $rephgujarati
+!	$evowelsignrephgujarati		$evowelsigngujarati $rephgujarati
+!	$aivowelsignrephgujarati		$aivowelsigngujarati $rephgujarati
+!	$aavowelsignrephgujarati		$aavowelsigngujarati $rephgujarati
+!	$ecandravowelsignrephgujarati		$ecandravowelsigngujarati $rephgujarati
+!	$ocandravowelsignrephgujarati		$ocandravowelsigngujarati $rephgujarati
+!	$karauvowelsigngujarati		$karagujarati $uvowelsigngujarati
+!	$karauuvowelsigngujarati		$karagujarati $uuvowelsigngujarati
+!	$ssattaragujarati		$ssattagujarati $viramagujarati $ragujarati
+!	$narvocalicvowelsigngujarati		$nagujarati $rvocalicvowelsigngujarati
+!	$daravagujarati		$daragujarati $viramagujarati $vagujarati
+!	$darayagujarati		$daragujarati $viramagujarati $yagujarati
+!	$daravagujarati		$daragujarati $viramagujarati $vagujarati
+!	$darayagujarati		$daragujarati $viramagujarati $yagujarati
+

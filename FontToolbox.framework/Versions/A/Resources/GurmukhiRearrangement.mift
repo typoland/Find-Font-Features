@@ -1,0 +1,71 @@
+###############################################################
+#
+#	File:		GurmukhiRearrangement.mift
+# 
+#	Contains:	MIF templates for Gurmukhi rearrangement
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GurmukhiRearrangement.mift,v $
+#	Revision 1.2  2006/04/12 22:15:50  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gurmukhi MIF
+//	     7. Rearrangement
+//====================================================
+
+Type		Rearrangement
+Name		NULL
+Namecode	5
+Setting		NULL
+Settingcode	0
+Default		yes
+Orientation	HV
+Forward		yes
+Exclusive	no
+
+Cons		$bagurmukhi $bhagurmukhi $cagurmukhi $chagurmukhi $dagurmukhi $daragurmukhi $ddagurmukhi $ddhagurmukhi $dhagurmukhi $fagurmukhi $gagurmukhi $ghagurmukhi $ghhagurmukhi $hagurmukhi $jagurmukhi $jhagurmukhi $kagurmukhi $karagurmukhi $khagurmukhi $khhagurmukhi $lagurmukhi $magurmukhi $nagurmukhi $ngagurmukhi $nnagurmukhi $nyagurmukhi $pagurmukhi $paragurmukhi $phagurmukhi $ragurmukhi $rragurmukhi $sagurmukhi $saragurmukhi $shagurmukhi $sharagurmukhi $tagurmukhi $taragurmukhi $thagurmukhi $ttagurmukhi $tthagurmukhi $vagurmukhi $yagurmukhi $zagurmukhi $zerowidthjoiner
+PostCons	$hasubscriptgurmukhi $rasubscriptgurmukhi $vasubscriptgurmukhi $yapostformgurmukhi
+MatraI		$imatragurmukhi
+Nukta		$nuktacomgurmukhi $nuktagurmukhi
+Halant		$halantgurmukhi
+
+						EOT	OOB	DEL	EOL	Cons	PostCons	MatraI	Nukta	Halant
+AtStartOfText			1	1	1	1	2		1			1		1		1
+AtStartOfLine			1	1	1	1	2		1			1		1		1
+GotCons					1	1	3	1	2		3			6		4		5
+GotConsNuk				1	1	4	1	2		3			6		1		1
+GotConsHal				1	1	5	1	3		1			1		1		1
+
+	GoTo          	MarkFirst?	MarkLast?	Advance?	DoThis
+1	AtStartOfText	no			no			yes			none
+2	GotCons			yes			no			yes			none
+3	GotCons			no			no			yes			none
+4	GotConsNuk		no			no			yes			none
+5	GotConsHal		no			no			yes			none
+6	AtStartOfText	no			yes			yes			xD->Dx
+

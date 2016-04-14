@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+		elementFormDefault="unqualified"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://developer.apple.com/fonts/"
+		xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+    <xs:element name='FTFontTable_fond'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:FONDResource'/>
+                <xs:element maxOccurs='unbounded' ref='ft:NFNTResource'/>
+            </xs:sequence>
+            <xs:attribute name='FONDCount' use='optional' type='xs:integer'/>
+            <xs:attribute name='NFNTCount' use='optional' type='xs:integer'/>
+            <xs:attribute name='version' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDResource'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ft:FONDsfntMappingTable'/>
+                <xs:element ref='ft:FONDFlags'/>
+                <xs:element ref='ft:FONDRange'/>
+                <xs:element ref='ft:FONDMetrics'/>
+                <xs:element ref='ft:FONDInternational'/>
+                <xs:element ref='ft:FAT'/>
+                <xs:element ref='ft:StyleMappingTable'/>
+                <xs:element ref='ft:GlyphWidthTable'/>
+                <xs:element ref='ft:BoundingBoxTable'/>
+            </xs:sequence>
+            <xs:attribute name='familyID' use='required' type='xs:integer'/>
+            <xs:attribute name='language' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceFlags' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceID' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceLength' use='optional' type='xs:integer'/>
+            <xs:attribute name='resourceName' use='required'/>
+            <xs:attribute name='resourceOffset' use='optional' type='xs:integer'/>
+            <xs:attribute name='script' use='required' type='xs:integer'/>
+            <xs:attribute name='style' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDsfntMappingTable'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ft:FONDsfntMapping'/>
+            </xs:sequence>
+            <xs:attribute name='numMappings' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDsfntMapping'>
+        <xs:complexType>
+            <xs:attribute name='index' use='optional' type='xs:integer'/>
+            <xs:attribute name='name' use='required' type='xs:NCName'/>
+            <xs:attribute name='resourceID' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDFlags'>
+        <xs:complexType>
+            <xs:attribute name='ignoreFracEnable' use='required' type='xs:NCName'/>
+            <xs:attribute name='isFixedWidth' use='required' type='xs:NCName'/>
+            <xs:attribute name='useIntegerWidths' use='required' type='xs:NCName'/>
+            <xs:attribute name='widthTableUsed' use='required' type='xs:NCName'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDRange'>
+        <xs:complexType>
+            <xs:attribute name='firstChar' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='lastChar' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDMetrics'>
+        <xs:complexType>
+            <xs:attribute name='ascent' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='descent' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='leading' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='maxGlyphWidth' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FONDInternational'>
+        <xs:complexType>
+            <xs:attribute name='firstWord' use='required' type='xs:integer'/>
+            <xs:attribute name='secondWord' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FAT'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:FATEntry'/>
+            </xs:sequence>
+            <xs:attribute name='entryCount' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='FATEntry'>
+        <xs:complexType>
+            <xs:attribute name='index' use='optional' type='xs:integer'/>
+            <xs:attribute name='resourceID' use='required' type='xs:integer'/>
+            <xs:attribute name='size' use='required' type='xs:integer'/>
+            <xs:attribute name='style' use='required' type='ft:macStyle'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='StyleMappingTable'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ft:StyleMappingTableFlags'/>
+                <xs:element ref='ft:PostScriptNames'/>
+                <xs:element ref='ft:GlyphReencodings'/>
+            </xs:sequence>
+            <xs:attribute name='hasGlyphReencodings' use='required' type='xs:NCName'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='StyleMappingTableFlags'>
+        <xs:complexType>
+            <xs:attribute name='hasMacReencoding' type='xs:NCName'/>
+            <xs:attribute name='hasNonMacReencoding' type='xs:NCName'/>
+            <xs:attribute name='nameNeedsCoordinating' use='required' type='xs:NCName'/>
+            <xs:attribute name='outlinesBySettingPaintType2' use='required' type='xs:NCName'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='PostScriptNames'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:PostScriptName'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='PostScriptName'>
+        <xs:complexType>
+            <xs:attribute name='name' use='required' type='xs:NCName'/>
+            <xs:attribute name='style' use='required' type='ft:macStyle'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='GlyphReencodings'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:GlyphReencoding'/>
+            </xs:sequence>
+            <xs:attribute name='numReencodings' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='GlyphReencoding'>
+        <xs:complexType>
+            <xs:attribute name='charCode' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='glyphName' use='required' type='xs:NCName'/>
+            <xs:attribute name='index' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='GlyphWidthTable'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='ft:StyleWidthTable'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='StyleWidthTable'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:GlyphWidth'/>
+            </xs:sequence>
+            <xs:attribute name='style' use='required' type='ft:macStyle'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='GlyphWidth'>
+        <xs:complexType>
+            <xs:attribute name='charCode' use='required'/>
+            <xs:attribute name='width' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='BoundingBoxTable'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs='unbounded' ref='ft:BoundingBox'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='BoundingBox'>
+        <xs:complexType>
+            <xs:attribute name='bottom' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='left' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='right' use='required' type='xs:NMTOKEN'/>
+            <xs:attribute name='style' use='required' type='ft:macStyle'/>
+            <xs:attribute name='top' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='NFNTResource'>
+        <xs:complexType mixed='true'>
+            <xs:attribute name='language' use='required' type='xs:integer'/>
+            <xs:attribute name='pointSize' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceFlags' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceID' use='required' type='xs:integer'/>
+            <xs:attribute name='resourceLength' use='optional' type='xs:integer'/>
+            <xs:attribute name='resourceName' use='required'/>
+            <xs:attribute name='resourceOffset' use='optional' type='xs:integer'/>
+            <xs:attribute name='script' use='required' type='xs:integer'/>
+            <xs:attribute name='style' use='required' type='xs:NMTOKEN'/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

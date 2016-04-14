@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="FTFontTable_post">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="PostScriptName" maxOccurs="unbounded" minOccurs="0"/>
+				<xsd:element ref="psGlyph" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="versionMajor" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="versionMinor" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="italicAngle" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="underlinePosition" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="underlineThickness" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="isFixedPitch" type="xsd:boolean" use="required"/>
+			<xsd:attribute name="minMemType42" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="maxMemType42" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="minMemType1" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="maxMemType1" type="xsd:decimal" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PostScriptName">
+		<xsd:complexType>
+			<xsd:attribute name="glyphRefID" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="NameString" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="psGlyph">
+		<xsd:complexType>
+			<xsd:attribute name="glyphRefID" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="glyphName" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,61 @@
+###############################################################
+#
+#	File:		GurmukhiNuktaLigatures.mift
+# 
+#	Contains:	MIF templates for Gurmukhi nukta support
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GurmukhiNuktaLigatures.mift,v $
+#	Revision 1.2  2006/04/12 22:15:50  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gurmukhi MIF
+//	     2. Nukta ligatures
+//			Turn consonant + nukta into the appropriate
+//			nukta-form (for compatibility, since the
+//			nukta forms are already in Unicode)
+//====================================================
+
+Type        LigatureList
+Name		NULL
+Namecode	1
+Setting		NULL
+Settingcode	4
+Default		yes
+Orientation	HV
+Forward		yes
+Exclusive	no
+
+List
+!	$rragurmukhi		$ddagurmukhi	$nuktagurmukhi
+!	$khhagurmukhi		$khagurmukhi	$nuktagurmukhi
+!	$ghhagurmukhi		$gagurmukhi		$nuktagurmukhi
+!	$zagurmukhi			$jagurmukhi		$nuktagurmukhi
+!	$fagurmukhi			$phagurmukhi	$nuktagurmukhi
+
+

@@ -1,0 +1,79 @@
+###############################################################
+#
+#	File:		GujaratiKillExtraneousRephs.mift
+# 
+#	Contains:	MIF templates to get rid of any reph glyphs left over by previous actions
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003-2006 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Peter Lofting
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GujaratiKillExtraneousRephs.mift,v $
+#	Revision 1.2  2006/04/12 22:15:48  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Peter Lofting, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gujarati MIF
+//	     12. Final final contextual forms
+//====================================================
+Type          Contextual
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   10
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+ClassReph                   $rephgujarati 
+ClassECandra                $ecandravowelsigngujarati 
+ClassECandraAnusvara        $ecandravowelsignanusvaragujarati 
+ClassCons                   $kagujarati $khagujarati $gagujarati $ghagujarati $ngagujarati $cagujarati $chagujarati $jagujarati $jhagujarati $nyagujarati $ttagujarati $tthagujarati $ddagujarati $ddhagujarati $nnagujarati $tagujarati $thagujarati $dagujarati $dhagujarati $nagujarati $pagujarati $phagujarati $bagujarati $bhagujarati $magujarati $yagujarati $ragujarati $lagujarati $llagujarati $vagujarati $shagujarati $ssagujarati $sagujarati $hagujarati $zerowidthjoiner 
+
+                EOT                     OOB                     DEL                     EOL                     ClassReph               ClassECandra            ClassECandraAnusvara    ClassCons               
+StartOfText     1                       1                       1                       1                       2                       1                       1                       1                       
+StartOfLine     1                       1                       1                       1                       2                       1                       1                       1                       
+GotReph         1                       1                       3                       1                       2                       1                       1                       4                       
+GotRephDel      1                       1                       3                       1                       2                       1                       1                       4                       
+GotRephCons     1                       1                       5                       1                       2                       6                       7                       1                       
+
+	GoTo          Mark?  Advance?  SubstMark                 SubstCurrent
+1	StartOfText   no     yes       none                      none
+2	GotReph       yes    yes       none                      none
+3	GotRephDel    no     yes       none                      none
+4	GotRephCons   no     yes       none                      none
+5	GotRephCons   no     yes       none                      none
+6	GotRephCons   no     yes       KillReph                  ChangeECandra
+7	GotRephCons   no     yes       KillReph                  ChangeECandraAnusvara
+
+ChangeECandra
+!	$ecandravowelsigngujarati	$ecandravowelsignrephgujarati
+
+ChangeECandraAnusvara
+!	$ecandravowelsignanusvaragujarati	$ecandravowelsignrephanusvaragujarati
+
+KillReph
+!	$rephgujarati	DEL
+
