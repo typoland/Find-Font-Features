@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -672,7 +673,7 @@
             </items>
         </menu>
         <window title="Find Font Features" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="845" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -688,7 +689,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="16" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" indentationMarkerFollowsCell="NO" outlineTableColumn="MEu-LW-2L1" id="IR6-cO-ycB" customClass="FeaturesTable" customModule="Find_Font_Features" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="269" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="271" height="315"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="2" height="3"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -789,7 +790,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn width="63" minWidth="60" maxWidth="1000" id="ij4-Kv-8qy">
+                                        <tableColumn identifier="" width="63" minWidth="60" maxWidth="1000" id="ij4-Kv-8qy">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -814,10 +815,10 @@
                                                             </buttonCell>
                                                             <connections>
                                                                 <action selector="searchFontWithFeature:" target="Olg-Gc-M3f" id="wpi-LT-0M5"/>
-                                                                <binding destination="Voe-Tx-rLC" name="hidden" keyPath="onlySelectedFontFeatures" id="7la-Eo-tUM"/>
                                                                 <binding destination="ft7-vs-oev" name="value" keyPath="objectValue.search" id="cgp-Y6-GP8"/>
                                                                 <binding destination="ft7-vs-oev" name="title" keyPath="objectValue.searchResult" previousBinding="mzm-Ly-Ri1" id="V7v-Gu-o9p"/>
                                                                 <binding destination="ft7-vs-oev" name="alternateTitle" keyPath="objectValue.searchResult" id="mzm-Ly-Ri1"/>
+                                                                <binding destination="Voe-Tx-rLC" name="hidden" keyPath="onlySelectedFontFeatures" id="7la-Eo-tUM"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -856,14 +857,14 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="31" headerView="XPl-c0-j73" viewBased="YES" id="BZQ-JY-4eD" customClass="FontsTable" customModule="Find_Font_Features" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="325" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="316"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="0.0"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="279" minWidth="40" maxWidth="1000" id="nNw-E7-Dhe">
+                                        <tableColumn identifier="" width="279" minWidth="40" maxWidth="1000" id="nNw-E7-Dhe">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -903,7 +904,7 @@
                                                 <binding destination="BXm-fR-74k" name="value" keyPath="arrangedObjects.self" id="iUP-UK-iui"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn width="40" minWidth="40" maxWidth="40" id="nLS-kj-Ze5">
+                                        <tableColumn identifier="" width="40" minWidth="40" maxWidth="40" id="nLS-kj-Ze5">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -942,7 +943,6 @@
                                     </tableColumns>
                                 </tableView>
                             </subviews>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="yL3-DB-qH4">
                             <rect key="frame" x="1" y="323" width="325" height="16"/>
@@ -967,7 +967,12 @@
                         </textFieldCell>
                         <connections>
                             <binding destination="Voe-Tx-rLC" name="font" keyPath="selectedFont" id="jmo-Ut-vhm"/>
-                            <binding destination="BXm-fR-74k" name="value" keyPath="selection.allChars" id="wbJ-HV-gcc"/>
+                            <binding destination="BXm-fR-74k" name="value" keyPath="selection.allChars" id="y0c-IT-qse">
+                                <dictionary key="options">
+                                    <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                    <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                </dictionary>
+                            </binding>
                         </connections>
                     </textField>
                     <button id="JlR-Vc-IJ5">

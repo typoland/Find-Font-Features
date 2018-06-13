@@ -62,9 +62,7 @@ class OTFeature:OTF {
             if let selectedFont = (NSApplication.shared.delegate as! AppDelegate)._selectedFont {
             return fonts.contains(selectedFont)
             }
-            return false
-                
-           
+            return false   
         }
     }
         

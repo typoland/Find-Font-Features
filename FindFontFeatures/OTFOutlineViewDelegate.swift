@@ -25,7 +25,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print(debugCounter, context, object!)
+        print ("observeValue", debugCounter, context as Any, object!)
         debugCounter += 1
         switch context! {
         case &otfFeaturesChangedContext:

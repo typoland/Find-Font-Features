@@ -75,6 +75,9 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             }) as NSArray}
         }
     }
+    @objc func setAllFonts (_ sender:Any) {
+        Swift.print ("set all fonts", sender)
+    }
     
     var _featuresToSearch = Set<OTFeature>()
     

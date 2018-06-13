@@ -10,12 +10,12 @@ import Foundation
 import Cocoa
 
 extension NSFont {
-    var openTypeFeaturesCount:Int {
+    @objc var openTypeFeaturesCount:Int {
         get {
             return self.openTypeFeatures.types.count
         }
     }
-    var openTypeFeatures : OTFFeatures {
+    @objc var openTypeFeatures : OTFFeatures {
         get {
             
             let result = OTFFeatures()
@@ -23,10 +23,11 @@ extension NSFont {
             let descriptor = self.fontDescriptor
             if let featureDescriptions = CTFontDescriptorCopyAttribute(descriptor, kCTFontFeaturesAttribute) {
                 for featureType in featureDescriptions  as! [[String:AnyObject]]{
-                    guard  let name = featureType["CTFeatureTypeName"] as? String,
-                        let nameID = featureType["CTFeatureTypeNameID"] as? Int,
-                        let identifier = featureType["CTFeatureTypeIdentifier"]  as? Int,
-                        let exclusive = featureType["CTFeatureTypeExclusive"] as? Int else { /*print ("dupa");*/ return OTFFeatures()}
+                    let name = featureType["CTFeatureTypeName"] as? String ?? "No Name"
+                    let nameID = featureType["CTFeatureTypeNameID"] as? Int ?? 0
+                    let identifier = featureType["CTFeatureTypeIdentifier"]  as? Int ?? 0
+                    let exclusive = featureType["CTFeatureTypeExclusive"] as? Int ?? 0
+                    //Swift.print ("\(name), \(nameID), \(identifier), \(exclusive)")
                     let otfType = OTFType(name:name,
                                           nameID: nameID,
                                           identifier: identifier,
@@ -58,33 +59,46 @@ extension NSFont {
                 
             }
             return result
+        } set {
+            print ("set OTFeatures \(newValue)")
         }
     }
-    func setOpenTypeFeatures(_ types:OTFFeatures) {
-        
-    }
-    
-    var allChars:String {
+    /*
+     func setOpenTypeFeatures(_ types:OTFFeatures) {
+     
+     }
+     */
+    @objc var allChars:String {
         get {
-            let charset  = NSMutableCharacterSet(bitmapRepresentation: (self.coveredCharacterSet as NSCharacterSet).bitmapRepresentation)
-            charset.formIntersection (with: CharacterSet.controlCharacters.inverted)
+            print("getting AllChars")
+            let allFontChars = self.coveredCharacterSet.intersection(CharacterSet.controlCharacters.inverted)
+            //let charset = NSMutableCharacterSet(bitmapRepresentation:  (allFontChars as NSCharacterSet).bitmapRepresentation)
+            
+            //print("charset", allFontChars, charset)
+            //charset.formIntersection (with: CharacterSet.controlCharacters.inverted)
             var result = ""
             for plane : UInt8 in 0...16 {
-                if charset.hasMemberInPlane(plane ) {
+                if allFontChars.hasMember(inPlane: plane) {
                     
                     for c : UInt32 in UInt32( plane ) << 16 ..< (UInt32(plane)+1) << 16 {
-                        if charset.doesContain(UnicodeScalar(c) as Any) {
-                            var c1 = c.littleEndian // To make it byte-order safe
-                            
-                            let s = NSString(bytes: &c1, length: 4, encoding: String.Encoding.utf32LittleEndian.rawValue);
-                            
-                            result += (s != nil ? s! as String : "")
+                        if let scalar = UnicodeScalar(c)  {
+                            if allFontChars.contains(scalar) {
+                                var c1 = c.littleEndian // To make it byte-order safe
+                                
+                                let s = NSString(bytes: &c1, length: 4, encoding: String.Encoding.utf32LittleEndian.rawValue);
+                                
+                                result += (s != nil ? s! as String : "")
+                            }
                         }
                     }
                 }
             }
+            print(result)
             return result
         }
-        
+    
+    }
+    @objc func setAllChars (_ sender:Any) {
+        print ("setting allchars")
     }
 }
