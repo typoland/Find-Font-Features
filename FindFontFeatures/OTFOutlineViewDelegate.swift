@@ -11,10 +11,10 @@ import Cocoa
 
 let setSearchNotification = "com.typoland.otf.setSearchNotification"
 let setFeatureNotification = "com.typoland.otf.setFeatureNotification"
-var otfFeaturesChangedContext = "com.typoland.otf.otffeaturesChanged"
+var otfFeaturesChangedContext = "com.typoland.otf.FeaturesChangedContext"
 class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDataSource {
     
-    var otfFeatures:OTFFeatures = OTFFeatures()
+    @objc var otfFeatures:OTFFeatures = OTFFeatures()
     @IBOutlet weak var table:NSOutlineView!
     
     var selectedFonts:[NSFont] = [NSFont]()
@@ -24,10 +24,10 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
-        print(debugCounter, context, object)
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print(debugCounter, context, object!)
         debugCounter += 1
-        switch context {
+        switch context! {
         case &otfFeaturesChangedContext:
             table.reloadData()
         default:
@@ -35,7 +35,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         }
     }
     
-    func outlineView(outlineView: NSOutlineView, numberOfChildrenOfItem item: AnyObject?) -> Int {
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         
         if item is OTFType {
             return (item as! OTFType).typeSelectors.count
@@ -46,7 +46,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
     }
     
     
-    func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
         //print ("is item expandible", item)
         if  item is OTFType {
             return true
@@ -54,17 +54,17 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
             return false
         }
     }
-    func outlineView(outlineView: NSOutlineView, objectValueForTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) -> AnyObject? {
+    func outlineView(_ outlineView: NSOutlineView, objectValueFor tableColumn: NSTableColumn?, byItem item: Any?) -> Any? {
         //print("Teraz odda dupę, tylko po co?", item, tableColumn?.identifier)
         return item
     }
-    func outlineView(outlineView: NSOutlineView, heightOfRowByItem item: AnyObject) -> CGFloat {
+    func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
         if item is OTFeature {
             return 15
         }
         return 18
     }
-    func outlineView(outlineView: NSOutlineView, child index: Int, ofItem item: AnyObject?) -> AnyObject {
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
         //print("childOfItem", item, index)
         if item == nil {
             return otfFeatures.types[index]
@@ -73,11 +73,11 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
             return (item as! OTFType).typeSelectors[index]
         }
     }
-    func checkFeatureInSelectedFonts (item:OTFeature) -> Bool {
+    func checkFeatureInSelectedFonts (_ item:OTFeature) -> Bool {
 
         for font in selectedFonts {
             for type in OTFFeatures.fromFont(font).types {
-                if (type as! OTFType).typeSelectors.indexOfObject(item) != NSNotFound {
+                if (type as! OTFType).typeSelectors.index(of: item) != NSNotFound {
                     print("znalazł")
                     return true
                 }
@@ -87,20 +87,20 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         return false
     }
     
-    func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         if let columnIdentifier = tableColumn?.identifier{
             //print(columnIdentifier)
-            switch columnIdentifier {
+            switch columnIdentifier.rawValue {
             case "Features" :
                 
                 if item is OTFeature {
                     
                     let cell:LDTableCellButton
                     if (item as! OTFeature).parent.exclusive != nil {
-                        cell = outlineView.makeViewWithIdentifier("OTFOption", owner: self) as! LDTableCellButton
+                        cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "OTFOption"), owner: self) as! LDTableCellButton
 
                     } else {
-                        cell = outlineView.makeViewWithIdentifier("OTFeature", owner: self) as! LDTableCellButton
+                        cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "OTFeature"), owner: self) as! LDTableCellButton
                     }
                     //cell.checkButton.enabled = checkFeatureInSelectedFonts(item as! OTFeature)
 
@@ -108,18 +108,18 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
                     return cell
                     
                 } else if item is OTFType {
-                    let cell = outlineView.makeViewWithIdentifier("OTFType", owner: self) as! NSTableCellView
+                    let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "OTFType"), owner: self) as! NSTableCellView
                     return cell
                 }
             case "Additional" :
-                let cell = outlineView.makeViewWithIdentifier("Identifier", owner: self) as! NSTableCellView
+                let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "Identifier"), owner: self) as! NSTableCellView
                 return cell
                 
             default:
-                let cell = outlineView.makeViewWithIdentifier("OTFSearch", owner: self) as! LDTableCellButton
+                let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "OTFSearch"), owner: self) as! LDTableCellButton
                 if item is OTFeature {
                     cell.checkButton.integerValue = (item as! OTFeature).search
-                    cell.checkButton.enabled = true
+                    cell.checkButton.isEnabled = true
                     cell.checkButton.allowsMixedState = false
                     return cell
                 } else if item is OTFType {
@@ -135,18 +135,18 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         
     }
     
-    @IBAction func searchFontWithFeature (sender:AnyObject) {
+    @IBAction func searchFontWithFeature (_ sender:AnyObject) {
         print("searchFontWithFeatue", sender)
          print(sender)
-        NSNotificationCenter.defaultCenter().postNotificationName(setSearchNotification, object: (sender))
+        NotificationCenter.default.post(name: Notification.Name(rawValue: setSearchNotification), object: (sender))
         table.reloadData()
        
     
     }
     
-    @IBAction func setOnOf(sender:AnyObject) {
+    @IBAction func setOnOf(_ sender:AnyObject) {
         print("set On/Off", sender)
-        NSNotificationCenter.defaultCenter().postNotificationName(setFeatureNotification, object: (sender))
+        NotificationCenter.default.post(name: Notification.Name(rawValue: setFeatureNotification), object: (sender))
         table.reloadData()
         /*
         let feature = (sender.superview as! NSTableCellView).objectValue as! OTFeature
@@ -156,15 +156,15 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
  */
     }
     
-    @IBAction func selectExclusive(sender:AnyObject) {
+    @IBAction func selectExclusive(_ sender:AnyObject) {
         print ("Coś robi")
         
         
         let feature = (sender.superview as! NSTableCellView).objectValue as! OTFeature
         
         let type = feature.parent
-        type.selectFeature(feature)
-        NSNotificationCenter.defaultCenter().postNotificationName(setFeatureNotification, object: (sender))
+        type?.selectFeature(feature)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: setFeatureNotification), object: (sender))
         table.reloadData()
     }
 }

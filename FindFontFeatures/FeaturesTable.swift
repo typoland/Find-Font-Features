@@ -10,6 +10,6 @@ import Foundation
 import Cocoa
 class FeaturesTable: NSOutlineView {
     override func awakeFromNib() {
-        self.backgroundColor = NSColor.clearColor()
+        self.backgroundColor = NSColor.clear
     }
 }

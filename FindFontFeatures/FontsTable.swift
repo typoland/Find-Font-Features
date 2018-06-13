@@ -10,6 +10,6 @@ import Foundation
 import Cocoa
 class FontsTable: NSTableView {
     override func awakeFromNib() {
-        self.backgroundColor = NSColor.clearColor()
+        self.backgroundColor = NSColor.clear
     }
 }

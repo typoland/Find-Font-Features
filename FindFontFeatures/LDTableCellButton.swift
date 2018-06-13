@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+@IBDesignable
 class LDTableCellButton: NSTableCellView {
     @IBOutlet weak var checkButton:NSButton!
 }

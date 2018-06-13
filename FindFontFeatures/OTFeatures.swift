@@ -9,27 +9,27 @@
 import Foundation
 import Cocoa
 
-class OTF:NSObject {
-    var name:String = ""
+@objc class OTF:NSObject {
+    @objc var name:String = ""
     var nameID:Int? = 0
-    var identifier:Int = 0
+   @objc var identifier:Int = 0
     
-    var selected:Int = 0
-    var search:Int = 0
-    var enabled:Bool {get { return false }}
+    @objc var selected:Int = 0
+    @objc var search:Int = 0
+    @objc var enabled:Bool {get { return false }}
     
     
     
-    var toolTip:String {
+    @objc var toolTip:String {
         get {
-            return "\(name) \(self is OTFeature ?  " from \((self as! OTFeature).parent.name)" : "")\n\tindentifier: \(identifier)\n\tname ID: \(nameID == nil ? String(nameID) : "no" )" + "\n\n\tseleced: \(selected == 1 ? "Yes":"No")\n\tsearch: \(search)" //+ ("\n\tHash:\n\(name.hashValue) \n\(identifier.hashValue)")
+            return "\(name) \(self is OTFeature ?  " from \((self as! OTFeature).parent.name)" : "")\n\tindentifier: \(identifier)\n\tname ID: \(nameID == nil ? String(describing: nameID) : "no" )" + "\n\n\tseleced: \(selected == 1 ? "Yes":"No")\n\tsearch: \(search)" //+ ("\n\tHash:\n\(name.hashValue) \n\(identifier.hashValue)")
         }
     }
     override var hash: Int {
         //print ("hash")
         return self.hashValue // if the only field to determine uniqueness is `identifier`, this hashing method is enough
     }
-    override func isEqual(object: AnyObject?) -> Bool {
+    override func isEqual(_ object: Any?) -> Bool {
         if let otf = object as? OTF {
             return otf.hashValue == self.hashValue
         }
@@ -54,13 +54,13 @@ class OTFeature:OTF {
     var parent:OTFType!
     var isOn:Int = 1
     
-    var fonts:NSMutableOrderedSet = NSMutableOrderedSet()
-    var searchResult: String { get {return String(fonts.count)} }
+    @objc var fonts:NSMutableOrderedSet = NSMutableOrderedSet()
+    @objc var searchResult: String { get {return String(fonts.count)} }
     
     override var enabled: Bool {
         get {
-            if let selectedFont = (NSApplication.sharedApplication().delegate as! AppDelegate)._selectedFont {
-            return fonts.containsObject(selectedFont)
+            if let selectedFont = (NSApplication.shared.delegate as! AppDelegate)._selectedFont {
+            return fonts.contains(selectedFont)
             }
             return false
                 
@@ -88,7 +88,8 @@ class OTFeature:OTF {
         self.parent = parent
     }
 }
-class OTFType:OTF {
+
+@objc class OTFType:OTF {
     
     var exclusive:Int?
     var typeSelectors:NSMutableOrderedSet = NSMutableOrderedSet()
@@ -97,7 +98,7 @@ class OTFType:OTF {
         get {
             var n = 0
             for feature in typeSelectors {
-                n += feature.search
+                n += (feature as! OTFeature).search
             }
             //print ("get search", n, typeSelectors.count)
             if n == 0 {
@@ -111,23 +112,23 @@ class OTFType:OTF {
         set (value) {
             //print ("set", value)
             for selector in typeSelectors.array as! [OTFeature] {
-                selector.willChangeValueForKey("search")
+                selector.willChangeValue(forKey: "search")
                 selector.search = value
-                selector.didChangeValueForKey("search")
+                selector.didChangeValue(forKey: "search")
             }
         }
     }
     
-     var searchResult: String {
+     @objc var searchResult: String {
         get {
             let fonts = NSMutableSet()
             let inSearch = NSMutableSet()
             for feature in  typeSelectors {
-                let new = feature.fonts.array
-                if feature.search == 1 {
-                    inSearch.addObjectsFromArray(new)
+                let new = (feature as AnyObject).fonts.array
+                if (feature as! OTFeature).search == 1 {
+                    inSearch.addObjects(from: new)
                 }
-                fonts.addObjectsFromArray(new)
+                fonts.addObjects(from: new)
             }
             
             let result = String(format: "\(inSearch.count)/\(fonts.count)")
@@ -140,10 +141,11 @@ class OTFType:OTF {
         super.init(name: name, nameID: nameID, identifier: identifier)
         self.exclusive = exclusive
         self.typeSelectors = NSMutableOrderedSet()
+        self.name = name
     }
     
     
-    func selectFeature(feature:OTFeature)  {
+    func selectFeature(_ feature:OTFeature)  {
         for selector in self.typeSelectors.array as! [OTFeature] {
             if (feature == selector) || (feature.identifier == selector.identifier) {
                 selector.selected = 1
@@ -165,15 +167,15 @@ class OTFFeatures:NSObject  {
     var types = NSMutableOrderedSet()
     var typesArray:NSArray {
         get {
-            return self.types.array
+            return self.types.array as NSArray
         }
     }
     
     
-    class func fromTypes(types:OTFFeatures) -> OTFFeatures {
+    class func fromTypes(_ types:OTFFeatures) -> OTFFeatures {
         let result = OTFFeatures()
         for type in types.types {
-            result.types.addObject(type)
+            result.types.add(type)
         }
         return result
     }
@@ -187,9 +189,9 @@ class OTFFeatures:NSObject  {
         self.types.removeObjectAtIndex(idx)
     }
     */
-    class func fromAllSystemFonts(size: CGFloat) -> OTFFeatures {
+    class func fromAllSystemFonts(_ size: CGFloat) -> OTFFeatures {
         let result = OTFFeatures()
-        for fontName in NSFontManager.sharedFontManager().availableFonts {
+        for fontName in NSFontManager.shared.availableFonts {
             if let font = NSFont(name: fontName, size: size) {
                 result.addFontFeatures(OTFFeatures.fromFont(font), fromFont: font)
             }
@@ -197,7 +199,7 @@ class OTFFeatures:NSObject  {
         return result
     }
     
-    class func fromFont(font : NSFont) -> OTFFeatures {
+    class func fromFont(_ font : NSFont) -> OTFFeatures {
                 return font.openTypeFeatures
     }
     
@@ -214,7 +216,7 @@ class OTFFeatures:NSObject  {
     }
     */
     
-    func addFontFeatures(fontFeatures:OTFFeatures, fromFont font :NSFont ){
+    func addFontFeatures(_ fontFeatures:OTFFeatures, fromFont font :NSFont ){
         for type in fontFeatures.types {
             self.addOTFType(type as! OTFType, fromFont: font)
             for selector in (type as! OTFType).typeSelectors {
@@ -223,8 +225,8 @@ class OTFFeatures:NSObject  {
         }
     }
     
-    func addOTFType(newType:OTFType, fromFont:NSFont) {
-        self.types.addObject(newType)
+    func addOTFType(_ newType:OTFType, fromFont:NSFont) {
+        self.types.add(newType)
  
     }
     /*
@@ -233,18 +235,18 @@ class OTFFeatures:NSObject  {
         
     }
     */
-    func addFeature(feature:OTFeature, fromFont: NSFont) {
-        let index = Int(types.indexOfObject(feature.parent))
+    func addFeature(_ feature:OTFeature, fromFont: NSFont) {
+        let index = Int(types.index(of: feature.parent))
         
         if index != NSNotFound {
-            let type = types.objectAtIndex(index) as! OTFType
+            let type = types.object(at: index) as! OTFType
             feature.parent = type
-            type.typeSelectors.addObject(feature)
+            type.typeSelectors.add(feature)
             
-            let featureIndex = type.typeSelectors.indexOfObject(feature)
+            let featureIndex = type.typeSelectors.index(of: feature)
             if featureIndex != NSNotFound {
-                let savedFeature = type.typeSelectors.objectAtIndex(featureIndex)
-                savedFeature.fonts.addObject(fromFont)
+                let savedFeature = type.typeSelectors.object(at: featureIndex)
+                (savedFeature as AnyObject).fonts.add(fromFont)
             }
         }
     }
