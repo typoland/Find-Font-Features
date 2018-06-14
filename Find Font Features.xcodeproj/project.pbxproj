@@ -14,8 +14,6 @@
 		B2539A791CB6C575002917DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539A781CB6C575002917DE /* AppDelegate.swift */; };
 		B2539A7B1CB6C575002917DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2539A7A1CB6C575002917DE /* Assets.xcassets */; };
 		B2539A7E1CB6C575002917DE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2539A7C1CB6C575002917DE /* MainMenu.xib */; };
-		B2539A891CB6C575002917DE /* FindFontFeaturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539A881CB6C575002917DE /* FindFontFeaturesTests.swift */; };
-		B2539A941CB6C575002917DE /* FindFontFeaturesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539A931CB6C575002917DE /* FindFontFeaturesUITests.swift */; };
 		B2539AA21CB6E9BA002917DE /* OTFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA11CB6E9BA002917DE /* OTFeatures.swift */; };
 		B2539AA41CB6F5F6002917DE /* LDTableCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA31CB6F5F6002917DE /* LDTableCellButton.swift */; };
 		B2539AA61CB6FA64002917DE /* OTFOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA51CB6FA64002917DE /* OTFOutlineViewDelegate.swift */; };
@@ -23,23 +21,6 @@
 		B2B0A2501F4AD2BD00D7E2CA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A24F1F4AD2BD00D7E2CA /* AppKit.framework */; };
 		B2B0A2521F4AD7C100D7E2CA /* FontToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B2539A851CB6C575002917DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2539A6D1CB6C575002917DE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B2539A741CB6C575002917DE;
-			remoteInfo = FindFontFeatures;
-		};
-		B2539A901CB6C575002917DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2539A6D1CB6C575002917DE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B2539A741CB6C575002917DE;
-			remoteInfo = FindFontFeatures;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B225AA591CB9DF7C00AADCDC /* NSFont + extensionOTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSFont + extensionOTF.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -52,19 +33,12 @@
 		B2539A7A1CB6C575002917DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2539A7D1CB6C575002917DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B2539A7F1CB6C575002917DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2539A841CB6C575002917DE /* Find Font Features.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find Font Features.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2539A881CB6C575002917DE /* FindFontFeaturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFontFeaturesTests.swift; sourceTree = "<group>"; };
-		B2539A8A1CB6C575002917DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2539A8F1CB6C575002917DE /* Find Font Features.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find Font Features.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2539A931CB6C575002917DE /* FindFontFeaturesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFontFeaturesUITests.swift; sourceTree = "<group>"; };
-		B2539A951CB6C575002917DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2539AA11CB6E9BA002917DE /* OTFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OTFeatures.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B2539AA31CB6F5F6002917DE /* LDTableCellButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDTableCellButton.swift; sourceTree = "<group>"; };
 		B2539AA51CB6FA64002917DE /* OTFOutlineViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTFOutlineViewDelegate.swift; sourceTree = "<group>"; };
 		B2539AA71CB7087A002917DE /* LDSwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDSwitchButton.swift; sourceTree = "<group>"; };
 		B2B0A24F1F4AD2BD00D7E2CA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontToolbox.framework; path = ../../../../../Library/Frameworks/FontToolbox.framework; sourceTree = "<group>"; };
-		B2C3D5961CBF06C500A0872B /* ObjectiveCWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectiveCWrappers.h; path = ../../../../../../Library/Frameworks/FontToolbox.framework/Versions/A/Headers/ObjectiveCWrappers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,20 +51,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2539A811CB6C575002917DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2539A8C1CB6C575002917DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				B2539A771CB6C575002917DE /* Find Font Features */,
-				B2539A871CB6C575002917DE /* FindFontFeaturesTests */,
-				B2539A921CB6C575002917DE /* FindFontFeaturesUITests */,
 				B2539A761CB6C575002917DE /* Products */,
 				B2B0A24E1F4AD2BD00D7E2CA /* Frameworks */,
 			);
@@ -109,8 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				B2539A751CB6C575002917DE /* Find Font Features.app */,
-				B2539A841CB6C575002917DE /* Find Font Features.xctest */,
-				B2539A8F1CB6C575002917DE /* Find Font Features.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,7 +78,6 @@
 				B225AA5F1CBC444400AADCDC /* FontsTable.swift */,
 				B225AA5D1CBC3F2500AADCDC /* FeaturesTable.swift */,
 				B2539AA11CB6E9BA002917DE /* OTFeatures.swift */,
-				B2C3D5961CBF06C500A0872B /* ObjectiveCWrappers.h */,
 				B2539A7A1CB6C575002917DE /* Assets.xcassets */,
 				B2539A7C1CB6C575002917DE /* MainMenu.xib */,
 				B225AA611CBC52AB00AADCDC /* character set.playground */,
@@ -135,24 +90,6 @@
 			);
 			name = "Find Font Features";
 			path = FindFontFeatures;
-			sourceTree = "<group>";
-		};
-		B2539A871CB6C575002917DE /* FindFontFeaturesTests */ = {
-			isa = PBXGroup;
-			children = (
-				B2539A881CB6C575002917DE /* FindFontFeaturesTests.swift */,
-				B2539A8A1CB6C575002917DE /* Info.plist */,
-			);
-			path = FindFontFeaturesTests;
-			sourceTree = "<group>";
-		};
-		B2539A921CB6C575002917DE /* FindFontFeaturesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B2539A931CB6C575002917DE /* FindFontFeaturesUITests.swift */,
-				B2539A951CB6C575002917DE /* Info.plist */,
-			);
-			path = FindFontFeaturesUITests;
 			sourceTree = "<group>";
 		};
 		B2B0A24E1F4AD2BD00D7E2CA /* Frameworks */ = {
@@ -184,42 +121,6 @@
 			productReference = B2539A751CB6C575002917DE /* Find Font Features.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B2539A831CB6C575002917DE /* Find Font FeaturesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B2539A9B1CB6C575002917DE /* Build configuration list for PBXNativeTarget "Find Font FeaturesTests" */;
-			buildPhases = (
-				B2539A801CB6C575002917DE /* Sources */,
-				B2539A811CB6C575002917DE /* Frameworks */,
-				B2539A821CB6C575002917DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B2539A861CB6C575002917DE /* PBXTargetDependency */,
-			);
-			name = "Find Font FeaturesTests";
-			productName = FindFontFeaturesTests;
-			productReference = B2539A841CB6C575002917DE /* Find Font Features.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B2539A8E1CB6C575002917DE /* Find Font FeaturesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B2539A9E1CB6C575002917DE /* Build configuration list for PBXNativeTarget "Find Font FeaturesUITests" */;
-			buildPhases = (
-				B2539A8B1CB6C575002917DE /* Sources */,
-				B2539A8C1CB6C575002917DE /* Frameworks */,
-				B2539A8D1CB6C575002917DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B2539A911CB6C575002917DE /* PBXTargetDependency */,
-			);
-			name = "Find Font FeaturesUITests";
-			productName = FindFontFeaturesUITests;
-			productReference = B2539A8F1CB6C575002917DE /* Find Font Features.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,16 +134,6 @@
 					B2539A741CB6C575002917DE = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0940;
-					};
-					B2539A831CB6C575002917DE = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0940;
-						TestTargetID = B2539A741CB6C575002917DE;
-					};
-					B2539A8E1CB6C575002917DE = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0940;
-						TestTargetID = B2539A741CB6C575002917DE;
 					};
 				};
 			};
@@ -260,8 +151,6 @@
 			projectRoot = "";
 			targets = (
 				B2539A741CB6C575002917DE /* Find Font Features */,
-				B2539A831CB6C575002917DE /* Find Font FeaturesTests */,
-				B2539A8E1CB6C575002917DE /* Find Font FeaturesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,20 +162,6 @@
 			files = (
 				B2539A7B1CB6C575002917DE /* Assets.xcassets in Resources */,
 				B2539A7E1CB6C575002917DE /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2539A821CB6C575002917DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2539A8D1CB6C575002917DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,36 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2539A801CB6C575002917DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2539A891CB6C575002917DE /* FindFontFeaturesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B2539A8B1CB6C575002917DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2539A941CB6C575002917DE /* FindFontFeaturesUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B2539A861CB6C575002917DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B2539A741CB6C575002917DE /* Find Font Features */;
-			targetProxy = B2539A851CB6C575002917DE /* PBXContainerItemProxy */;
-		};
-		B2539A911CB6C575002917DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B2539A741CB6C575002917DE /* Find Font Features */;
-			targetProxy = B2539A901CB6C575002917DE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2539A7C1CB6C575002917DE /* MainMenu.xib */ = {
@@ -476,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeatures;
 				PRODUCT_NAME = "Find Font Features";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -498,82 +344,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeatures;
 				PRODUCT_NAME = "Find Font Features";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		B2539A9C1CB6C575002917DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = FindFontFeaturesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeaturesTests;
-				PRODUCT_NAME = "Find Font Features";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find Font Features.app/Contents/MacOS/Find Font Features";
-			};
-			name = Debug;
-		};
-		B2539A9D1CB6C575002917DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = FindFontFeaturesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeaturesTests;
-				PRODUCT_NAME = "Find Font Features";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find Font Features.app/Contents/MacOS/Find Font Features";
-			};
-			name = Release;
-		};
-		B2539A9F1CB6C575002917DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = FindFontFeaturesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeaturesUITests;
-				PRODUCT_NAME = "Find Font Features";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = FindFontFeatures;
-			};
-			name = Debug;
-		};
-		B2539AA01CB6C575002917DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = FindFontFeaturesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.typoland.FindFontFeaturesUITests;
-				PRODUCT_NAME = "Find Font Features";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = FindFontFeatures;
 			};
 			name = Release;
 		};
@@ -594,24 +366,6 @@
 			buildConfigurations = (
 				B2539A991CB6C575002917DE /* Debug */,
 				B2539A9A1CB6C575002917DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B2539A9B1CB6C575002917DE /* Build configuration list for PBXNativeTarget "Find Font FeaturesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2539A9C1CB6C575002917DE /* Debug */,
-				B2539A9D1CB6C575002917DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B2539A9E1CB6C575002917DE /* Build configuration list for PBXNativeTarget "Find Font FeaturesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2539A9F1CB6C575002917DE /* Debug */,
-				B2539AA01CB6C575002917DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
