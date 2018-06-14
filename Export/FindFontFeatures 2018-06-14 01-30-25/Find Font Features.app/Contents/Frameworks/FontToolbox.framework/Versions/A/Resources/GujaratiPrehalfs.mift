@@ -1,0 +1,156 @@
+###############################################################
+#
+#	File:		GujaratiPrehalfs.mift
+# 
+#	Contains:	MIF templates for Gujarati prehalf forms
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GujaratiPrehalfs.mift,v $
+#	Revision 1.2  2006/04/12 22:15:48  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gujarati MIF
+//	     8. Prehalf forms
+//====================================================
+Type          Contextual
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   8
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+PotentialPrehalf        $kagujarati $khagujarati $gagujarati $ghagujarati $ghanagujarati $cagujarati $canagujarati $jagujarati $jaforvagujarati $nnagujarati $tagujarati $tanagujarati $tatagujarati $thagujarati $dhagujarati $nagujarati $nanagujarati $pagujarati $bagujarati $bhagujarati $magujarati $yagujarati $lagujarati $llagujarati $vagujarati $shagujarati $shacagujarati $sharagujarati $shanagujarati $ssagujarati $sagujarati $hagujarati $kassagujarati $janyagujarati $taragujarati 
+Halant                  $viramagujarati 
+OtherConsonants         $ddagujarati $dagujarati $ragujarati $kaevowelsigngujarati $karvocalicvowelsigngujarati $karagujarati $karauvowelsigngujarati $karauuvowelsigngujarati $kayanohookgujarati $kasanohookgujarati $kavanohookgujarati $kalanohookgujarati $katanohookgujarati $khaevowelsigngujarati $khauvowelsigngujarati $khauuvowelsigngujarati $khatanohookgujarati $kharagujarati $kharanohookgujarati $gaevowelsigngujarati $garagujarati $garanohookgujarati $ghaevowelsigngujarati $ghauvowelsigngujarati $ghauuvowelsigngujarati $gharvocalicvowelsigngujarati $gharagujarati $gharanohookgujarati $ghananohookgujarati $caevowelsigngujarati $cauuvowelsigngujarati $cauvowelsigngujarati $caragujarati $caranohookgujarati $cananohookgujarati $chaevowelsigngujarati $jaevowelsigngujarati $jayanohookgujarati $jaforuvowelsignsgujarati $jaaavowelsigngujarati $jaovowelsigngujarati $jaiivowelsigngujarati $jaragujarati $jhaevowelsigngujarati $ttaevowelsigngujarati $tthaevowelsigngujarati $ddaevowelsigngujarati $ddaddagujarati $ddhaevowelsigngujarati $nnaevowelsigngujarati $nnauvowelsigngujarati $nnauvowelsignanusvaragujarati $taevowelsigngujarati $tarvocalicvowelsigngujarati $tauvowelsigngujarati $tauuvowelsigngujarati $tananohookgujarati $tatanohookgujarati $thaevowelsigngujarati $thauvowelsigngujarati $thauuvowelsigngujarati $tharagujarati $tharanohookgujarati $daevowelsigngujarati $dauvowelsigngujarati $darvocalicvowelsigngujarati $dadagujarati $dhaevowelsigngujarati $dharvocalicvowelsigngujarati $dhauvowelsigngujarati $dhauuvowelsigngujarati $dharagujarati $dharanohookgujarati $naevowelsigngujarati $narvocalicvowelsigngujarati $nauvowelsigngujarati $nauuvowelsigngujarati $naragujarati $naranohookgujarati $nananohookgujarati $paevowelsigngujarati $pauvowelsigngujarati $pauuvowelsigngujarati $parvocalicvowelsigngujarati $paragujarati $paranohookgujarati $patanohookgujarati $phaevowelsigngujarati $pharagujarati $phauvowelsigngujarati $phauuvowelsigngujarati $pharauuvowelsigngujarati $pharauvowelsigngujarati $baevowelsigngujarati $barvocalicvowelsigngujarati $bauvowelsigngujarati $bauuvowelsigngujarati $baragujarati $baranohookgujarati $bhaevowelsigngujarati $bharvocalicvowelsigngujarati $bhauvowelsigngujarati $bhauuvowelsigngujarati $bharagujarati $bharanohookgujarati $maevowelsigngujarati $marvocalicvowelsigngujarati $mauvowelsigngujarati $mauuvowelsigngujarati $maragujarati $maranohookgujarati $hamanohookgujarati $yaevowelsigngujarati $yauvowelsigngujarati $yauuvowelsigngujarati $yapostformgujarati $yapostformforddagujarati $raevowelsigngujarati $rauvowelsigngujarati $laevowelsigngujarati $lauvowelsigngujarati $lauuvowelsigngujarati $llaevowelsigngujarati $llauvowelsigngujarati $vaevowelsigngujarati $varvocalicvowelsigngujarati $vauvowelsigngujarati $vauuvowelsigngujarati $varagujarati $varanohookgujarati $shaevowelsigngujarati $sharanohookgujarati $shananohookgujarati $ssaevowelsigngujarati $ssarvocalicvowelsigngujarati $ssauvowelsigngujarati $ssauuvowelsigngujarati $ssaragujarati $ssaranohookgujarati $saevowelsigngujarati $sarvocalicvowelsigngujarati $sauvowelsigngujarati $sauuvowelsigngujarati $saragujarati $saranohookgujarati $haevowelsigngujarati $hayanohookgujarati $harvocalicvowelsigngujarati $daragujarati $darahighgujarati $kassaevowelsigngujarati $kassauvowelsigngujarati $kassauuvowelsigngujarati $janyaevowelsigngujarati $janyauvowelsigngujarati $janyauuvowelsigngujarati $taraevowelsigngujarati $taranohookgujarati $rauuvowelsigngujarati $lalanohookgujarati $napostformgujarati $yaforbhapostformgujarati $zerowidthjoiner
+
+                        EOT                 OOB                 DEL                 EOL                 PotentialPrehalf    Halant              OtherConsonants     
+AtStartOfText           1                   1                   1                   1                   2                   1                   1                   
+AtStartOfLine           1                   1                   1                   1                   2                   1                   1                   
+GotPotentialPrehalf     1                   1                   3                   1                   2                   4                   1                   
+GotPPHalant             1                   1                   5                   1                   6                   1                   7                   
+
+	GoTo                  Mark?  Advance?  SubstMark     SubstCurrent
+1	AtStartOfText         no     yes       none          none
+2	GotPotentialPrehalf   yes    yes       none          none
+3	GotPotentialPrehalf   no     yes       none          none
+4	GotPPHalant           no     yes       none          none
+5	GotPPHalant           no     yes       none          none
+6	GotPotentialPrehalf   yes    yes       Prehalfs      none
+7	AtStartOfText         no     yes       Prehalfs      none
+
+Prehalfs
+!	$kagujarati			$kapreformgujarati
+!	$khagujarati		$khapreformgujarati
+!	$gagujarati			$gapreformgujarati
+!	$ghagujarati		$ghapreformgujarati
+!	$ghanagujarati		$ghanapreformgujarati
+!	$cagujarati			$capreformgujarati
+!	$canagujarati		$canapreformgujarati
+!	$jagujarati			$japreformgujarati
+!	$jaforvagujarati	$japreformforvagujarati
+!	$nnagujarati		$nnapreformgujarati
+!	$tagujarati			$tapreformgujarati
+!	$tanagujarati		$tanapreformgujarati
+!	$tatagujarati		$tatapreformgujarati
+!	$thagujarati		$thapreformgujarati
+!	$dhagujarati		$dhapreformgujarati
+!	$nagujarati			$napreformgujarati
+!	$nanagujarati		$nanapreformgujarati
+!	$pagujarati			$papreformgujarati
+!	$bagujarati			$prebagujarati
+!	$bhagujarati		$bhapreformgujarati
+!	$magujarati			$mapreformgujarati
+!	$yagujarati			$yapreformgujarati
+!	$lagujarati			$lapreformgujarati
+!	$llagujarati		$llapreformgujarati
+!	$vagujarati			$prevagujarati
+!	$shagujarati		$shapreformgujarati
+!	$shacagujarati		$shacapreformgujarati
+!	$sharagujarati		$sharapreformgujarati
+!	$shanagujarati		$shanapreformgujarati
+!	$ssagujarati		$ssapreformgujarati
+!	$sagujarati			$sapreformgujarati
+!	$hagujarati			$hapreformgujarati
+!	$kassagujarati		$kassapreformgujarati
+!	$janyagujarati		$janyapreformgujarati
+!	$taragujarati		$tarapreformgujarati
+
+//====================================================
+//	Gujarati MIF
+//	     9. Prehalf ligatures (kill the virama following the prehalf forms we just made)
+//====================================================
+
+Type          LigatureList
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   8
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+List
+!	$kapreformgujarati			$kapreformgujarati $viramagujarati
+!	$khapreformgujarati			$khapreformgujarati $viramagujarati
+!	$gapreformgujarati			$gapreformgujarati $viramagujarati
+!	$ghapreformgujarati			$ghapreformgujarati $viramagujarati
+!	$ghanapreformgujarati		$ghanapreformgujarati $viramagujarati
+!	$capreformgujarati			$capreformgujarati $viramagujarati
+!	$canapreformgujarati		$canapreformgujarati $viramagujarati
+!	$japreformgujarati			$japreformgujarati $viramagujarati
+!	$japreformforvagujarati		$japreformforvagujarati $viramagujarati
+!	$nnapreformgujarati			$nnapreformgujarati $viramagujarati
+!	$tapreformgujarati			$tapreformgujarati $viramagujarati
+!	$tanapreformgujarati		$tanapreformgujarati $viramagujarati
+!	$tatapreformgujarati		$tatapreformgujarati $viramagujarati
+!	$thapreformgujarati			$thapreformgujarati $viramagujarati
+!	$dhapreformgujarati			$dhapreformgujarati $viramagujarati
+!	$napreformgujarati			$napreformgujarati $viramagujarati
+!	$nanapreformgujarati		$nanapreformgujarati $viramagujarati
+!	$papreformgujarati			$papreformgujarati $viramagujarati
+!	$prebagujarati				$prebagujarati $viramagujarati
+!	$bhapreformgujarati			$bhapreformgujarati $viramagujarati
+!	$mapreformgujarati			$mapreformgujarati $viramagujarati
+!	$yapreformgujarati			$yapreformgujarati $viramagujarati
+!	$lapreformgujarati			$lapreformgujarati $viramagujarati
+!	$llapreformgujarati			$llapreformgujarati $viramagujarati
+!	$prevagujarati				$prevagujarati $viramagujarati
+!	$shapreformgujarati			$shapreformgujarati $viramagujarati
+!	$shapreformaltonegujarati	$shapreformaltonegujarati $viramagujarati
+!	$shacapreformgujarati		$shacapreformgujarati $viramagujarati
+!	$sharapreformgujarati		$sharapreformgujarati $viramagujarati
+!	$shanapreformgujarati		$shanapreformgujarati $viramagujarati
+!	$ssapreformgujarati			$ssapreformgujarati $viramagujarati
+!	$sapreformgujarati			$sapreformgujarati $viramagujarati
+!	$hapreformgujarati			$hapreformgujarati $viramagujarati
+!	$kassapreformgujarati		$kassapreformgujarati $viramagujarati
+!	$janyapreformgujarati		$janyapreformgujarati $viramagujarati
+!	$tarapreformgujarati		$tarapreformgujarati $viramagujarati

@@ -1,0 +1,58 @@
+###############################################################
+#
+#	File:		GurmukhiRaLigatures.mift
+# 
+#	Contains:	MIF templates for Gurmukhi ra ligatures
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GurmukhiRaLigatures.mift,v $
+#	Revision 1.2  2006/04/12 22:15:50  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gurmukhi MIF
+//	     3. Ra ligatures
+//====================================================
+
+Type        LigatureList
+Name		NULL
+Namecode	1
+Setting		NULL
+Settingcode	6
+Default		yes
+Orientation	HV
+Forward		yes
+Exclusive	no
+
+List
+!	$karagurmukhi		$kagurmukhi		$halantgurmukhi	$ragurmukhi
+!	$taragurmukhi		$tagurmukhi		$halantgurmukhi	$ragurmukhi
+!	$daragurmukhi		$dagurmukhi		$halantgurmukhi	$ragurmukhi
+!	$paragurmukhi		$pagurmukhi		$halantgurmukhi	$ragurmukhi
+!	$sharagurmukhi		$shagurmukhi	$halantgurmukhi	$ragurmukhi
+!	$saragurmukhi		$sagurmukhi		$halantgurmukhi	$ragurmukhi
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	File:		Arabic.mifl
+ 
+	Contains:	List of MIF templates for automatic Arabic support
+ 
+	Version:	Mac OS X
+ 
+	Written by:	The Apple Font Group
+ 
+	Copyright:	© 2005–2016 by Apple Inc. All rights reserved.
+ 
+	File Ownership:
+ 
+		DRI:				John Jenkins
+ 
+		Other Contact:		Julio Gonzalez
+ 
+		Technology:			Apple Font Tools
+ 
+	Writers:
+ 
+		(JHJ)	John Jenkins
+ 
+	$Log: Arabic.mifl,v $
+	Revision 1.2  2006/04/12 22:15:44  jenkins
+	Purely cosmetic update: changed "Other Contact" from
+	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+	and removed invalid UTF-8 from files.
+	
+	Revision 1.1  2005/12/21 19:11:12  jenkins
+	First checked in <rdar://problem/4291273>.
+	
+-->
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>ArabicMainShaping</string>
+	<string>ArabicLigatures</string>
+</array>
+</plist>

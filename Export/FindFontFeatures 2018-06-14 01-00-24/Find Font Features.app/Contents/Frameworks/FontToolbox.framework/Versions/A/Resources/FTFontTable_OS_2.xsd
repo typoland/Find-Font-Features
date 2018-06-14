@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://developer.apple.com/fonts/"
+            xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+    <xs:element name='FTFontTable_OS_2'>
+        <xs:complexType>
+            <xs:sequence>
+				<xs:element name='classes' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:sequence minOccurs='0' maxOccurs='1'>
+							<xs:element name='family'>
+								<xs:complexType>
+									<xs:attribute name='classID' use='required' type='xs:string'/>
+									<xs:attribute name='subclassID' use='optional' type='xs:string'/>
+									<xs:attribute name='classIDValue' use='required' type='xs:integer'/>
+									<xs:attribute name='subclassIDValue' use='optional' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name='weight' use='optional' type='xs:NCName'/>
+						<xs:attribute name='width' use='optional' type='xs:NCName'/>
+						<xs:attribute name='weightValue' use='optional' type='xs:integer'/>
+						<xs:attribute name='widthValue' use='optional' type='xs:integer'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='embedding' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='reserved' use='optional' type='xs:boolean'/>
+						<xs:attribute name='restrictedLicense' use='optional' type='xs:boolean'/>
+						<xs:attribute name='previewAndPrint' use='optional' type='xs:boolean'/>
+						<xs:attribute name='editable' use='optional' type='xs:boolean'/>
+						<xs:attribute name='noSubsetting' use='optional' type='xs:boolean'/>
+						<xs:attribute name='bitmapEmbedOnly' use='optional' type='xs:boolean'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='subscript' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='xSize' use='optional' type='xs:integer'/>
+						<xs:attribute name='ySize' use='optional' type='xs:integer'/>
+						<xs:attribute name='xOffset' use='optional' type='xs:integer'/>
+						<xs:attribute name='yOffset' use='optional' type='xs:integer'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='superscript' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='xSize' use='optional' type='xs:integer'/>
+						<xs:attribute name='ySize' use='optional' type='xs:integer'/>
+						<xs:attribute name='xOffset' use='optional' type='xs:integer'/>
+						<xs:attribute name='yOffset' use='optional' type='xs:integer'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='strikeout' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='size' use='optional' type='xs:integer'/>
+						<xs:attribute name='position' use='optional' type='xs:integer'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='PANOSE' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name='familyType'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='serifStyle'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='weight'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='proportion'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='contrast'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='strokeVariation'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='armStyle'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='letterform'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='midline'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='xHeight'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='unicodeBlocks' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name='block' minOccurs='0' maxOccurs='unbounded'>
+								<xs:complexType>
+									<xs:attribute name='name' use='optional' type='xs:string'/>
+									<xs:attribute name='bit' use='optional' type='xs:integer'/>
+									<xs:attribute name='isCovered' use='optional' type='xs:boolean'/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='vendorID' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='value' use='required' type='ft:fourCharCode'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='fsSelection' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='italic' use='optional' type='xs:boolean'/>
+						<xs:attribute name='underscore' use='optional' type='xs:boolean'/>
+						<xs:attribute name='negative' use='optional' type='xs:boolean'/>
+						<xs:attribute name='outline' use='optional' type='xs:boolean'/>
+						<xs:attribute name='strikeout' use='optional' type='xs:boolean'/>
+						<xs:attribute name='bold' use='optional' type='xs:boolean'/>
+						<xs:attribute name='regular' use='optional' type='xs:boolean'/>
+						<xs:attribute name='useTypoMetrics' use='optional' type='xs:boolean'/>
+						<xs:attribute name='weightWidthSlope' use='optional' type='xs:boolean'/>
+						<xs:attribute name='oblique' use='optional' type='xs:boolean'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='characterRange' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='firstCharIndex' use='optional' type='ft:unicode'/>
+						<xs:attribute name='lastCharIndex' use='optional' type='ft:unicode'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='metrics' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name='avgCharWidth' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='typoAscender' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='typoDescender' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='typoLineGap' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='winAscent' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='winDescent' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='sXHeight' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name='capHeight' minOccurs='0' maxOccurs='1'>
+								<xs:complexType>
+									<xs:attribute name='value' use='required' type='xs:integer'/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='codePages' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name='codePage' minOccurs='0' maxOccurs='unbounded'>
+								<xs:complexType>
+									<xs:attribute name='name' use='optional' type='xs:string'/>
+									<xs:attribute name='bit' use='optional' type='xs:integer'/>
+									<xs:attribute name='isCovered' use='optional' type='xs:boolean'/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='specialCharacters' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='defaultChar' use='optional' type='ft:unicode'/>
+						<xs:attribute name='breakChar' use='optional' type='ft:unicode'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='maxContext' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='value' use='required' type='xs:integer'/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name='opticalPointSizeRange' minOccurs='0' maxOccurs='1'>
+					<xs:complexType>
+						<xs:attribute name='lowerOpticalPointSize' use='optional' type='xs:unsignedInt'/>
+						<xs:attribute name='upperOpticalPointSize' use='optional' type='xs:unsignedInt'/>
+					</xs:complexType>
+				</xs:element>
+            </xs:sequence>
+            <xs:attribute name='version' use='optional' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+ </xs:schema>

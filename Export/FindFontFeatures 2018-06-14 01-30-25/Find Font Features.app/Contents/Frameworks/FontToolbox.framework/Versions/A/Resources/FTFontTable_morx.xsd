@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+		elementFormDefault="unqualified"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://developer.apple.com/fonts/"
+		xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+	<xs:element name="FTFontTable_morx">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="morxChain" minOccurs="1" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="morxFeatureSubtable" maxOccurs="unbounded" minOccurs="1">
+								<xs:complexType>
+									<xs:attribute type="xs:unsignedShort" name="featureType" use="required" />
+									<xs:attribute type="xs:unsignedShort" name="featureSetting" use="required" />
+									<xs:attribute type="ft:hexValue" name="enableFlags" use="required" />
+									<xs:attribute type="ft:hexValue" name="disableFlags" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="morxSubtable" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ft:triggerGlyphs" minOccurs="0" maxOccurs="1" />
+										<xs:choice>
+											<xs:element name="rearrangementSubtable">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="ft:classTable" minOccurs="1" maxOccurs="1" />
+														<xs:element ref="ft:stateTable" minOccurs="1" maxOccurs="1" />
+														<xs:element name="rearrangementEntryTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="rearrangementEntry" minOccurs="1" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="entry" use="required"/>
+																			<xs:attribute type="xs:string" name="nextState" use="required"/>
+																			<xs:attribute type="xs:boolean" name="markFirst" use="required"/>
+																			<xs:attribute type="xs:boolean" name="markLast" use="required"/>
+																			<xs:attribute type="xs:boolean" name="advance" use="required"/>
+																			<xs:attribute type="xs:string" name="verb" use="required"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute type="xs:unsignedShort" name="nEntries" use="optional"/>
+													<xs:attribute type="ft:hexValue" name="entryTableOffset" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="contextualSubtable">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="ft:classTable" minOccurs="1" maxOccurs="1" />
+														<xs:element ref="ft:stateTable" minOccurs="1" maxOccurs="1" />
+														<xs:element name="contextualEntryTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="contextualEntry" maxOccurs="unbounded" minOccurs="1" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="entry" use="required"/>
+																			<xs:attribute type="xs:string" name="nextState" use="required"/>
+																			<xs:attribute type="xs:boolean" name="mark" use="optional"/>
+																			<xs:attribute type="xs:boolean" name="advance" use="optional"/>
+																			<xs:attribute type="xs:string" name="markedGlyphSubstitution" use="optional"/>
+																			<xs:attribute type="xs:string" name="currentGlyphSubstitution" use="optional"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="nEntries" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="entryTableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="contextualSubstitutionTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element ref="ft:lookupTable" minOccurs="1" maxOccurs="unbounded" />
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="lookupTableCount" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="tableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="ligatureSubtable">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="ft:classTable" minOccurs="1" maxOccurs="1" />
+														<xs:element ref="ft:stateTable" minOccurs="1" maxOccurs="1" />
+														<xs:element name="ligatureEntryTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="ligatureEntry" minOccurs="1" maxOccurs="unbounded">
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="name" use="required"/>
+																			<xs:attribute type="xs:string" name="nextState" use="required"/>
+																			<xs:attribute type="xs:boolean" name="setComponent" use="required"/>
+																			<xs:attribute type="xs:boolean" name="advance" use="required"/>
+																			<xs:attribute type="xs:boolean" name="performAction" use="required"/>
+																			<xs:attribute type="xs:string" name="action" use="optional"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="nEntries" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="entryTableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="ligatureActionTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="ligatureAction" minOccurs="1" maxOccurs="unbounded" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="name" use="required"/>
+																			<xs:attribute type="xs:boolean" name="isLast" use="required"/>
+																			<xs:attribute type="xs:boolean" name="store" use="required"/>
+																			<xs:attribute type="xs:short" name="componentIndex" use="required"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="ligatureActionCount" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="tableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="ligatureComponentTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="ligatureComponent" minOccurs="1" maxOccurs="unbounded" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:short" name="index" use="required"/>
+																			<xs:attribute type="xs:short" name="value" use="required"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="componentCount" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="tableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="ligatureTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="ligature" minOccurs="1" maxOccurs="unbounded" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:short" name="index" use="required"/>
+																			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required" />
+																			<xs:attribute type="ft:glyphName" name="glyphName" use="optional"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+																<xs:attribute type="xs:unsignedShort" name="ligatureCount" use="optional"/>
+																<xs:attribute type="ft:hexValue" name="tableOffset" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute type="xs:unsignedShort" name="nEntries" use="optional"/>
+													<xs:attribute type="ft:hexValue" name="entryTableOffset" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="noncontextualSubtable">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="ft:lookupTable" minOccurs="1" maxOccurs="1" />
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="insertionSubtable">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="ft:classTable" minOccurs="1" maxOccurs="1" />
+														<xs:element ref="ft:stateTable" minOccurs="1" maxOccurs="1" />
+														<xs:element name="insertionEntryTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="insertionEntry" minOccurs="1" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="entry" use="required"/>
+																			<xs:attribute type="xs:string" name="nextState" use="required"/>
+																			<xs:attribute type="xs:boolean" name="mark" use="required"/>
+																			<xs:attribute type="xs:boolean" name="advance" use="required"/>
+																			<xs:attribute type="xs:boolean" name="currentIsKashidaLike" use="required"/>
+																			<xs:attribute type="xs:boolean" name="markedIsKashidaLike" use="required"/>
+																			<xs:attribute type="xs:boolean" name="currentInsertBefore" use="required"/>
+																			<xs:attribute type="xs:boolean" name="markedInsertBefore" use="required"/>
+																			<xs:attribute type="xs:unsignedShort" name="currentInsertCount" use="required"/>
+																			<xs:attribute type="xs:unsignedShort" name="markedInsertCount" use="required"/>
+																			<xs:attribute type="xs:string" name="currentInsertIndex" use="required"/>
+																			<xs:attribute type="xs:string" name="markedInsertIndex" use="required"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="insertionGlyphTable" minOccurs="1" maxOccurs="1" >
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="insertionGlyph" minOccurs="1" >
+																		<xs:complexType>
+																			<xs:attribute type="xs:string" name="index" />
+																			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required" />
+																			<xs:attribute type="ft:glyphName" name="glyphName" use="optional"/>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute type="xs:unsignedShort" name="glyphCount" use="optional"/>
+													<xs:attribute type="ft:hexValue" name="tableOffset" use="optional"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute type="xs:unsignedInt" name="length" use="optional"/>
+									<xs:attribute type="xs:unsignedShort" name="subtableIndex" use="optional"/>
+									<xs:attribute type="ft:hexValue" name="coverage" use="required"/>
+									<xs:attribute type="xs:unsignedShort" name="subtableType" use="optional"/>
+									<xs:attribute type="ft:hexValue" name="subFeatureFlags" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="ft:hexValue" name="defaultFlags" use="required"/>
+						<xs:attribute type="xs:unsignedShort" name="chainIndex" use="optional"/>
+						<xs:attribute type="xs:unsignedInt" name="chainLength" use="optional"/>
+						<xs:attribute type="xs:unsignedShort" name="nFeatureEntries" use="optional"/>
+						<xs:attribute type="xs:unsignedShort" name="nSubtables" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:decimal" name="version" use="required"/>
+			<xs:attribute type="xs:unsignedShort" name="nChains" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="classTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="class" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ft:glyph" maxOccurs="unbounded" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="nClasses" use="optional"/>
+			<xs:attribute type="ft:hexValue" name="classTableOffset" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="stateTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="stateRow" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="stateEntry" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:string" name="class" use="optional"/>
+									<xs:attribute type="xs:string" name="entry" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="nStates" use="optional"/>
+			<xs:attribute type="ft:hexValue" name="stateTableOffset" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="triggerGlyphs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ft:glyph" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="nGlyphs" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="glyph">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+			<xs:attribute type="ft:glyphName" name="glyphName" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="lookupTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="lookupEntry" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute type="xs:unsignedShort" name="targetGlyphRefID" use="required" />
+						<xs:attribute type="ft:glyphName" name="targetGlyphName" use="optional"/>
+						<xs:attribute type="xs:unsignedShort" name="sourceGlyphRefID" use="required" />
+						<xs:attribute type="ft:glyphName" name="sourceGlyphName" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="format" use="optional"/>
+			<xs:attribute type="xs:string" name="name" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

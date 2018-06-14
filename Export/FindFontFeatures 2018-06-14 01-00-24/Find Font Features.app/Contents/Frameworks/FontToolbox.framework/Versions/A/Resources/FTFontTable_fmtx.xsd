@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+    elementFormDefault="unqualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://developer.apple.com/fonts/"
+    xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+    <xs:element name="FTFontTable_fmtx">
+        <xs:complexType>
+			<xs:sequence>
+                <xs:element name='horizontalBefore'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='horizontalAfter'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='horizontalCaretHead'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='horizontalCaretBase'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='verticalBefore'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='verticalAfter'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='verticalCaretHead'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name='verticalCaretBase'>
+                    <xs:complexType>
+                        <xs:attribute name='pointID' use='required' type='xs:unsignedShort'/>
+                        <xs:attribute name='x' use='required' type='xs:short'/>
+                        <xs:attribute name='y' use='required' type='xs:short'/>
+                    </xs:complexType>
+                </xs:element>
+			</xs:sequence>
+			<xs:attribute name='version' use='optional' type='xs:unsignedShort'/>
+			<xs:attribute name='glyphRefID' use='required' type='xs:unsignedShort'/>
+			<xs:attribute name='glyphName' use='optional' type='ft:glyphName'/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

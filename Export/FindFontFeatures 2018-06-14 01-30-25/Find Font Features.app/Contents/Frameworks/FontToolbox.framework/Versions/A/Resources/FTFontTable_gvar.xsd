@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://developer.apple.com/fonts/"
+            xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+    <xs:element name="FTFontTable_gvar">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="axisGlobalCoordinates">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                            <xs:element name="globalCoordinate">
+                                <xs:complexType>
+                                    <xs:attribute type="xs:unsignedShort" name="axisRefID" use="optional"/>
+                                    <xs:attribute type="xs:string" name="axisTag" use="required"/>
+                                    <xs:attribute type="xs:float" name="value" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:unsignedShort" name="index" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="glyphData">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tuple" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                            <xs:element name="tupleCoordinate" maxOccurs="unbounded" minOccurs="0">
+                                                <xs:complexType>
+                                                    <xs:attribute type="xs:unsignedShort" name="axisRefID" use="optional"/>
+                                                    <xs:attribute type="xs:string" name="axisTag" use="required"/>
+                                                    <xs:attribute type="xs:float" name="value" use="required"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="intermediateCoordinate" maxOccurs="unbounded" minOccurs="0">
+                                                <xs:complexType>
+                                                    <xs:attribute type="xs:unsignedShort" name="axisRefID" use="optional"/>
+                                                    <xs:attribute type="xs:string" name="axisTag" use="required"/>
+                                                    <xs:attribute type="xs:float" name="from" use="required"/>
+                                                    <xs:attribute type="xs:float" name="to" use="required"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="tuplePoint" maxOccurs="unbounded" minOccurs="0">
+                                                <xs:complexType>
+                                                    <xs:attribute type="xs:unsignedShort" name="number" use="required"/>
+                                                    <xs:attribute type="xs:short" name="xDelta" use="required"/>
+                                                    <xs:attribute type="xs:short" name="yDelta" use="required"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                    </xs:choice>
+                                    <xs:attribute type="xs:unsignedShort" name="index" use="optional"/>
+                                    <xs:attribute type="xs:unsignedShort" name="size" use="optional"/>
+                                    <xs:attribute type="xs:boolean" name="embeddedTupleCoordinates" use="optional"/>
+                                    <xs:attribute type="xs:boolean" name="intermediateTuple" use="optional"/>
+                                    <xs:attribute type="xs:boolean" name="privatePointNumbers" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+                        <xs:attribute type="xs:string" name="glyphName" use="optional"/>
+                        <xs:attribute type="ft:hexValue" name="offset" use="optional"/>
+                        <xs:attribute type="xs:unsignedShort" name="size" use="optional"/>
+                        <xs:attribute type="xs:boolean" name="tuplesSharePoints" use="optional"/>
+                        <xs:attribute type="xs:unsignedShort" name="tupleCount" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+            <xs:attribute type="xs:float" name="format" use="optional"/>
+            <xs:attribute type="xs:unsignedShort" name="version" use="optional"/>
+            <xs:attribute type="xs:unsignedShort" name="axisCount" use="optional"/>
+            <xs:attribute type="xs:unsignedShort" name="globalCoordCount" use="optional"/>
+            <xs:attribute type="xs:unsignedShort" name="glyphCount" use="optional"/>
+            <xs:attribute type="ft:hexValue" name="flags" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

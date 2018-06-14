@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="FTFontTable_prop">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="defaultProps"/>
+				<xsd:element ref="glyphProps" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="version" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="propTable">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="defaultProps"/>
+				<xsd:element ref="glyphProps" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="version" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="defaultProps">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="glyphProps"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="glyphProps">
+		<xsd:complexType>
+			<xsd:attribute name="glyphRefID" type="xsd:decimal" use="required"/>
+			<xsd:attribute name="glyphName" type="xsd:string"/>
+			<xsd:attribute name="directionalityClass"/>
+			<xsd:attribute name="mirrorGlyphRefID" type="xsd:decimal"/>
+			<xsd:attribute name="mirrorGlyphName" type="xsd:string"/>
+			<xsd:attribute name="floats" type="xsd:boolean"/>
+			<xsd:attribute name="hangsLeft" type="xsd:boolean"/>
+			<xsd:attribute name="hangsRight" type="xsd:boolean"/>
+			<xsd:attribute name="attachesRight" type="xsd:boolean"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

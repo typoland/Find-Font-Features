@@ -1,0 +1,63 @@
+###############################################################
+#
+#	File:		DevanagariBhaDhaCurlyVariants.mift
+# 
+#	Contains:	MIF template the formation of curly bha and dha conjuncts
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: DevanagariBhaDhaCurlyVariants.mift,v $
+#	Revision 1.2  2006/04/12 22:15:45  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 5/28/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Devanagari MIF
+//	     15. Bha and dha curly variants
+//====================================================
+
+Type          Noncontextual
+Name          Character Alternates
+Namecode      17
+Setting       Dha & Bha Curl Variants
+Settingcode   10
+Default       no
+Orientation   HV
+Forward       yes
+Exclusive     no
+!$dadhadeva			$dadhaaltonedeva
+!$dhadeva			$dhaaltonedeva
+!$dharadeva			$dharaaltonedeva
+!$dhanadeva			$dhanaaltonedeva
+!$dhaprehalfdeva	$dhaprehalfaltonedeva
+!$dharaprehalfdeva	$dharaprehalfaltonedeva
+!$dhanaprehalfdeva	$dhanaprehalfaltonedeva
+!$bhadeva			$bhaaltonedeva
+!$bhaevowelsigndeva	$bhaevowelsignaltonedeva
+!$bharadeva			$bharaaltonedeva
+!$bhaprehalfdeva	$bhaprehalfaltonedeva
+!$dabhadeva			$dabhaaltonedeva
+!$dabhayadeva		$dabhayaaltonedeva
+

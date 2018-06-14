@@ -1,0 +1,574 @@
+2018-06-13 23:00:11 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fced3b88dd0; archive(resolved)='<IDEArchive: 0x7fced3935480>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	Chain (10, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fced3b88dd0; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fced2b88910; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fced366d030; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fced27e6f60; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fced4dac7f0; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fcece301ee0; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fced3b758e0; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fcedfdb6870; teamID='3ASHMCMJEN', teamName='Łukasz Dziedzic (Personal Team)', teamType='Personal Team', username='dziedzic@typoland.com', isFreeProvisioningTeam='1'>'>
+	<IDEDistributionContext: 0x7fced26422d0; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='(null)'>
+	<IDEDistributionContext: 0x7fced2de5c30; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='<IDEDistributionMethodDevelopmentSignedMac: 0x7fcee0ed5380>', team='(null)'>
+	<IDEDistributionContext: 0x7fced3b7ec70; archive = '<IDEArchive: 0x7fced3935480>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fced3b88dd0>
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCreateDestRootStep
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCopyItemStep
+2018-06-13 23:00:11 +0000  Running /usr/bin/ditto '-V' '/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app'
+2018-06-13 23:00:11 +0000  >>> Copying /Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app 
+2018-06-13 23:00:11 +0000  copying file ./Contents/_CodeSignature/CodeResources ... 
+2018-06-13 23:00:11 +0000  7733 bytes for ./Contents/_CodeSignature/CodeResources
+2018-06-13 23:00:11 +0000  copying file ./Contents/MacOS/Find Font Features ... 
+2018-06-13 23:00:11 +0000  210144 bytes for ./Contents/MacOS/Find Font Features
+2018-06-13 23:00:11 +0000  copying file ./Contents/Resources/AppIcon.icns ... 
+2018-06-13 23:00:11 +0000  143726 bytes for ./Contents/Resources/AppIcon.icns
+2018-06-13 23:00:11 +0000  copying file ./Contents/Resources/Base.lproj/MainMenu.nib ... 
+2018-06-13 23:00:11 +0000  111200 bytes for ./Contents/Resources/Base.lproj/MainMenu.nib
+2018-06-13 23:00:11 +0000  copying file ./Contents/Resources/Assets.car ... 
+2018-06-13 23:00:11 +0000  162776 bytes for ./Contents/Resources/Assets.car
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/libswiftAppKit.dylib ... 
+2018-06-13 23:00:11 +0000  166640 bytes for ./Contents/Frameworks/libswiftAppKit.dylib
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/libswiftCoreImage.dylib ... 
+2018-06-13 23:00:11 +0000  40128 bytes for ./Contents/Frameworks/libswiftCoreImage.dylib
+copying file ./Contents/Frameworks/libswiftObjectiveC.dylib ... 
+2018-06-13 23:00:11 +0000  60720 bytes for ./Contents/Frameworks/libswiftObjectiveC.dylib
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/libswiftXPC.dylib ... 
+2018-06-13 23:00:11 +0000  35744 bytes for ./Contents/Frameworks/libswiftXPC.dylib
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/libswiftCore.dylib ... 
+2018-06-13 23:00:11 +0000  6151568 bytes for ./Contents/Frameworks/libswiftCore.dylib
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/libswiftCoreGraphics.dylib ... 
+187952 bytes for ./Contents/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Contents/Frameworks/libswiftMetal.dylib ... 
+68576 bytes for ./Contents/Frameworks/libswiftMetal.dylib
+copying file ./Contents/Frameworks/libswiftCoreData.dylib ... 
+95600 bytes for ./Contents/Frameworks/libswiftCoreData.dylib
+copying file ./Contents/Frameworks/libswiftDispatch.dylib ... 
+302080 bytes for ./Contents/Frameworks/libswiftDispatch.dylib
+copying file ./Contents/Frameworks/libswiftos.dylib ... 
+49248 bytes for ./Contents/Frameworks/libswiftos.dylib
+copying file ./Contents/Frameworks/libswiftCoreFoundation.dylib ... 
+31680 bytes for ./Contents/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Contents/Frameworks/libswiftDarwin.dylib ... 
+89280 bytes for ./Contents/Frameworks/libswiftDarwin.dylib
+copying file ./Contents/Frameworks/libswiftQuartzCore.dylib ... 
+52160 bytes for ./Contents/Frameworks/libswiftQuartzCore.dylib
+copying symlink ./Contents/Frameworks/FontToolbox.framework/Resources ... 
+linked ./Contents/Frameworks/FontToolbox.framework/Resources
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/_CodeSignature/CodeResources ... 
+29504 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/_CodeSignature/CodeResources
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.mifl ... 
+2018-06-13 23:00:11 +0000  549 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.mifl
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cvar.xsd ... 
+2862 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cvar.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_fond.xsd ... 
+2018-06-13 23:00:11 +0000  9270 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_fond.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPostforms.mift ... 
+2018-06-13 23:00:11 +0000  14120 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPostforms.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ThaiHighShortTails.mift ... 
+2018-06-13 23:00:11 +0000  1524 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ThaiHighShortTails.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_glyf.xsd ... 
+2018-06-13 23:00:11 +0000  4516 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_glyf.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiLastLigatures.mift ... 
+2018-06-13 23:00:11 +0000  4089 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiLastLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_gcid.xsd ... 
+2018-06-13 23:00:11 +0000  1657 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_gcid.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.atifl ... 
+2018-06-13 23:00:11 +0000  550 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.atifl
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiMainLigatures.mift ... 
+2018-06-13 23:00:11 +0000  4020 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiMainLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTDatabase.sql ... 
+2018-06-13 23:00:11 +0000  434176 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTDatabase.sql
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gurmukhi.mifl ... 
+2018-06-13 23:00:11 +0000  1179 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gurmukhi.mifl
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiLastForms.mift ... 
+2018-06-13 23:00:11 +0000  3111 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiLastForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTNameTypes.strings ... 
+2018-06-13 23:00:11 +0000  577 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTNameTypes.strings
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTScripts.strings ... 
+2018-06-13 23:00:11 +0000  847 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTScripts.strings
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTPlatforms.strings ... 
+2018-06-13 23:00:11 +0000  161 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTPlatforms.strings
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTLanguages.strings ... 
+2018-06-13 23:00:11 +0000  1581 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/English.lproj/FTLanguages.strings
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariAlternateNnaLigature.mift ... 
+2018-06-13 23:00:11 +0000  1650 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariAlternateNnaLigature.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPrehalfs.mift ... 
+2018-06-13 23:00:11 +0000  9198 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPrehalfs.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_GSUB.xsd ... 
+2018-06-13 23:00:11 +0000  11359 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_GSUB.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cmap.xsd ... 
+2018-06-13 23:00:11 +0000  7940 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cmap.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_kerx.xsd ... 
+2018-06-13 23:00:11 +0000  13422 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_kerx.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTWeights_OS_2.plist ... 
+2018-06-13 23:00:11 +0000  1097 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTWeights_OS_2.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ArabicMainShaping.mift ... 
+2018-06-13 23:00:11 +0000  9626 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ArabicMainShaping.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ZapfGroups.plist ... 
+2018-06-13 23:00:11 +0000  146778 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ZapfGroups.plist
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_LTSH.xsd ... 
+2018-06-13 23:00:11 +0000  1032 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_LTSH.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_fmtx.xsd ... 
+2018-06-13 23:00:11 +0000  4055 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_fmtx.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFirstContextualForms.mift ... 
+2018-06-13 23:00:11 +0000  10630 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFirstContextualForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_kern.xsd ... 
+2018-06-13 23:00:11 +0000  9240 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_kern.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_prop.xsd ... 
+2018-06-13 23:00:11 +0000  1478 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_prop.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.mifl ... 
+2018-06-13 23:00:11 +0000  1049 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.mifl
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTSummaries.py ... 
+2018-06-13 23:00:11 +0000  2104 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTSummaries.py
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariVowelSignLigatures.mift ... 
+2018-06-13 23:00:11 +0000  6521 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariVowelSignLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiFinalForms.mift ... 
+2018-06-13 23:00:11 +0000  4966 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiFinalForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFirstRearrangement.mift ... 
+2018-06-13 23:00:11 +0000  4927 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFirstRearrangement.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Arabic.glyphlist ... 
+2018-06-13 23:00:11 +0000  8289 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Arabic.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTWidths_OS_2.plist ... 
+2018-06-13 23:00:11 +0000  1372 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTWidths_OS_2.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Blocks.txt ... 
+2018-06-13 23:00:11 +0000  9275 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Blocks.txt
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ATIFSyntax.txt ... 
+2018-06-13 23:00:11 +0000  21573 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ATIFSyntax.txt
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPositionalForms.mift ... 
+2018-06-13 23:00:11 +0000  18612 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariPositionalForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariShowInvisibles.mift ... 
+2018-06-13 23:00:11 +0000  1293 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariShowInvisibles.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariAdditionalConjuncts.mift ... 
+2018-06-13 23:00:11 +0000  3153 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariAdditionalConjuncts.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTUnicodeBlocks_OS_2.plist ... 
+2018-06-13 23:00:11 +0000  12284 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTUnicodeBlocks_OS_2.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTVerticalForms.plist ... 
+2018-06-13 23:00:11 +0000  1787 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTVerticalForms.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gurmukhi.glyphlist ... 
+2018-06-13 23:00:11 +0000  3137 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gurmukhi.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiAddak.mift ... 
+2018-06-13 23:00:11 +0000  11015 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiAddak.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariNine.mift ... 
+2018-06-13 23:00:11 +0000  1285 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariNine.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_gvar.xsd ... 
+2018-06-13 23:00:11 +0000  5762 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_gvar.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Devanagari.glyphlist ... 
+2018-06-13 23:00:11 +0000  3864 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Devanagari.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariRequiredConjuncts.mift ... 
+2018-06-13 23:00:11 +0000  7804 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariRequiredConjuncts.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FontToolbox.xsd ... 
+2018-06-13 23:00:11 +0000  1323 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FontToolbox.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Devanagari.mifl ... 
+2018-06-13 23:00:11 +0000  1810 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Devanagari.mifl
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFinalRearrangement.mift ... 
+2018-06-13 23:00:11 +0000  6201 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFinalRearrangement.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTXGlyphPieces.plist ... 
+2018-06-13 23:00:11 +0000  529129 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTXGlyphPieces.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ArabicLigatures.mift ... 
+27470 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ArabicLigatures.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gujarati.glyphlist ... 
+2018-06-13 23:00:11 +0000  3336 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gujarati.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiRareLigatures.mift ... 
+2018-06-13 23:00:11 +0000  1308 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiRareLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOldStyleNumerals.mift ... 
+2018-06-13 23:00:11 +0000  1530 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOldStyleNumerals.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.mift ... 
+2018-06-13 23:00:11 +0000  1717 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cidg.xsd ... 
+2018-06-13 23:00:11 +0000  1747 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_cidg.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiSubjoinedForms.mift ... 
+2018-06-13 23:00:11 +0000  2515 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiSubjoinedForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_sbix.xsd ... 
+2018-06-13 23:00:11 +0000  10315 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_sbix.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTLanguagesToScripts.plist ... 
+2018-06-13 23:00:11 +0000  11669 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTLanguagesToScripts.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_post.xsd ... 
+2018-06-13 23:00:11 +0000  1634 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_post.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiRearrangement.mift ... 
+2018-06-13 23:00:11 +0000  2387 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiRearrangement.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiRaLigatures.mift ... 
+2018-06-13 23:00:11 +0000  1473 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiRaLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalLigatures.mift ... 
+2018-06-13 23:00:11 +0000  6994 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_morx.xsd ... 
+2018-06-13 23:00:11 +0000  15521 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_morx.xsd
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariZeroWidthJoinerPrehalfs.mift ... 
+2018-06-13 23:00:11 +0000  7108 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariZeroWidthJoinerPrehalfs.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiPrehalfs.mift ... 
+2018-06-13 23:00:11 +0000  10398 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiPrehalfs.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFamilies_OS_2.plist ... 
+2018-06-13 23:00:11 +0000  4644 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFamilies_OS_2.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOldStyleVariants.mift ... 
+2018-06-13 23:00:11 +0000  2598 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOldStyleVariants.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.glyphlist ... 
+2018-06-13 23:00:11 +0000  2689 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_ltag.xsd ... 
+2018-06-13 23:00:11 +0000  660 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_ltag.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/UnicodeDecomposition.plist ... 
+2018-06-13 23:00:11 +0000  955214 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/UnicodeDecomposition.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.mift ... 
+8677 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Thai.mift
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTStandardLocalizations.plist ... 
+882 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTStandardLocalizations.plist
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/RequiredLigatures.plist ... 
+2018-06-13 23:00:11 +0000  4057 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/RequiredLigatures.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiFinalLigatures.mift ... 
+2018-06-13 23:00:11 +0000  2091 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiFinalLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalRearrangement.mift ... 
+2018-06-13 23:00:11 +0000  5944 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalRearrangement.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_meta.xsd ... 
+2018-06-13 23:00:11 +0000  1781 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_meta.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gujarati.mifl ... 
+2018-06-13 23:00:11 +0000  1333 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Gujarati.mifl
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariBhaDhaCurlyVariants.mift ... 
+2018-06-13 23:00:11 +0000  1700 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariBhaDhaCurlyVariants.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFirstForms.mift ... 
+2018-06-13 23:00:11 +0000  9961 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariFirstForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalForms.mift ... 
+2018-06-13 23:00:11 +0000  14418 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFinalForms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Arabic.mifl ... 
+2018-06-13 23:00:11 +0000  947 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Arabic.mifl
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTNameTranslations.plist ... 
+2018-06-13 23:00:11 +0000  168548 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTNameTranslations.plist
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiNuktaLigatures.mift ... 
+2018-06-13 23:00:11 +0000  1493 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GurmukhiNuktaLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiRequiredLigatures.mift ... 
+2018-06-13 23:00:11 +0000  1663 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiRequiredLigatures.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ThaiLowShortTails.mift ... 
+2018-06-13 23:00:11 +0000  1478 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ThaiLowShortTails.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariYaPostforms.mift ... 
+2018-06-13 23:00:11 +0000  3259 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariYaPostforms.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOtherVariants.mift ... 
+2018-06-13 23:00:11 +0000  1294 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariOtherVariants.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.glyphlist ... 
+2018-06-13 23:00:11 +0000  605 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Latin.glyphlist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariRephViramaCleanup.mift ... 
+2018-06-13 23:00:11 +0000  1797 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariRephViramaCleanup.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTCodePages_OS_2.plist ... 
+2018-06-13 23:00:11 +0000  4157 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTCodePages_OS_2.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariNarrowISign.mift ... 
+2018-06-13 23:00:11 +0000  2475 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/DevanagariNarrowISign.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiKillExtraneousRephs.mift ... 
+2018-06-13 23:00:11 +0000  3858 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiKillExtraneousRephs.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_Zapf.xsd ... 
+2018-06-13 23:00:11 +0000  6816 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_Zapf.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ScriptsWithMIFs.plist ... 
+2018-06-13 23:00:11 +0000  1129 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/ScriptsWithMIFs.plist
+copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Info.plist ... 
+2018-06-13 23:00:11 +0000  1363 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/Info.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/OptionalLigatures.plist ... 
+2018-06-13 23:00:11 +0000  1407 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/OptionalLigatures.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/version.plist ... 
+2018-06-13 23:00:11 +0000  512 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/version.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFirstRearrangement.mift ... 
+2018-06-13 23:00:11 +0000  5241 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/GujaratiFirstRearrangement.mift
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_just.xsd ... 
+2018-06-13 23:00:11 +0000  3282 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_just.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_OS_2.xsd ... 
+2018-06-13 23:00:11 +0000  10157 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTFontTable_OS_2.xsd
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTScriptsToLanguages.plist ... 
+2018-06-13 23:00:11 +0000  6096 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/FTScriptsToLanguages.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/SampleTexts.plist ... 
+2018-06-13 23:00:11 +0000  497255 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/Resources/SampleTexts.plist
+2018-06-13 23:00:11 +0000  copying file ./Contents/Frameworks/FontToolbox.framework/Versions/A/FontToolbox ... 
+2018-06-13 23:00:11 +0000  6772528 bytes for ./Contents/Frameworks/FontToolbox.framework/Versions/A/FontToolbox
+2018-06-13 23:00:11 +0000  
+2018-06-13 23:00:11 +0000  /usr/bin/ditto exited with 0
+2018-06-13 23:00:11 +0000  copying symlink ./Contents/Frameworks/FontToolbox.framework/Versions/Current ... 
+linked ./Contents/Frameworks/FontToolbox.framework/Versions/Current
+copying symlink ./Contents/Frameworks/FontToolbox.framework/FontToolbox ... 
+linked ./Contents/Frameworks/FontToolbox.framework/FontToolbox
+copying file ./Contents/Frameworks/libswiftIOKit.dylib ... 
+35856 bytes for ./Contents/Frameworks/libswiftIOKit.dylib
+copying file ./Contents/Frameworks/libswiftFoundation.dylib ... 
+2849008 bytes for ./Contents/Frameworks/libswiftFoundation.dylib
+copying file ./Contents/Info.plist ... 
+1740 bytes for ./Contents/Info.plist
+copying file ./Contents/PkgInfo ... 
+8 bytes for ./Contents/PkgInfo
+2018-06-13 23:00:11 +0000  2018-06-13 23:00:11 +0000  Processing step: IDEDistributionEmbedProfileStep
+
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced2e162b0 'com.apple.fonts.FontToolbox' '<DVTFilePath:0x7fced3052810:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced4d0cf70 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fced32e77c0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced35cf250 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fced3286400:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fcee0bae890 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fcedc3895f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fcee0e36910 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fcecff3b260:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced3589a40 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fcee2656410:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced2ee2910 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fced285fe20:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced0aa3ba0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fced252d220:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced2ae1930 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fced26443f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced2c72ca0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fcecfb51f50:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fcecca3fa30 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fcecf97c7e0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced4d399e0 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fced0aa9150:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced2f1e950 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fcee9ad0780:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fcee360a390 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fced5569570:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced3a54ea0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fcedc2bc4a0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fcece46bc40 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fced2836840:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping profile for item: <IDEDistributionItem: 0x7fced4e231f0 'com.typoland.FindFontFeatures' '<DVTFilePath:0x7fced4d6bab0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app'>'>
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionSymbolsStep
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionAppThinningStep
+2018-06-13 23:00:11 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionODRStep
+2018-06-13 23:00:11 +0000  Processing step: IDEDistributionStripXattrsStep
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced2e162b0 'com.apple.fonts.FontToolbox' '<DVTFilePath:0x7fced3052810:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced4d0cf70 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fced32e77c0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced35cf250 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fced3286400:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fcee0bae890 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fcedc3895f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fcee0e36910 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fcecff3b260:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced3589a40 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fcee2656410:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced2ee2910 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fced285fe20:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced0aa3ba0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fced252d220:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced2ae1930 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fced26443f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced2c72ca0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fcecfb51f50:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fcecca3fa30 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fcecf97c7e0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced4d399e0 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fced0aa9150:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced2f1e950 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fcee9ad0780:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fcee360a390 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fced5569570:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fced3a54ea0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fcedc2bc4a0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib'>'>
+2018-06-13 23:00:11 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7fcece46bc40 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fced2836840:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib'>'>
+2018-06-13 23:00:11 +0000  Running /usr/bin/xattr '-crs' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app'
+2018-06-13 23:00:11 +0000  
+2018-06-13 23:00:11 +0000  
+2018-06-13 23:00:11 +0000  /usr/bin/xattr exited with 0
+2018-06-13 23:00:11 +0000  
+2018-06-13 23:00:11 +0000  2018-06-13 23:00:11 +0000  Processing step: IDEDistributionCodesignStep
+
+2018-06-13 23:00:11 +0000  Entitlements for <IDEDistributionItem: 0x7fced2e162b0 'com.apple.fonts.FontToolbox' '<DVTFilePath:0x7fced3052810:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A'>'>: {
+}
+2018-06-13 23:00:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced2e162b0 'com.apple.fonts.FontToolbox' '<DVTFilePath:0x7fced3052810:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsymWPyS
+2018-06-13 23:00:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsymWPyS' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A'
+2018-06-13 23:00:11 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/FontToolbox.framework/Versions/A: signed bundle with Mach-O thin (x86_64) [com.apple.fonts.FontToolbox]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced4d0cf70 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fced32e77c0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced4d0cf70 'com.apple.dt.runtime.swiftAppKit' '<DVTFilePath:0x7fced32e77c0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementst1FhHX
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementst1FhHX' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftAppKit.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftAppKit]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced35cf250 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fced3286400:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced35cf250 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7fced3286400:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsbCdDUg
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsbCdDUg' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCore.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCore]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fcee0bae890 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fcedc3895f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fcee0bae890 'com.apple.dt.runtime.swiftCoreData' '<DVTFilePath:0x7fcedc3895f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements3EfncK
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements3EfncK' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreData.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreData]
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fcee0e36910 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fcecff3b260:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fcee0e36910 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7fcecff3b260:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsVpEwqD
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsVpEwqD' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreFoundation]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced3589a40 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fcee2656410:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced3589a40 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7fcee2656410:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements65aCc1
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements65aCc1' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreGraphics]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced2ee2910 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fced285fe20:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced2ee2910 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7fced285fe20:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsSQY3MV
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsSQY3MV' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftCoreImage.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftCoreImage]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced0aa3ba0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fced252d220:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced0aa3ba0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7fced252d220:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements2D915T
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements2D915T' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDarwin.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftDarwin]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced2ae1930 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fced26443f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced2ae1930 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7fced26443f0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsCqQ4vL
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsCqQ4vL' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftDispatch.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftDispatch]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fced2c72ca0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fcecfb51f50:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced2c72ca0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7fcecfb51f50:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsFUQ5cC
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsFUQ5cC' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib: replacing existing signature
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftFoundation.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftFoundation]
+2018-06-13 23:00:12 +0000  2018-06-13 23:00:12 +0000  
+
+2018-06-13 23:00:12 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  
+2018-06-13 23:00:12 +0000  Entitlements for <IDEDistributionItem: 0x7fcecca3fa30 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fcecf97c7e0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib'>'>: {
+}
+2018-06-13 23:00:12 +0000  Writing entitlements for <IDEDistributionItem: 0x7fcecca3fa30 'com.apple.dt.runtime.swiftIOKit' '<DVTFilePath:0x7fcecf97c7e0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsS3eV2p
+2018-06-13 23:00:12 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsS3eV2p' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib'
+2018-06-13 23:00:12 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftIOKit.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftIOKit]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fced4d399e0 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fced0aa9150:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced4d399e0 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7fced0aa9150:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsHl6c1a
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsHl6c1a' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftMetal.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftMetal]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fced2f1e950 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fcee9ad0780:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced2f1e950 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7fcee9ad0780:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsvkO2Gb
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsvkO2Gb' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftObjectiveC.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftObjectiveC]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fcee360a390 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fced5569570:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fcee360a390 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7fced5569570:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsC2aorn
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsC2aorn' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftQuartzCore.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftQuartzCore]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fced3a54ea0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fcedc2bc4a0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced3a54ea0 'com.apple.dt.runtime.swiftXPC' '<DVTFilePath:0x7fcedc2bc4a0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements49RoOb
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlements49RoOb' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftXPC.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftXPC]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fcece46bc40 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fced2836840:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fcece46bc40 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7fced2836840:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsyMFhdf
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsyMFhdf' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app/Contents/Frameworks/libswiftos.dylib: signed Mach-O thin (x86_64) [com.apple.dt.runtime.swiftos]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  
+2018-06-13 23:00:13 +0000  Entitlements for <IDEDistributionItem: 0x7fced4e231f0 'com.typoland.FindFontFeatures' '<DVTFilePath:0x7fced4d6bab0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app'>'>: {
+}
+2018-06-13 23:00:13 +0000  Writing entitlements for <IDEDistributionItem: 0x7fced4e231f0 'com.typoland.FindFontFeatures' '<DVTFilePath:0x7fced4d6bab0:'/Users/lukasz/Library/Developer/Xcode/Archives/2018-06-14/FindFontFeatures 14-06-2018, 00.58.xcarchive/Products/Applications/Find Font Features.app'>'> to: /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsIbNp0f
+2018-06-13 23:00:13 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/entitlementsIbNp0f' '/var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app'
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app: replacing existing signature
+2018-06-13 23:00:13 +0000  /var/folders/74/365j0gws1g161ddncgck8mg40000gn/T/XcodeDistPipeline.c5q/Root/Applications/Find Font Features.app: signed app bundle with Mach-O thin (x86_64) [com.typoland.FindFontFeatures]
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  /usr/bin/codesign exited with 0
+2018-06-13 23:00:13 +0000  2018-06-13 23:00:13 +0000  
+
+2018-06-13 23:00:13 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-13 23:00:13 +0000  Processing step: IDEDistributionSkipPackagingStep
+2018-06-13 23:00:13 +0000  Processing step: IDEDistributionCreateManifestStep
+2018-06-13 23:00:13 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so

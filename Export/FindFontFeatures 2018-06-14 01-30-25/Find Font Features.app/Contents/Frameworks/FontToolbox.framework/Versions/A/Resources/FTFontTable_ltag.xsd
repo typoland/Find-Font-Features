@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="sfntTable_ltag">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="languageTag" maxOccurs="unbounded" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="languageTag">
+		<xsd:complexType>
+			<xsd:attribute name="tagIndex" type="xsd:unsignedShort" use="optional"/>
+			<xsd:attribute name="languageTag" type="xsd:language" use="required"/>
+			<xsd:attribute name="languageName" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

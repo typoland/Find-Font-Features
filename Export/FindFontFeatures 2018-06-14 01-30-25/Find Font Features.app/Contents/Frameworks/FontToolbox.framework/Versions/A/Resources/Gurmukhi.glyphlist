@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	File:		Gurmukhi.glyphlist
+ 
+	Contains:	List of glyphs required for automatic Gurmukhi support
+ 
+	Version:	Mac OS X
+ 
+	Written by:	The Apple Font Group
+ 
+	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+ 
+	File Ownership:
+ 
+		DRI:				John Jenkins
+ 
+		Other Contact:		Julio Gonzalez
+ 
+		Technology:			Apple Font Tools
+ 
+	Writers:
+ 
+		(JHJ)	John Jenkins
+
+	$Log: Gurmukhi.glyphlist,v $
+	Revision 1.2  2006/04/12 22:15:50  jenkins
+	Purely cosmetic update: changed "Other Contact" from
+	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+	and removed invalid UTF-8 from files.
+	
+	Old Change History (most recent first):
+
+		 <1>	 5/27/03	JHJ		Initial check-in.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>bindigurmukhi</string>
+	<string>agurmukhi</string>
+	<string>aagurmukhi</string>
+	<string>igurmukhi</string>
+	<string>iigurmukhi</string>
+	<string>ugurmukhi</string>
+	<string>uugurmukhi</string>
+	<string>eegurmukhi</string>
+	<string>aigurmukhi</string>
+	<string>oogurmukhi</string>
+	<string>augurmukhi</string>
+	<string>kagurmukhi</string>
+	<string>khagurmukhi</string>
+	<string>gagurmukhi</string>
+	<string>ghagurmukhi</string>
+	<string>ngagurmukhi</string>
+	<string>cagurmukhi</string>
+	<string>chagurmukhi</string>
+	<string>jagurmukhi</string>
+	<string>jhagurmukhi</string>
+	<string>nyagurmukhi</string>
+	<string>ttagurmukhi</string>
+	<string>tthagurmukhi</string>
+	<string>ddagurmukhi</string>
+	<string>ddhagurmukhi</string>
+	<string>nnagurmukhi</string>
+	<string>tagurmukhi</string>
+	<string>thagurmukhi</string>
+	<string>dagurmukhi</string>
+	<string>dhagurmukhi</string>
+	<string>nagurmukhi</string>
+	<string>pagurmukhi</string>
+	<string>phagurmukhi</string>
+	<string>bagurmukhi</string>
+	<string>bhagurmukhi</string>
+	<string>magurmukhi</string>
+	<string>yagurmukhi</string>
+	<string>ragurmukhi</string>
+	<string>lagurmukhi</string>
+	<string>vagurmukhi</string>
+	<string>shagurmukhi</string>
+	<string>sagurmukhi</string>
+	<string>hagurmukhi</string>
+	<string>nuktagurmukhi</string>
+	<string>aamatragurmukhi</string>
+	<string>imatragurmukhi</string>
+	<string>iimatragurmukhi</string>
+	<string>umatragurmukhi</string>
+	<string>uumatragurmukhi</string>
+	<string>eematragurmukhi</string>
+	<string>aimatragurmukhi</string>
+	<string>oomatragurmukhi</string>
+	<string>aumatragurmukhi</string>
+	<string>halantgurmukhi</string>
+	<string>khhagurmukhi</string>
+	<string>ghhagurmukhi</string>
+	<string>zagurmukhi</string>
+	<string>rragurmukhi</string>
+	<string>fagurmukhi</string>
+	<string>zerogurmukhi</string>
+	<string>onegurmukhi</string>
+	<string>twogurmukhi</string>
+	<string>threegurmukhi</string>
+	<string>fourgurmukhi</string>
+	<string>fivegurmukhi</string>
+	<string>sixgurmukhi</string>
+	<string>sevengurmukhi</string>
+	<string>eightgurmukhi</string>
+	<string>ninegurmukhi</string>
+	<string>tippigurmukhi</string>
+	<string>addakgurmukhi</string>
+	<string>irigurmukhi</string>
+	<string>uragurmukhi</string>
+	<string>ekonkargurmukhi</string>
+</array>
+</plist>

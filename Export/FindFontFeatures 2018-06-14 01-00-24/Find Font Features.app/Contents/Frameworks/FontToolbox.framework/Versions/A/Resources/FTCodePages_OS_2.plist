@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	File:		FTCodePages_OS_2.plist
+ 
+	Contains:	Standard names for an 'OS/2' table ulCodePageRange* values
+ 
+	Version:	Mac OS X
+ 
+	Written by:	The Apple Font Group
+ 
+	Copyright:	© 2015 by Apple Computer, Inc. All rights reserved.
+ 
+	File Ownership:
+ 
+		DRI:				John Jenkins
+ 
+		Other Contact:		Julio Gonzalez
+ 
+		Technology:			Apple Font Tools
+ 
+-->
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key><string>CP1252 (Latin 1)</string>
+	<key>1</key><string>CP1250 (Latin 2: Eastern Europe)</string>
+	<key>2</key><string>CP1251 (Cyrillic)</string>
+	<key>3</key><string>CP1253 (Greek)</string>
+	<key>4</key><string>CP1254 (Turkish)</string>
+	<key>5</key><string>CP1255 (Hebrew)</string>
+	<key>6</key><string>CP1256 (Arabic)</string>
+	<key>7</key><string>CP1257 (Windows Baltic)</string>
+	<key>8</key><string>CP1258 (Vietnamese)</string>
+	<key>16</key><string>CP874 (Thai)</string>
+	<key>17</key><string>CP932 (JIS/Japan)</string>
+	<key>18</key><string>CP936 (Chinese: Simplified chars)</string>
+	<key>19</key><string>CP949 (Korean Wansung)</string>
+	<key>20</key><string>CP950 (Chinese: Traditional chars)</string>
+	<key>21</key><string>CP1361 (Korean Johab)</string>
+	<key>29</key><string>MacRoman</string>
+	<key>30</key><string>OEM Character Set</string>
+	<key>31</key><string>Symbol Character Set</string>
+	<key>48</key><string>CP869 (IBM Greek)</string>
+	<key>49</key><string>CP866 (MS-DOS Russian)</string>
+	<key>50</key><string>CP865 (MS-DOS Nordic)</string>
+	<key>51</key><string>CP864 (Arabic)</string>
+	<key>52</key><string>CP863 (MS-DOS Canadian French)</string>
+	<key>53</key><string>CP862 (Hebrew)</string>
+	<key>54</key><string>CP861 (MS-DOS Icelandic)</string>
+	<key>55</key><string>CP860 (MS-DOS Portuguese)</string>
+	<key>56</key><string>CP857 (IBM Turkish)</string>
+	<key>57</key><string>CP855 (IBM Cyrillic; primarily Russian)</string>
+	<key>58</key><string>CP852 (Latin 2)</string>
+	<key>59</key><string>CP775 (MS-DOS Baltic)</string>
+	<key>60</key><string>CP737 (Greek; former 437 G)</string>
+	<key>61</key><string>CP708 (Arabic; ASMO 708)</string>
+	<key>62</key><string>CP850 (WE/Latin 1)</string>
+	<key>63</key><string>CP437 (US)</string>
+	<key>CP437 (US)</key><integer>63</integer>
+	<key>CP708 (Arabic; ASMO 708)</key><integer>61</integer>
+	<key>CP737 (Greek; former 437 G)</key><integer>60</integer>
+	<key>CP775 (MS-DOS Baltic)</key><integer>59</integer>
+	<key>CP850 (WE/Latin 1)</key><integer>62</integer>
+	<key>CP852 (Latin 2)</key><integer>58</integer>
+	<key>CP855 (IBM Cyrillic; primarily Russian)</key><integer>57</integer>
+	<key>CP857 (IBM Turkish)</key><integer>56</integer>
+	<key>CP860 (MS-DOS Portuguese)</key><integer>55</integer>
+	<key>CP861 (MS-DOS Icelandic)</key><integer>54</integer>
+	<key>CP862 (Hebrew)</key><integer>53</integer>
+	<key>CP863 (MS-DOS Canadian French)</key><integer>52</integer>
+	<key>CP864 (Arabic)</key><integer>51</integer>
+	<key>CP865 (MS-DOS Nordic)</key><integer>50</integer>
+	<key>CP866 (MS-DOS Russian)</key><integer>49</integer>
+	<key>CP869 (IBM Greek)</key><integer>48</integer>
+	<key>CP874 (Thai)</key><integer>16</integer>
+	<key>CP932 (JIS/Japan)</key><integer>17</integer>
+	<key>CP936 (Chinese: Simplified chars)</key><integer>18</integer>
+	<key>CP949 (Korean Wansung)</key><integer>19</integer>
+	<key>CP950 (Chinese: Traditional chars)</key><integer>20</integer>
+	<key>CP1250 (Latin 2: Eastern Europe)</key><integer>1</integer>
+	<key>CP1251 (Cyrillic)</key><integer>2</integer>
+	<key>CP1252 (Latin 1)</key><integer>0</integer>
+	<key>CP1253 (Greek)</key><integer>3</integer>
+	<key>CP1254 (Turkish)</key><integer>4</integer>
+	<key>CP1255 (Hebrew)</key><integer>5</integer>
+	<key>CP1256 (Arabic)</key><integer>6</integer>
+	<key>CP1257 (Windows Baltic)</key><integer>7</integer>
+	<key>CP1258 (Vietnamese)</key><integer>8</integer>
+	<key>CP1361 (Korean Johab)</key><integer>21</integer>
+	<key>MacRoman</key><integer>29</integer>
+	<key>OEM Character Set</key><integer>30</integer>
+	<key>Symbol Character Set</key><integer>31</integer>
+</dict>
+</plist>

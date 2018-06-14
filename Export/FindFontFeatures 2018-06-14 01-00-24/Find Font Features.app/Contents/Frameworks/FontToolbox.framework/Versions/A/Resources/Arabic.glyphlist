@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	File:		Arabic.glyphlist
+ 
+	Contains:	List of glyphs required for automatic Arabic support
+ 
+	Version:	Mac OS X
+ 
+	Written by:	The Apple Font Group
+ 
+	Copyright:	© 2005–2016 by Apple Inc. All rights reserved.
+ 
+	File Ownership:
+ 
+		DRI:				John Jenkins
+ 
+		Other Contact:		Julio Gonzalez
+ 
+		Technology:			Apple Font Tools
+ 
+	Writers:
+ 
+		(JHJ)	John Jenkins
+
+	$Log: Arabic.glyphlist,v $
+	Revision 1.2  2006/04/12 22:15:44  jenkins
+	Purely cosmetic update: changed "Other Contact" from
+	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+	and removed invalid UTF-8 from files.
+	
+	Revision 1.1  2005/12/21 19:09:08  jenkins
+	First checked in <rdar://problem/4291273>.
+	 
+-->
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>ainarabic</string>
+	<string>ainfinalarabic</string>
+	<string>aininitialarabic</string>
+	<string>ainmedialarabic</string>
+	<string>alefarabic</string>
+	<string>aleffinalarabic</string>
+	<string>alefhamzaabovearabic</string>
+	<string>alefhamzaabovefinalarabic</string>
+	<string>alefhamzabelowarabic</string>
+	<string>alefhamzabelowfinalarabic</string>
+	<string>alefmaddaabovearabic</string>
+	<string>alefmaddaabovefinalarabic</string>
+	<string>alefmaksuraarabic</string>
+	<string>alefmaksurafinalarabic</string>
+	<string>beharabic</string>
+	<string>behfinalarabic</string>
+	<string>behinitialarabic</string>
+	<string>behmedialarabic</string>
+	<string>behmeeminitialarabic</string>
+	<string>behmeemisolatedarabic</string>
+	<string>behnoonfinalarabic</string>
+	<string>dadarabic</string>
+	<string>dadfinalarabic</string>
+	<string>dadinitialarabic</string>
+	<string>dadmedialarabic</string>
+	<string>dalarabic</string>
+	<string>dalfinalarabic</string>
+	<string>dammaarabic</string>
+	<string>dammalowarabic</string>
+	<string>dammatanarabic</string>
+	<string>ddalfinalarabic</string>
+	<string>decimalseparatorarabic</string>
+	<string>fathaarabic</string>
+	<string>fathalowarabic</string>
+	<string>fathatanarabic</string>
+	<string>feharabic</string>
+	<string>fehfinalarabic</string>
+	<string>fehinitialarabic</string>
+	<string>fehmedialarabic</string>
+	<string>gafarabic</string>
+	<string>gaffinalarabic</string>
+	<string>gafinitialarabic</string>
+	<string>gafmedialarabic</string>
+	<string>ghainarabic</string>
+	<string>ghainfinalarabic</string>
+	<string>ghaininitialarabic</string>
+	<string>ghainmedialarabic</string>
+	<string>haaltonearabic</string>
+	<string>haharabic</string>
+	<string>hahfinalarabic</string>
+	<string>hahinitialarabic</string>
+	<string>hahmedialarabic</string>
+	<string>hamzaarabic</string>
+	<string>heharabic</string>
+	<string>hehfinalaltonearabic</string>
+	<string>hehfinalarabic</string>
+	<string>hehinitialaltonearabic</string>
+	<string>hehinitialarabic</string>
+	<string>hehmedialaltonearabic</string>
+	<string>hehmedialarabic</string>
+	<string>jeemarabic</string>
+	<string>jeemfinalarabic</string>
+	<string>jeeminitialarabic</string>
+	<string>jeemmedialarabic</string>
+	<string>jeharabic</string>
+	<string>jehfinalarabic</string>
+	<string>kafarabic</string>
+	<string>kaffinalarabic</string>
+	<string>kafinitialarabic</string>
+	<string>kafmedialarabic</string>
+	<string>kashidaautoarabic</string>
+	<string>kashidaautonosidebearingarabic</string>
+	<string>kasraarabic</string>
+	<string>kasratanarabic</string>
+	<string>khaharabic</string>
+	<string>khahfinalarabic</string>
+	<string>khahinitialarabic</string>
+	<string>khahmedialarabic</string>
+	<string>lamaleffinalarabic</string>
+	<string>lamalefhamzaabovefinalarabic</string>
+	<string>lamalefhamzaaboveisolatedarabic</string>
+	<string>lamalefhamzabelowfinalarabic</string>
+	<string>lamalefhamzabelowisolatedarabic</string>
+	<string>lamalefisolatedarabic</string>
+	<string>lamalefmaddaabovefinalarabic</string>
+	<string>lamalefmaddaaboveisolatedarabic</string>
+	<string>lamarabic</string>
+	<string>lamfinalarabic</string>
+	<string>lamhahinitialarabic</string>
+	<string>laminitialarabic</string>
+	<string>lamjeeminitialarabic</string>
+	<string>lamkhahinitialarabic</string>
+	<string>lamlamhehisolatedarabic</string>
+	<string>lammedialarabic</string>
+	<string>lammeemhahinitialarabic</string>
+	<string>lammeeminitialarabic</string>
+	<string>lammeemjeeminitialarabic</string>
+	<string>lammeemkhahinitialarabic</string>
+	<string>meemarabic</string>
+	<string>meemfinalarabic</string>
+	<string>meeminitialarabic</string>
+	<string>meemmedialarabic</string>
+	<string>meemmeeminitialarabic</string>
+	<string>meemmeemisolatedarabic</string>
+	<string>noonarabic</string>
+	<string>noonfinalarabic</string>
+	<string>noonghunnaarabic</string>
+	<string>noonghunnafinalarabic</string>
+	<string>nooninitialarabic</string>
+	<string>noonjeeminitialarabic</string>
+	<string>noonjeemisolatedarabic</string>
+	<string>noonmedialarabic</string>
+	<string>noonmeeminitialarabic</string>
+	<string>noonmeemisolatedarabic</string>
+	<string>noonnoonfinalarabic</string>
+	<string>parenleftaltonearabic</string>
+	<string>parenrightaltonearabic</string>
+	<string>peharabic</string>
+	<string>pehfinalarabic</string>
+	<string>pehinitialarabic</string>
+	<string>pehmedialarabic</string>
+	<string>qafarabic</string>
+	<string>qaffinalarabic</string>
+	<string>qafinitialarabic</string>
+	<string>qafmedialarabic</string>
+	<string>reharabic</string>
+	<string>rehfinalarabic</string>
+	<string>rrehfinalarabic</string>
+	<string>sadarabic</string>
+	<string>sadfinalarabic</string>
+	<string>sadinitialarabic</string>
+	<string>sadmedialarabic</string>
+	<string>sallallahoualayhewasallamarabic</string>
+	<string>seenarabic</string>
+	<string>seenfinalarabic</string>
+	<string>seeninitialarabic</string>
+	<string>seenmedialarabic</string>
+	<string>shaddaarabic</string>
+	<string>shaddadammaarabic</string>
+	<string>shaddadammatanarabic</string>
+	<string>shaddafathaarabic</string>
+	<string>shaddakasraarabic</string>
+	<string>shaddakasratanarabic</string>
+	<string>sheenarabic</string>
+	<string>sheenfinalarabic</string>
+	<string>sheeninitialarabic</string>
+	<string>sheenmedialarabic</string>
+	<string>sukunarabic</string>
+	<string>taharabic</string>
+	<string>tahfinalarabic</string>
+	<string>tahinitialarabic</string>
+	<string>tahmedialarabic</string>
+	<string>tatweelarabic</string>
+	<string>tcheharabic</string>
+	<string>tchehfinalarabic</string>
+	<string>tchehinitialarabic</string>
+	<string>tchehmedialarabic</string>
+	<string>teharabic</string>
+	<string>tehfinalarabic</string>
+	<string>tehhahinitialarabic</string>
+	<string>tehhahisolatedarabic</string>
+	<string>tehinitialarabic</string>
+	<string>tehjeeminitialarabic</string>
+	<string>tehjeemisolatedarabic</string>
+	<string>tehmarbutaarabic</string>
+	<string>tehmarbutafinalarabic</string>
+	<string>tehmedialarabic</string>
+	<string>tehmeeminitialarabic</string>
+	<string>tehmeemisolatedarabic</string>
+	<string>tehnoonfinalarabic</string>
+	<string>thalarabic</string>
+	<string>thalfinalarabic</string>
+	<string>theharabic</string>
+	<string>thehfinalarabic</string>
+	<string>thehinitialarabic</string>
+	<string>thehmedialarabic</string>
+	<string>thousandsseparatorarabic</string>
+	<string>tteharabic</string>
+	<string>ttehfinalarabic</string>
+	<string>ttehinitialarabic</string>
+	<string>ttehmedialarabic</string>
+	<string>veharabic</string>
+	<string>vehfinalarabic</string>
+	<string>vehinitialarabic</string>
+	<string>vehmedialarabic</string>
+	<string>wawarabic</string>
+	<string>wawfinalarabic</string>
+	<string>wawhamzaabovearabic</string>
+	<string>wawhamzaabovefinalarabic</string>
+	<string>yeharabic</string>
+	<string>yehbarreearabic</string>
+	<string>yehbarreefinalarabic</string>
+	<string>yehfinalarabic</string>
+	<string>yehhamzaabovearabic</string>
+	<string>yehhamzaabovefinalarabic</string>
+	<string>yehhamzaaboveinitialarabic</string>
+	<string>yehhamzaabovemedialarabic</string>
+	<string>yehinitialarabic</string>
+	<string>yehmedialarabic</string>
+	<string>yehmeeminitialarabic</string>
+	<string>yehmeemisolatedarabic</string>
+	<string>yehnoonfinalarabic</string>
+	<string>yehthreedotsbelowarabic</string>
+	<string>zaharabic</string>
+	<string>zahfinalarabic</string>
+	<string>zahinitialarabic</string>
+	<string>zahmedialarabic</string>
+	<string>zainarabic</string>
+	<string>zainfinalarabic</string>
+</array>
+</plist>

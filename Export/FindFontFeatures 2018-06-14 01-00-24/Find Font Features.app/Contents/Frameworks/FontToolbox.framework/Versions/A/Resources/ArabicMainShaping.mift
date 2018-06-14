@@ -1,0 +1,292 @@
+###############################################################
+#
+#	File:		ArabicMainShaping.mift
+# 
+#	Contains:	The main Arabic shaping rules
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2005–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+# 
+#	$Log: ArabicMainShaping.mift,v $
+#	Revision 1.2  2006/04/12 22:15:44  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Revision 1.1  2005/12/21 19:14:39  jenkins
+#	First checked in <rdar://problem/4291273>.
+#	
+###############################################################
+
+Type	Contextual
+Name	NULL
+Namecode	2
+Setting	NULL
+Settingcode	2
+Default	yes
+Orientation	H
+Forward	no
+Exclusive	yes
+
+Quads	$beharabic $teharabic $theharabic $tteharabic $uni067A $uni067B $uni067C $uni067D $peharabic $uni067F $uni0680 $noonarabic $uni06B9 $noonghunnaarabic $uni06BB $uni06BC $uni06BD $yehhamzaabovearabic $alefmaksuraarabic $yeharabic $uni0678 $uni06CC $uni06CE $uni06D0 $yehthreedotsbelowarabic $jeemarabic $haharabic $khaharabic $uni0681 $uni0682 $uni0683 $uni0684 $uni0685 $tcheharabic $uni0687 $uni06BF $seenarabic $sheenarabic $uni069A $uni069B $uni069C $uni06FA $sadarabic $dadarabic $uni069D $uni069E $uni06FB $taharabic $zaharabic $uni069F $ainarabic $ghainarabic $uni06A0 $uni06FC $feharabic $uni06A1 $uni06A2 $uni06A3 $veharabic $uni06A5 $uni06A6 $qafarabic $uni06A7 $uni06A8 $meemarabic $heharabic $uni06BE $uni06C1 $kafarabic $uni06AC $uni06AD $uni06AE $uni06AA $uni06A9 $uni06AB $gafarabic $uni06B0 $uni06B1 $uni06B2 $uni06B3 $uni06B4 $lamarabic $uni06B5 $uni06B6 $uni06B7 $uni06B8
+Doubles	$alefmaddaabovearabic $alefhamzaabovearabic $alefhamzabelowarabic $alefarabic $uni0671 $uni0672 $uni0673 $uni0675 $wawhamzaabovearabic $wawarabic $uni0676 $uni0677 $uni06C4 $uni06C5 $uni06C6 $uni06C7 $uni06C8 $uni06C9 $uni06CA $uni06CB $uni06CF $dalarabic $thalarabic $ddalarabic $uni0689 $uni068A $uni068B $uni068C $uni068D $uni068E $uni068F $uni0690 $reharabic $zainarabic $rreharabic $uni0692 $uni0693 $uni0694 $uni0695 $uni0696 $uni0697 $jeharabic $uni0699 $tehmarbutaarabic $uni06C0 $uni06C2 $uni06C3 $uni06CD $yehbarreearabic $uni06D3
+Ignores	$fathatanarabic $dammatanarabic $kasratanarabic $fathaarabic $dammaarabic $kasraarabic $shaddaarabic $sukunarabic $uni0653 $uni0654 $uni0655 $uni0670 $uni06D6 $uni06D7 $uni06D8 $uni06D9 $uni06DA $uni06DB $uni06DC $uni06DD $uni06DE $uni06DF $uni06E0 $uni06E1 $uni06E2 $uni06E3 $uni06E4 $uni06E5 $uni06E6 $uni06E7 $uni06E8 $uni06E9 $uni06EA $uni06EB $uni06EC $uni06ED $uni200F $uni202B $uni202C $uni202E
+Joiners	$zerowidthjoiner $tatweelarabic
+
+	EOT	OOB	DEL	EOL	Quads	Doubles	Ignores	Joiners
+StartText	1	1	1	1	2	1	1	9
+StartLine	1	1	1	1	2	1	1	9
+SawQuad	1	1	3	1	4	5	3	12
+SawQuads	1	1	6	1	7	8	6	14
+SawIJoiner	1	1	9	1	10	11	9	9
+SawMJoiner	1	1	13	1	10	11	13	13
+
+	GoTo	Mark?	Advance?	SubstMark	SubstCurrent
+1	StartText	no	yes	none	none
+2	SawQuad	yes	yes	none	none
+3	SawQuad	no	yes	none	none
+4	SawQuads	yes	yes	ToInitial	ToFinal
+5	StartText	no	yes	ToInitial	ToFinal
+6	SawQuads	no	yes	none	none
+7	SawQuads	yes	yes	ToMedial	ToFinal
+8	StartText	no	yes	ToMedial	ToFinal
+9	SawIJoiner	no	yes	none	none
+10	SawQuads	yes	yes	none	ToFinal
+11	StartText	no	yes	none	ToFinal
+12	SawMJoiner	no	yes	ToInitial	none
+13	SawMJoiner	no	yes	none	none
+14	SawMJoiner	no	yes	ToMedial	none
+
+ToInitial
+!	$yehhamzaabovearabic	$yehhamzaaboveinitialarabic
+!	$beharabic	$behinitialarabic
+!	$teharabic	$tehinitialarabic
+!	$theharabic	$thehinitialarabic
+!	$jeemarabic	$jeeminitialarabic
+!	$haharabic	$hahinitialarabic
+!	$khaharabic	$khahinitialarabic
+!	$seenarabic	$seeninitialarabic
+!	$sheenarabic	$sheeninitialarabic
+!	$sadarabic	$sadinitialarabic
+!	$dadarabic	$dadinitialarabic
+!	$taharabic	$tahinitialarabic
+!	$zaharabic	$zahinitialarabic
+!	$ainarabic	$aininitialarabic
+!	$ghainarabic	$ghaininitialarabic
+!	$feharabic	$fehinitialarabic
+!	$qafarabic	$qafinitialarabic
+!	$kafarabic	$kafinitialarabic
+!	$lamarabic	$laminitialarabic
+!	$meemarabic	$meeminitialarabic
+!	$noonarabic	$nooninitialarabic
+!	$heharabic	$hehinitialarabic
+!	$alefmaksuraarabic	$uniFBE8
+!	$yeharabic	$yehinitialarabic
+!	$tteharabic	$ttehinitialarabic
+!	$uni067A	$uniFB60
+!	$uni067B	$uniFB54
+!	$peharabic	$pehinitialarabic
+!	$uni067F	$uniFB64
+!	$uni0680	$uniFB5C
+!	$uni0683	$uniFB78
+!	$uni0684	$uniFB74
+!	$tcheharabic	$tchehinitialarabic
+!	$uni0687	$uniFB80
+!	$veharabic	$vehinitialarabic
+!	$uni06A6	$uniFB70
+!	$uni06A9	$uniFB90
+!	$uni06AD	$uniFBD5
+!	$gafarabic	$gafinitialarabic
+!	$uni06B1	$uniFB9C
+!	$uni06B3	$uniFB98
+!	$uni06BB	$uniFBA2
+!	$uni06BE	$uniFBAC
+!	$uni06C1	$uniFBA8
+!	$uni06CC	$uniFBFE
+!	$uni06D0	$uniFBE6
+
+ToMedial
+!	$yehhamzaabovearabic	$yehhamzaabovemedialarabic
+!	$beharabic	$behmedialarabic
+!	$teharabic	$tehmedialarabic
+!	$theharabic	$thehmedialarabic
+!	$jeemarabic	$jeemmedialarabic
+!	$haharabic	$hahmedialarabic
+!	$khaharabic	$khahmedialarabic
+!	$seenarabic	$seenmedialarabic
+!	$sheenarabic	$sheenmedialarabic
+!	$sadarabic	$sadmedialarabic
+!	$dadarabic	$dadmedialarabic
+!	$taharabic	$tahmedialarabic
+!	$zaharabic	$zahmedialarabic
+!	$ainarabic	$ainmedialarabic
+!	$ghainarabic	$ghainmedialarabic
+!	$feharabic	$fehmedialarabic
+!	$qafarabic	$qafmedialarabic
+!	$kafarabic	$kafmedialarabic
+!	$lamarabic	$lammedialarabic
+!	$meemarabic	$meemmedialarabic
+!	$noonarabic	$noonmedialarabic
+!	$heharabic	$hehmedialarabic
+!	$alefmaksuraarabic	$uniFBE9
+!	$yeharabic	$yehmedialarabic
+!	$tteharabic	$ttehmedialarabic
+!	$uni067A	$uniFB61
+!	$uni067B	$uniFB55
+!	$peharabic	$pehmedialarabic
+!	$uni067F	$uniFB65
+!	$uni0680	$uniFB5D
+!	$uni0683	$uniFB79
+!	$uni0684	$uniFB75
+!	$tcheharabic	$tchehmedialarabic
+!	$uni0687	$uniFB81
+!	$veharabic	$vehmedialarabic
+!	$uni06A6	$uniFB71
+!	$uni06A9	$uniFB91
+!	$uni06AD	$uniFBD6
+!	$gafarabic	$gafmedialarabic
+!	$uni06B1	$uniFB9D
+!	$uni06B3	$uniFB99
+!	$uni06BB	$uniFBA3
+!	$uni06BE	$uniFBAD
+!	$uni06C1	$uniFBA9
+!	$uni06CC	$uniFBFF
+!	$uni06D0	$uniFBE7
+!	$yehhamzaabovefinalarabic	$yehhamzaabovemedialarabic
+!	$behfinalarabic	$behmedialarabic
+!	$tehfinalarabic	$tehmedialarabic
+!	$thehfinalarabic	$thehmedialarabic
+!	$jeemfinalarabic	$jeemmedialarabic
+!	$hahfinalarabic	$hahmedialarabic
+!	$khahfinalarabic	$khahmedialarabic
+!	$seenfinalarabic	$seenmedialarabic
+!	$sheenfinalarabic	$sheenmedialarabic
+!	$sadfinalarabic	$sadmedialarabic
+!	$dadfinalarabic	$dadmedialarabic
+!	$tahfinalarabic	$tahmedialarabic
+!	$zahfinalarabic	$zahmedialarabic
+!	$ainfinalarabic	$ainmedialarabic
+!	$ghainfinalarabic	$ghainmedialarabic
+!	$fehfinalarabic	$fehmedialarabic
+!	$qaffinalarabic	$qafmedialarabic
+!	$kaffinalarabic	$kafmedialarabic
+!	$lamfinalarabic	$lammedialarabic
+!	$meemfinalarabic	$meemmedialarabic
+!	$noonfinalarabic	$noonmedialarabic
+!	$hehfinalarabic	$hehmedialarabic
+!	$alefmaksurafinalarabic	$uniFBE9
+!	$yehfinalarabic	$yehmedialarabic
+!	$ttehfinalarabic	$ttehmedialarabic
+!	$uniFB5F	$uniFB61
+!	$uniFB53	$uniFB55
+!	$pehfinalarabic	$pehmedialarabic
+!	$uniFB63	$uniFB65
+!	$uniFB5B	$uniFB5D
+!	$uniFB77	$uniFB79
+!	$uniFB73	$uniFB75
+!	$tchehfinalarabic	$tchehmedialarabic
+!	$uniFB7F	$uniFB81
+!	$vehfinalarabic	$vehmedialarabic
+!	$uniFB6F	$uniFB71
+!	$uniFB8F	$uniFB91
+!	$uniFBD4	$uniFBD6
+!	$gaffinalarabic	$gafmedialarabic
+!	$uniFB9B	$uniFB9D
+!	$uniFB97	$uniFB99
+!	$uniFBA1	$uniFBA3
+!	$uniFBAB	$uniFBAD
+!	$uniFBA7	$uniFBA9
+!	$uniFBFD	$uniFBFF
+!	$uniFBE5	$uniFBE7
+
+ToFinal
+!	$alefmaddaabovearabic	$alefmaddaabovefinalarabic
+!	$alefhamzaabovearabic	$alefhamzaabovefinalarabic
+!	$wawhamzaabovearabic	$wawhamzaabovefinalarabic
+!	$alefhamzabelowarabic	$alefhamzabelowfinalarabic
+!	$yehhamzaabovearabic	$yehhamzaabovefinalarabic
+!	$alefarabic	$aleffinalarabic
+!	$beharabic	$behfinalarabic
+!	$tehmarbutaarabic	$tehmarbutafinalarabic
+!	$teharabic	$tehfinalarabic
+!	$theharabic	$thehfinalarabic
+!	$jeemarabic	$jeemfinalarabic
+!	$haharabic	$hahfinalarabic
+!	$khaharabic	$khahfinalarabic
+!	$dalarabic	$dalfinalarabic
+!	$thalarabic	$thalfinalarabic
+!	$reharabic	$rehfinalarabic
+!	$zainarabic	$zainfinalarabic
+!	$seenarabic	$seenfinalarabic
+!	$sheenarabic	$sheenfinalarabic
+!	$sadarabic	$sadfinalarabic
+!	$dadarabic	$dadfinalarabic
+!	$taharabic	$tahfinalarabic
+!	$zaharabic	$zahfinalarabic
+!	$ainarabic	$ainfinalarabic
+!	$ghainarabic	$ghainfinalarabic
+!	$feharabic	$fehfinalarabic
+!	$qafarabic	$qaffinalarabic
+!	$kafarabic	$kaffinalarabic
+!	$lamarabic	$lamfinalarabic
+!	$meemarabic	$meemfinalarabic
+!	$noonarabic	$noonfinalarabic
+!	$heharabic	$hehfinalarabic
+!	$wawarabic	$wawfinalarabic
+!	$alefmaksuraarabic	$alefmaksurafinalarabic
+!	$yeharabic	$yehfinalarabic
+!	$uni0671	$uniFB51
+!	$tteharabic	$ttehfinalarabic
+!	$uni067A	$uniFB5F
+!	$uni067B	$uniFB53
+!	$peharabic	$pehfinalarabic
+!	$uni067F	$uniFB63
+!	$uni0680	$uniFB5B
+!	$uni0683	$uniFB77
+!	$uni0684	$uniFB73
+!	$tcheharabic	$tchehfinalarabic
+!	$uni0687	$uniFB7F
+!	$ddalarabic	$ddalfinalarabic
+!	$uni068C	$uniFB85
+!	$uni068D	$uniFB83
+!	$uni068E	$uniFB87
+!	$rreharabic	$rrehfinalarabic
+!	$jeharabic	$jehfinalarabic
+!	$veharabic	$vehfinalarabic
+!	$uni06A6	$uniFB6F
+!	$uni06A9	$uniFB8F
+!	$uni06AD	$uniFBD4
+!	$gafarabic	$gaffinalarabic
+!	$uni06B1	$uniFB9B
+!	$uni06B3	$uniFB97
+!	$noonghunnaarabic	$noonghunnafinalarabic
+!	$uni06BB	$uniFBA1
+!	$uni06BE	$uniFBAB
+!	$uni06C0	$hehhamzaabovefinalarabic
+!	$uni06C1	$uniFBA7
+!	$uni06C5	$uniFBE1
+!	$uni06C6	$uniFBDA
+!	$uni06C7	$uniFBD8
+!	$uni06C8	$uniFBDC
+!	$uni06C9	$uniFBE3
+!	$uni06CB	$uniFBDF
+!	$uni06CC	$uniFBFD
+!	$uni06D0	$uniFBE5
+!	$yehbarreearabic	$yehbarreefinalarabic
+!	$uni06D3	$uniFBB1
+

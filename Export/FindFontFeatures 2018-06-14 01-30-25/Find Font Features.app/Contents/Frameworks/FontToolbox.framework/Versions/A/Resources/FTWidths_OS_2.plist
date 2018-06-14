@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	File:		FTWidths_OS_2.plist
+ 
+	Contains:	Standard names for an 'OS/2' table usWidthClass value
+ 
+	Version:	Mac OS X
+ 
+	Written by:	The Apple Font Group
+ 
+	Copyright:	© 2015 by Apple Computer, Inc. All rights reserved.
+ 
+	File Ownership:
+ 
+		DRI:				John Jenkins
+ 
+		Other Contact:		Julio Gonzalez
+ 
+		Technology:			Apple Font Tools
+ 
+-->
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key><string>Ultra-condensed</string>
+	<key>2</key><string>Extra-condensed</string>
+	<key>3</key><string>Condensed</string>
+	<key>4</key><string>Semi-condensed</string>
+	<key>5</key><string>Medium</string>
+	<key>6</key><string>Semi-expanded</string>
+	<key>7</key><string>Expanded</string>
+	<key>8</key><string>Extra-expanded</string>
+	<key>9</key><string>Ultra-expanded</string>
+	<key>Condensed</key><integer>3</integer>
+	<key>Expanded</key><integer>7</integer>
+	<key>Extra-condensed</key><integer>2</integer>
+	<key>Extra-expanded</key><integer>8</integer>
+	<key>Medium</key><integer>5</integer>
+	<key>Normal</key><integer>5</integer>
+	<key>Semi-condensed</key><integer>4</integer>
+	<key>Semi-expanded</key><integer>6</integer>
+	<key>Ultra-condensed</key><integer>1</integer>
+	<key>Ultra-expanded</key><integer>9</integer>
+</dict>
+</plist>

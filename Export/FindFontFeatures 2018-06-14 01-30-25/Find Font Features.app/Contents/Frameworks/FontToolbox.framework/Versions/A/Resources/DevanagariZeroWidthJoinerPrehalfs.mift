@@ -1,0 +1,145 @@
+###############################################################
+#
+#	File:		DevanagariZeroWidthJoinerPrehalfs.mift
+# 
+#	Contains:	MIF template for formation of prehalfs when ZWJ is used
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: DevanagariZeroWidthJoinerPrehalfs.mift,v $
+#	Revision 1.2  2006/04/12 22:15:47  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 5/28/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Devanagari MIF
+//	     7. Prehalfs with zerowidthjoiner
+//====================================================
+
+Type          LigatureList
+Name          NULL
+Namecode      1
+Setting       NULL
+Settingcode   16
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+List
+!	$kaprehalfdeva			$kadeva $viramadeva $zerowidthjoiner
+!	$qaprehalfdeva			$qadeva $viramadeva $zerowidthjoiner
+!	$kassaprehalfdeva		$kassadeva $viramadeva $zerowidthjoiner
+!	$khaprehalfdeva			$khadeva $viramadeva $zerowidthjoiner
+!	$khhaprehalfdeva		$khhadeva $viramadeva $zerowidthjoiner
+!	$gaprehalfdeva			$gadeva $viramadeva $zerowidthjoiner
+!	$ghhaprehalfdeva		$ghhadeva $viramadeva $zerowidthjoiner
+!	$ghaprehalfdeva			$ghadeva $viramadeva $zerowidthjoiner
+!	$caprehalfdeva			$cadeva $viramadeva $zerowidthjoiner
+!	$chaprehalfdeva			$chadeva $viramadeva $zerowidthjoiner
+!	$japrehalfdeva			$jadeva $viramadeva $zerowidthjoiner
+!	$jajaprehalfdeva		$jajadeva $viramadeva $zerowidthjoiner
+!	$zaprehalfdeva			$zadeva $viramadeva $zerowidthjoiner
+!	$janyaprehalfdeva		$janyadeva $viramadeva $zerowidthjoiner
+!	$jhaprehalfdeva			$jhadeva $viramadeva $zerowidthjoiner
+!	$nyaprehalfdeva			$nyadeva $viramadeva $zerowidthjoiner
+!	$nyacaprehalfdeva		$nyacadeva $viramadeva $zerowidthjoiner
+!	$nyajaprehalfdeva		$nyajadeva $viramadeva $zerowidthjoiner
+!	$nnaprehalfdeva			$nnadeva $viramadeva $zerowidthjoiner
+!	$taprehalfdeva			$tadeva $viramadeva $zerowidthjoiner
+!	$tataprehalfdeva		$tatadeva $viramadeva $zerowidthjoiner
+!	$tanaprehalfdeva		$tanadeva $viramadeva $zerowidthjoiner
+!	$taraprehalfdeva		$taradeva $viramadeva $zerowidthjoiner
+!	$thaprehalfdeva			$thadeva $viramadeva $zerowidthjoiner
+!	$dayaprehalfdeva		$dayadeva $viramadeva $zerowidthjoiner
+!	$dhaprehalfdeva			$dhadeva $viramadeva $zerowidthjoiner
+!	$dhanaprehalfdeva		$dhanadeva $viramadeva $zerowidthjoiner
+!	$dharaprehalfdeva		$dharadeva $viramadeva $zerowidthjoiner
+!	$naprehalfdeva			$nadeva $viramadeva $zerowidthjoiner
+!	$nanaprehalfdeva		$nanadeva $viramadeva $zerowidthjoiner
+!	$paprehalfdeva			$padeva $viramadeva $zerowidthjoiner
+!	$pataprehalfdeva		$patadeva $viramadeva $zerowidthjoiner
+!	$phaprehalfdeva			$phadeva $viramadeva $zerowidthjoiner
+!	$faprehalfdeva			$fadeva $viramadeva $zerowidthjoiner
+!	$baprehalfdeva			$badeva $viramadeva $zerowidthjoiner
+!	$bhaprehalfdeva			$bhadeva $viramadeva $zerowidthjoiner
+!	$maprehalfdeva			$madeva $viramadeva $zerowidthjoiner
+!	$yaprehalfdeva			$yadeva $viramadeva $zerowidthjoiner
+!	$laprehalfdeva			$ladeva $viramadeva $zerowidthjoiner
+!	$llaprehalfdeva			$lladeva $viramadeva $zerowidthjoiner
+!	$vaprehalfdeva			$vadeva $viramadeva $zerowidthjoiner
+!	$shaprehalfdeva			$shadeva $viramadeva $zerowidthjoiner
+!	$shacaprehalfdeva		$shacadeva $viramadeva $zerowidthjoiner
+!	$sharaprehalfdeva		$sharadeva $viramadeva $zerowidthjoiner
+!	$shavaprehalfdeva		$shavadeva $viramadeva $zerowidthjoiner
+!	$ssaprehalfdeva			$ssadeva $viramadeva $zerowidthjoiner
+!	$saprehalfdeva			$sadeva $viramadeva $zerowidthjoiner
+!	$sanaprehalfdeva		$sanadeva $viramadeva $zerowidthjoiner
+!	$kaprehalfdeva			$kadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$qaprehalfdeva			$qadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$kassaprehalfdeva		$kassadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$khaprehalfdeva			$khadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$khhaprehalfdeva		$khhadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$gaprehalfdeva			$gadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$ghhaprehalfdeva		$ghhadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$ghaprehalfdeva			$ghadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$caprehalfdeva			$cadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$chaprehalfdeva			$chadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$japrehalfdeva			$jadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$jajaprehalfdeva		$jajadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$zaprehalfdeva			$zadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$janyaprehalfdeva		$janyadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$jhaprehalfdeva			$jhadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$nyaprehalfdeva			$nyadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$nyacaprehalfdeva		$nyacadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$nyajaprehalfdeva		$nyajadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$nnaprehalfdeva			$nnadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$taprehalfdeva			$tadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$taraprehalfdeva		$taradeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$thaprehalfdeva			$thadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$dhaprehalfdeva			$dhadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$naprehalfdeva			$nadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$paprehalfdeva			$padeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$phaprehalfdeva			$phadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$faprehalfdeva			$fadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$baprehalfdeva			$badeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$bhaprehalfdeva			$bhadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$maprehalfdeva			$madeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$yaprehalfdeva			$yadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$laprehalfdeva			$ladeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$llaprehalfdeva			$lladeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$vaprehalfdeva			$vadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$shaprehalfdeva			$shadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$shacaprehalfdeva		$shacadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$sharaprehalfdeva		$sharadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$shavaprehalfdeva		$shavadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$ssaprehalfdeva			$ssadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$saprehalfdeva			$sadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$sanaprehalfdeva		$sanadeva $viramadeva $nuktadeva $zerowidthjoiner
+!	$explicithalantdeva		$viramadeva $viramadeva $zerowidthjoiner
+!	$viramadeva				$viramadeva $nuktadeva $zerowidthjoiner
+!	$ngaviramadeva			$ngadeva $viramadeva
+!	$rahalfdeva				$radeva $viramadeva $zerowidthjoiner
+!	$haprehalfdeva			$hadeva $viramadeva $zerowidthjoiner
+

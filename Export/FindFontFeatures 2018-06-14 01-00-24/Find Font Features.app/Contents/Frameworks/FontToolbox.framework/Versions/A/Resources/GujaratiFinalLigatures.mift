@@ -1,0 +1,146 @@
+###############################################################
+#
+#	File:		GujaratiFinalLigatures.mift
+# 
+#	Contains:	MIF templates for the final set of required Gujarati ligatures
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GujaratiFinalLigatures.mift,v $
+#	Revision 1.2  2006/04/12 22:15:48  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gujarati MIF
+//	     7. Last (required) ligatures
+//====================================================
+
+Type          LigatureList
+Name          NULL
+Namecode      1
+Setting       NULL
+Settingcode   16
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+List
+!	$explicithalantgujarati		$viramagujarati $viramagujarati
+!	$viramagujarati		$viramagujarati $nuktagujarati
+!	$kassauvowelsigngujarati		$kassagujarati $uvowelsigngujarati
+!	$janyauvowelsigngujarati		$janyagujarati $uvowelsigngujarati
+!	$pharauvowelsigngujarati		$pharagujarati $uvowelsigngujarati
+!	$khauvowelsigngujarati		$khagujarati $uvowelsigngujarati
+!	$ghauvowelsigngujarati		$ghagujarati $uvowelsigngujarati
+!	$cauvowelsigngujarati		$cagujarati $uvowelsigngujarati
+!	$nnauvowelsigngujarati		$nnagujarati $uvowelsigngujarati
+!	$tauvowelsigngujarati		$tagujarati $uvowelsigngujarati
+!	$thauvowelsigngujarati		$thagujarati $uvowelsigngujarati
+!	$dauvowelsigngujarati		$dagujarati $uvowelsigngujarati
+!	$dhauvowelsigngujarati		$dhagujarati $uvowelsigngujarati
+!	$nauvowelsigngujarati		$nagujarati $uvowelsigngujarati
+!	$pauvowelsigngujarati		$pagujarati $uvowelsigngujarati
+!	$phauvowelsigngujarati		$phagujarati $uvowelsigngujarati
+!	$bauvowelsigngujarati		$bagujarati $uvowelsigngujarati
+!	$bhauvowelsigngujarati		$bhagujarati $uvowelsigngujarati
+!	$mauvowelsigngujarati		$magujarati $uvowelsigngujarati
+!	$yauvowelsigngujarati		$yagujarati $uvowelsigngujarati
+!	$lauvowelsigngujarati		$lagujarati $uvowelsigngujarati
+!	$llauvowelsigngujarati		$llagujarati $uvowelsigngujarati
+!	$vauvowelsigngujarati		$vagujarati $uvowelsigngujarati
+!	$ssauvowelsigngujarati		$ssagujarati $uvowelsigngujarati
+!	$sauvowelsigngujarati		$sagujarati $uvowelsigngujarati
+!	$kassauuvowelsigngujarati		$kassagujarati $uuvowelsigngujarati
+!	$janyauuvowelsigngujarati		$janyagujarati $uuvowelsigngujarati
+!	$pharauuvowelsigngujarati		$pharagujarati $uuvowelsigngujarati
+!	$khauuvowelsigngujarati		$khagujarati $uuvowelsigngujarati
+!	$ghauuvowelsigngujarati		$ghagujarati $uuvowelsigngujarati
+!	$cauuvowelsigngujarati		$cagujarati $uuvowelsigngujarati
+!	$tauuvowelsigngujarati		$tagujarati $uuvowelsigngujarati
+!	$thauuvowelsigngujarati		$thagujarati $uuvowelsigngujarati
+!	$dhauuvowelsigngujarati		$dhagujarati $uuvowelsigngujarati
+!	$nauuvowelsigngujarati		$nagujarati $uuvowelsigngujarati
+!	$pauuvowelsigngujarati		$pagujarati $uuvowelsigngujarati
+!	$phauuvowelsigngujarati		$phagujarati $uuvowelsigngujarati
+!	$bauuvowelsigngujarati		$bagujarati $uuvowelsigngujarati
+!	$bhauuvowelsigngujarati		$bhagujarati $uuvowelsigngujarati
+!	$mauuvowelsigngujarati		$magujarati $uuvowelsigngujarati
+!	$yauuvowelsigngujarati		$yagujarati $uuvowelsigngujarati
+!	$rauuvowelsigngujarati		$ragujarati $uuvowelsigngujarati
+!	$lauuvowelsigngujarati		$lagujarati $uuvowelsigngujarati
+!	$vauuvowelsigngujarati		$vagujarati $uuvowelsigngujarati
+!	$ssauuvowelsigngujarati		$ssagujarati $uuvowelsigngujarati
+!	$sauuvowelsigngujarati		$sagujarati $uuvowelsigngujarati
+!	$karvocalicvowelsigngujarati		$kagujarati $rvocalicvowelsigngujarati
+!	$gharvocalicvowelsigngujarati		$ghagujarati $rvocalicvowelsigngujarati
+!	$tarvocalicvowelsigngujarati		$tagujarati $rvocalicvowelsigngujarati
+!	$darvocalicvowelsigngujarati		$dagujarati $rvocalicvowelsigngujarati
+!	$dharvocalicvowelsigngujarati		$dhagujarati $rvocalicvowelsigngujarati
+!	$parvocalicvowelsigngujarati		$pagujarati $rvocalicvowelsigngujarati
+!	$barvocalicvowelsigngujarati		$bagujarati $rvocalicvowelsigngujarati
+!	$bharvocalicvowelsigngujarati		$bhagujarati $rvocalicvowelsigngujarati
+!	$marvocalicvowelsigngujarati		$magujarati $rvocalicvowelsigngujarati
+!	$varvocalicvowelsigngujarati		$vagujarati $rvocalicvowelsigngujarati
+!	$ssarvocalicvowelsigngujarati		$ssagujarati $rvocalicvowelsigngujarati
+!	$sarvocalicvowelsigngujarati		$sagujarati $rvocalicvowelsigngujarati
+!	$harvocalicvowelsigngujarati		$hagujarati $rvocalicvowelsigngujarati
+!	$kaevowelsigngujarati		$kagujarati $evowelsigngujarati
+!	$kassaevowelsigngujarati		$kassagujarati $evowelsigngujarati
+!	$khaevowelsigngujarati		$khagujarati $evowelsigngujarati
+!	$gaevowelsigngujarati		$gagujarati $evowelsigngujarati
+!	$ghaevowelsigngujarati		$ghagujarati $evowelsigngujarati
+!	$caevowelsigngujarati		$cagujarati $evowelsigngujarati
+!	$chaevowelsigngujarati		$chagujarati $evowelsigngujarati
+!	$jaevowelsigngujarati		$jagujarati $evowelsigngujarati
+!	$janyaevowelsigngujarati		$janyagujarati $evowelsigngujarati
+!	$jhaevowelsigngujarati		$jhagujarati $evowelsigngujarati
+!	$ttaevowelsigngujarati		$ttagujarati $evowelsigngujarati
+!	$tthaevowelsigngujarati		$tthagujarati $evowelsigngujarati
+!	$ddaevowelsigngujarati		$ddagujarati $evowelsigngujarati
+!	$ddhaevowelsigngujarati		$ddhagujarati $evowelsigngujarati
+!	$nnaevowelsigngujarati		$nnagujarati $evowelsigngujarati
+!	$taevowelsigngujarati		$tagujarati $evowelsigngujarati
+!	$taraevowelsigngujarati		$taragujarati $evowelsigngujarati
+!	$thaevowelsigngujarati		$thagujarati $evowelsigngujarati
+!	$daevowelsigngujarati		$dagujarati $evowelsigngujarati
+!	$dhaevowelsigngujarati		$dhagujarati $evowelsigngujarati
+!	$naevowelsigngujarati		$nagujarati $evowelsigngujarati
+!	$paevowelsigngujarati		$pagujarati $evowelsigngujarati
+!	$phaevowelsigngujarati		$phagujarati $evowelsigngujarati
+!	$baevowelsigngujarati		$bagujarati $evowelsigngujarati
+!	$bhaevowelsigngujarati		$bhagujarati $evowelsigngujarati
+!	$maevowelsigngujarati		$magujarati $evowelsigngujarati
+!	$yaevowelsigngujarati		$yagujarati $evowelsigngujarati
+!	$raevowelsigngujarati		$ragujarati $evowelsigngujarati
+!	$laevowelsigngujarati		$lagujarati $evowelsigngujarati
+!	$llaevowelsigngujarati		$llagujarati $evowelsigngujarati
+!	$vaevowelsigngujarati		$vagujarati $evowelsigngujarati
+!	$shaevowelsigngujarati		$shagujarati $evowelsigngujarati
+!	$ssaevowelsigngujarati		$ssagujarati $evowelsigngujarati
+!	$saevowelsigngujarati		$sagujarati $evowelsigngujarati
+!	$haevowelsigngujarati		$hagujarati $evowelsigngujarati
+!	$nnauvowelsignanusvaragujarati		$nnagujarati $uvowelsigngujarati $anusvaragujarati
+

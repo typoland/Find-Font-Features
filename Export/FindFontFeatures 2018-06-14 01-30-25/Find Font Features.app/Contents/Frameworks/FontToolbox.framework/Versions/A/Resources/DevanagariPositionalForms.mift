@@ -1,0 +1,248 @@
+###############################################################
+#
+#	File:		DevanagariPositionalForms.mift
+# 
+#	Contains:	MIF template for the contextual cleanup of some 
+#				positional variants, etc.
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: DevanagariPositionalForms.mift,v $
+#	Revision 1.3  2006/04/12 22:15:46  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <2>	 6/16/03	JHJ		Renumbered subtable.
+#		 <1>	 5/28/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Devanagari MIF
+//	     10. Last contextual forms
+//====================================================
+
+Type          Contextual
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   4
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+ConsLigNormal           $adeva $badeva $banadeva $baradeva $bhadeva $bharadeva $cadeva $caradeva $chadeva $dadeva $damadeva $dayadeva $ddadeva $ddhadeva $dhadeva $dhanadeva $dharadeva $gadeva $ganadeva $garadeva $ghadeva $ghanadeva $gharadeva $ghhadeva $jadeva $jajadeva $janyadeva $jaradeva $jhadeva $jharadeva $kanadeva $kassadeva $katadeva $khadeva $khanadeva $kharadeva $ladeva $lladeva $madeva $manadeva $maradeva $nadeva $nanadeva $naradeva $ngadeva $nnadeva $nyadeva $nyacadeva $padeva $panadeva $paradeva $patadeva $radeva $sadeva $sanadeva $saradeva $sataradeva $shadeva $shacadeva $shaladeva $shanadeva $sharadeva $shavadeva $ssadeva $ssattadeva $ssatthadeva $tadeva $tanadeva $taradeva $tatadeva $thadeva $tharadeva $ttadeva $tthadeva $vadeva $vanadeva $varadeva $vayadeva $yadeva $yapostformdeva $yapostformhighdeva $yapostformshortdeva $yyadeva $zadeva $zerowidthnonjoiner 
+ConsLigWide             
+ConsLeft                $fadeva $faradeva $kadeva $karadeva $phadeva $pharadeva $qadeva 
+ConsLowLeft             $kakadeva $kavadeva 
+ConsLowRight            $dabadeva $dadhadeva $dadhayadeva $daradeva $davadeva 
+HasNukta                $dddhadeva $llladeva $nnnadeva $rhadeva $rradeva 
+HasNuktaLeft            $anuktadeva $khhadeva 
+ConsPostNoWidth         $nastemdeva $rastemdeva 
+ConsLigPostForm         
+Reph                    $rephdeva $rephanusvaradeva 
+VowelIncluded           $aadeva $aideva $audeva $baevowelsigndeva $bhaevowelsigndeva $caevowelsigndeva $chaevowelsigndeva $daevowelsigndeva $dauuvowelsigndeva $dauvowelsigndeva $edeva $ecandradeva $gaevowelsigndeva $haaivowelsigndeva $haevowelsigndeva $harvocalicvowelsigndeva $harvocalicvowelsigndeva $hauuvowelsigndeva $hauuvowelsigndeva $hauvowelsigndeva $hauvowelsigndeva $ideva $iideva $jaevowelsigndeva $kaevowelsigndeva $khaevowelsigndeva $laevowelsigndeva $lvocalicdeva $lvocalicdeva $maaivowelsigndeva $maevowelsigndeva $naevowelsigndeva $odeva $ocandradeva $raevowelsigndeva $rauuvowelsigndeva $rauuvowelsigndeva $rauvowelsigndeva $rauvowelsigndeva $rrvocalicdeva $rvocalicdeva $saevowelsigndeva $shaevowelsigndeva $taevowelsigndeva $thaevowelsigndeva $ttaevowelsigndeva $udeva $uudeva $vaevowelsigndeva $yaevowelsigndeva 
+MatraBelow              $llvocalicvowelsigndeva $lvocalicvowelsigndeva $rrvocalicvowelsigndeva $rvocalicvowelsigndeva 
+MatraBelowOpNukta       $uuvowelsigndeva $uvowelsigndeva 
+MatraAbove              $aivowelsigndeva $ecandravowelsigndeva $eshortvowelsigndeva $evowelsigndeva 
+MatraLigAbove           $aivowelsignanusvaradeva $aivowelsignrephdeva $aivowelsignrephanusvaradeva $evowelsignanusvaradeva $evowelsignrephdeva $evowelsignrephanusvaradeva 
+OtherMatra              $aavowelsigndeva $auvowelsigndeva $iivowelsigndeva $ivowelsigndeva $ocandravowelsigndeva $oshortvowelsigndeva $ovowelsigndeva 
+ConsLigDeep             $dabhadeva $dabhayadeva $dadadeva $dadaradeva $dadavadeva $dadayadeva $dagadeva $dagaradeva $daghadeva $danadeva $darayadeva $davayadeva $ddaddadeva $ddaddhadeva $ddaghadeva $ddamadeva $ddaradeva $ddhaddhadeva $hadeva $haladeva $hamadeva $hanadeva $hannadeva $haradeva $havadeva $hayadeva $ngagadeva $ngaghadeva $ngakadeva $ngakassadeva $ngakassavadeva $ngakassayadeva $ngakatadeva $ngakhadeva $ngamadeva $ttaradeva $ttattadeva $ttatthadeva $tthatthadeva 
+ConsPostDeep            $gapoststackdeva $labottomstackdeva $racaretdeva $racaretdeepdeva $rastemdeepdeva $vabottomstackdeva $yapostformlowdeva 
+Nasal                   $anusvaradeva $candrabindudeva 
+Halant                  $explicithalantdeva $viramadeva 
+
+                    EOT                 OOB                 DEL                 EOL                 ConsLigNormal       ConsLigWide         ConsLeft            ConsLowLeft         ConsLowRight        HasNukta            HasNuktaLeft        ConsPostNoWidth     ConsLigPostForm     Reph                VowelIncluded       MatraBelow          MatraBelowOpNukta   MatraAbove          MatraLigAbove       OtherMatra          ConsLigDeep         ConsPostDeep        Nasal               Halant              
+AtStartOfText       1                   1                   1                   1                   2                   3                   6                   7                   8                   9                   10                  1                   1                   1                   5                   1                   1                   1                   1                   1                   4                   1                   1                   1                   
+AtStartOfLine       1                   1                   1                   1                   2                   3                   6                   7                   8                   9                   10                  1                   1                   1                   5                   1                   1                   1                   1                   1                   4                   1                   1                   1                   
+GotCons             1                   1                   11                  1                   12                  13                  6                   7                   8                   9                   10                  14                  15                  18                  5                   21                  22                  19                  20                  23                  16                  17                  24                  1                   
+SawMatra            1                   1                   25                  1                   12                  13                  6                   7                   8                   9                   10                  14                  15                  18                  5                   28                  29                  26                  27                  30                  16                  17                  31                  1                   
+SawDeep             1                   1                   32                  1                   33                  34                  6                   7                   8                   9                   10                  35                  36                  18                  5                   39                  40                  41                  42                  43                  37                  38                  31                  44                  
+SawLeft             1                   1                   45                  1                   12                  13                  6                   7                   8                   9                   10                  14                  15                  51                  5                   46                  47                  48                  49                  52                  16                  17                  50                  1                   
+SawLowLeft          1                   1                   53                  1                   12                  13                  6                   7                   8                   9                   10                  14                  15                  18                  5                   54                  55                  56                  57                  58                  16                  17                  31                  1                   
+SawLowRight         1                   1                   59                  1                   12                  13                  6                   7                   8                   9                   10                  14                  15                  18                  5                   60                  61                  62                  63                  64                  16                  17                  31                  1                   
+SawNukta            1                   1                   65                  1                   2                   3                   6                   7                   8                   9                   10                  1                   1                   1                   5                   66                  67                  68                  69                  71                  4                   1                   70                  1                   
+SawNuktaLeft        1                   1                   72                  1                   2                   3                   6                   7                   8                   9                   10                  1                   1                   1                   5                   74                  73                  75                  76                  77                  4                   1                   1                   1                   
+
+	GoTo              Mark?  Advance?  SubstMark             SubstCurrent
+1	AtStartOfText     no     yes       none                  none
+2	GotCons           no     yes       none                  none
+3	GotCons           no     yes       none                  none
+4	SawDeep           no     yes       none                  none
+5	SawMatra          no     yes       none                  none
+6	SawLeft           no     yes       none                  none
+7	SawLowLeft        no     yes       none                  none
+8	SawLowRight       no     yes       none                  none
+9	SawNukta          yes    yes       none                  none
+10	SawNuktaLeft      yes    yes       none                  none
+11	GotCons           no     yes       none                  none
+12	GotCons           no     yes       none                  none
+13	GotCons           no     yes       none                  none
+14	GotCons           no     yes       none                  none
+15	GotCons           no     yes       none                  none
+16	SawDeep           no     yes       none                  none
+17	SawDeep           no     yes       none                  none
+18	AtStartOfText     no     yes       none                  none
+19	SawMatra          no     yes       none                  MainForms
+20	SawMatra          no     yes       none                  none
+21	SawMatra          no     yes       none                  MainForms
+22	SawMatra          no     yes       none                  MainForms
+23	SawMatra          no     yes       none                  none
+24	AtStartOfText     no     yes       none                  MainForms
+25	SawMatra          no     yes       none                  none
+26	AtStartOfText     no     yes       none                  none
+27	AtStartOfText     no     yes       none                  none
+28	AtStartOfText     no     yes       none                  none
+29	AtStartOfText     no     yes       none                  none
+30	AtStartOfText     no     yes       none                  none
+31	AtStartOfText     no     yes       none                  MainForms
+32	SawDeep           no     yes       none                  none
+33	GotCons           no     yes       none                  none
+34	GotCons           no     yes       none                  none
+35	GotCons           no     yes       none                  none
+36	GotCons           no     yes       none                  none
+37	SawDeep           no     yes       none                  none
+38	SawDeep           no     yes       none                  none
+39	SawMatra          no     yes       none                  DeepForms
+40	SawMatra          no     yes       none                  DeepForms
+41	SawMatra          no     yes       none                  MainForms
+42	SawMatra          no     yes       none                  none
+43	SawMatra          no     yes       none                  none
+44	AtStartOfText     no     yes       none                  DeepForms
+45	SawLeft           no     yes       none                  none
+46	SawMatra          no     yes       none                  LeftForms
+47	SawMatra          no     yes       none                  LeftForms
+48	SawMatra          no     yes       none                  LeftForms
+49	SawMatra          no     yes       none                  LeftForms
+50	AtStartOfText     no     yes       none                  LeftForms
+51	AtStartOfText     no     yes       none                  LeftForms
+52	SawMatra          no     yes       none                  none
+53	SawLowLeft        no     yes       none                  none
+54	SawMatra          no     yes       none                  LowLeftForms
+55	SawMatra          no     yes       none                  LowLeftForms
+56	SawMatra          no     yes       none                  MainForms
+57	SawMatra          no     yes       none                  none
+58	SawMatra          no     yes       none                  none
+59	SawLowRight       no     yes       none                  none
+60	SawMatra          no     yes       none                  LowRightForms
+61	SawMatra          no     yes       none                  LowRightForms
+62	SawMatra          no     yes       none                  MainForms
+63	SawMatra          no     yes       none                  none
+64	SawMatra          no     yes       none                  none
+65	SawNukta          no     yes       none                  none
+66	SawMatra          no     yes       none                  MainForms
+67	SawMatra          no     yes       NuktaForms            NuktaMatraForms
+68	SawMatra          no     yes       none                  MainForms
+69	SawMatra          no     yes       none                  none
+70	AtStartOfText     no     yes       none                  MainForms
+71	SawMatra          no     yes       none                  none
+72	SawNukta          no     yes       none                  none
+73	SawMatra          no     yes       NuktaForms            NuktaMatraLeftForms
+74	SawMatra          no     yes       none                  MainForms
+75	SawMatra          no     yes       none                  MainForms
+76	SawMatra          no     yes       none                  none
+77	SawMatra          no     yes       none                  none
+
+MainForms
+!	$uvowelsigndeva	$uvowelsignrightdeva
+!	$uuvowelsigndeva	$uuvowelsignrightdeva
+!	$rvocalicvowelsigndeva	$rvocalicvowelsignrightdeva
+!	$rrvocalicvowelsigndeva	$rrvocalicvowelsignrightdeva
+!	$lvocalicvowelsigndeva	$lvocalicvowelsignrightdeva
+!	$llvocalicvowelsigndeva	$llvocalicvowelsignrightdeva
+!	$eshortvowelsigndeva	$eshortvowelsignleftdeva
+!	$evowelsigndeva	$evowelsignleftdeva
+!	$aivowelsigndeva	$aivowelsignleftdeva
+!	$ecandravowelsigndeva	$ecandravowelsignleftdeva
+!	$candrabindudeva	$candrabinduleftdeva
+!	$anusvaradeva	$anusvaraleftdeva
+
+DeepForms
+!	$uvowelsigndeva	$uvowelsigndeepdeva
+!	$uuvowelsigndeva	$uuvowelsigndeepdeva
+!	$rvocalicvowelsigndeva	$rvocalicvowelsigndeepdeva
+!	$rrvocalicvowelsigndeva	$rrvocalicvowelsigndeepdeva
+!	$lvocalicvowelsigndeva	$lvocalicvowelsigndeepdeva
+!	$llvocalicvowelsigndeva	$llvocalicvowelsigndeepdeva
+!	$viramadeva	$viramarightdeva
+
+LeftForms
+!	$uvowelsigndeva	$uvowelsignleftdeva
+!	$uuvowelsigndeva	$uuvowelsignleftdeva
+!	$rvocalicvowelsigndeva	$rvocalicvowelsignleftdeva
+!	$rrvocalicvowelsigndeva	$rrvocalicvowelsignleftdeva
+!	$lvocalicvowelsigndeva	$lvocalicvowelsignleftdeva
+!	$llvocalicvowelsigndeva	$llvocalicvowelsignleftdeva
+!	$eshortvowelsigndeva	$eshortvowelsignleftdeva
+!	$evowelsigndeva	$evowelsigncenterstemdeva
+!	$evowelsignanusvaradeva	$evowelsignanusvaracenterstemdeva
+!	$evowelsignrephdeva	$evowelsignrephcenterstemdeva
+!	$evowelsignrephanusvaradeva	$evowelsignrephanusvaracenterstemdeva
+!	$aivowelsigndeva	$aivowelsigncenterstemdeva
+!	$aivowelsignanusvaradeva	$aivowelsignanusvaracenterstemdeva
+!	$aivowelsignrephdeva	$aivowelsignrephcenterstemdeva
+!	$aivowelsignrephanusvaradeva	$aivowelsignrephanusvaracenterstemdeva
+!	$anusvaradeva	$anusvaracenterstemdeva
+!	$candrabindudeva	$candrabinducenterstemdeva
+!	$ecandravowelsigndeva	$ecandravowelsigncenterstemdeva
+!	$rephdeva	$rephcenterstemdeva
+!	$rephanusvaradeva	$rephanusvaracenterstemdeva
+
+LowLeftForms
+!	$uvowelsigndeva	$uvowelsignlowleftdeva
+!	$uuvowelsigndeva	$uuvowelsignlowleftdeva
+!	$rvocalicvowelsigndeva	$rvocalicvowelsignlowleftdeva
+!	$rrvocalicvowelsigndeva	$rrvocalicvowelsignlowleftdeva
+!	$lvocalicvowelsigndeva	$lvocalicvowelsignlowleftdeva
+!	$llvocalicvowelsigndeva	$llvocalicvowelsignlowleftdeva
+
+LowRightForms
+!	$uvowelsigndeva	$uvowelsignlowrightdeva
+!	$uuvowelsigndeva	$uuvowelsignlowrightdeva
+!	$rvocalicvowelsigndeva	$rvocalicvowelsignlowrightdeva
+!	$rrvocalicvowelsigndeva	$rrvocalicvowelsignlowrightdeva
+!	$lvocalicvowelsigndeva	$lvocalicvowelsignlowrightdeva
+!	$llvocalicvowelsigndeva	$llvocalicvowelsignlowrightdeva
+
+NuktaForms
+!	$qadeva	$kadeva
+!	$khhadeva	$khadeva
+!	$ghhadeva	$gadeva
+!	$zadeva	$jadeva
+!	$dddhadeva	$ddadeva
+!	$rhadeva	$ddhadeva
+!	$fadeva	$phadeva
+!	$faradeva	$pharadeva
+!	$nnadeva	$nadeva
+!	$yyadeva	$yadeva
+!	$rradeva	$radeva
+!	$nnnadeva	$nadeva
+!	$llladeva	$lladeva
+
+NuktaMatraForms
+!	$uvowelsigndeva	$uvowelsignnuktarightdeva
+!	$uuvowelsigndeva	$uuvowelsignnuktarightdeva
+
+NuktaMatraLeftForms
+!	$uvowelsigndeva	$uvowelsignnuktaleftdeva
+!	$uuvowelsigndeva	$uuvowelsignnuktaleftdeva
+

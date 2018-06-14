@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FindFontFeatures</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C</string>
+				<key>dateExpires</key>
+				<string>28/09/2018</string>
+				<key>type</key>
+				<string>Mac Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>x86_64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>B031C0F50067DDA6941102D2BEE1FD5D8D1BBF9C</string>
+						<key>dateExpires</key>
+						<string>28/09/2018</string>
+						<key>type</key>
+						<string>Mac Development</string>
+					</dict>
+					<key>name</key>
+					<string>FontToolbox.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>3ASHMCMJEN</string>
+						<key>name</key>
+						<string>Łukasz Dziedzic (Personal Team)</string>
+					</dict>
+				</dict>
+			</array>
+			<key>name</key>
+			<string>Find Font Features.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>3ASHMCMJEN</string>
+				<key>name</key>
+				<string>Łukasz Dziedzic (Personal Team)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

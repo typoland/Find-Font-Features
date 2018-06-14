@@ -1,0 +1,558 @@
+fileItemList ::= /* empty */
+		 | fileItem
+		 | fileItemList fileItem
+
+fileItem ::= rearrangementSubtable
+	 | ligatureSubtable
+	 | noncontextualSubtable
+	 | contextualSubtable
+	 | insertionSubtable
+	 | glyphDeclaration
+	 | globalClassDeclaration
+	 | featureDeclaration
+	 | kerningTable
+	 | justificationTable
+	 | includeStatement
+	 | uniMIFDirective
+	 | constantDeclaration
+	 | ';'
+
+includeStatement ::= 'include \"[^\"\n\r]+\"'
+
+kerningTable ::= kerningList
+		 | kerningMatrix
+		 | kerningIndexMatrix
+		 | contextualKerningSubtable
+		 | controlPointKerningSubtable
+
+controlPointKerningSubtable ::= 'control point kerning subtable' openBlock tupleCount kerningLayoutDirection kerningDirection pointType scanDirection triggerGlyphsList anchorPointDefinitionList classDeclarationList stateDefinitionList controlPointKerningTransitionList controlPointKerningActionList closeBlock
+
+pointType ::= /* empty */
+	  | 'uses anchor points;'
+	  | 'uses control points;'
+	  | 'uses coordinates;'
+
+controlPointKerningTransitionList ::= controlPointKerningTransition
+							  | controlPointKerningTransitionList controlPointKerningTransition
+
+controlPointKerningTransition ::= 'transition' identifier openBlock changeMarkRepeat resetStack kerningAction closeBlock
+						  | 'transition' identifier openBlock changeMarkRepeat resetStack closeBlock
+						  | 'transition' identifier openBlock changeMarkRepeat kerningAction closeBlock
+						  | 'transition' identifier openBlock changeMarkRepeat closeBlock
+
+controlPointKerningActionList ::= controlPointKerningAction
+						  | controlPointKerningActionList controlPointKerningAction
+
+controlPointKerningAction ::= pointCoordinateKerningAction
+					  | anchorPointKerningAction
+
+pointCoordinateKerningAction ::= 'coordinate action' identifier openBlock 'marked glyph coordinate:' coordinate '; current glyph coordinate:' coordinate ';' closeBlock
+						 | 'coordinate action' identifier openBlock 'current glyph coordinate:' coordinate '; marked glyph coordinate:' coordinate ';' closeBlock
+
+anchorPointKerningAction ::= 'anchor point action' identifier openBlock 'marked glyph point:' unsignedInteger '; current glyph point:' unsignedInteger ';' closeBlock
+					 | 'anchor point action' identifier openBlock 'current glyph point:' unsignedInteger '; marked glyph point:' unsignedInteger ';' closeBlock
+
+coordinate ::= '(' unsignedInteger ',' unsignedInteger ')'
+
+anchorPointDefinitionList ::= /* empty */
+					  | anchorPointDefinition
+					  | anchorPointDefinitionList anchorPointDefinition
+
+anchorPointDefinition ::= 'anchor' glyphID '[' unsignedInteger '] := (' signedInteger ',' signedInteger ');'
+
+contextualKerningSubtable ::= 'contextual kerning subtable' openBlock tupleCount kerningLayoutDirection kerningDirection scanDirection classDeclarationList stateDefinitionList contextualKerningTransitionList contextualKerningActionList closeBlock
+
+contextualKerningTransitionList ::= contextualKerningTransition
+							| contextualKerningTransitionList contextualKerningTransition
+
+contextualKerningTransition ::= 'transition' identifier openBlock stateChange pushResetRepeat kerningAction closeBlock
+						| 'transition' identifier openBlock stateChange pushResetRepeat closeBlock
+						| 'transition' identifier openBlock stateChange kerningAction closeBlock
+
+pushResetRepeat ::= /* empty */
+			| pushGlyph resetStack repeatGlyph
+			| pushGlyph repeatGlyph resetStack
+			| resetStack pushGlyph repeatGlyph
+			| resetStack repeatGlyph pushGlyph
+			| repeatGlyph pushGlyph resetStack
+			| repeatGlyph resetStack pushGlyph
+			| pushGlyph resetStack
+			| pushGlyph repeatGlyph
+			| resetStack repeatGlyph
+			| resetStack pushGlyph
+			| repeatGlyph resetStack
+			| repeatGlyph pushGlyph
+			| pushGlyph
+			| repeatGlyph
+			| resetStack
+
+pushGlyph ::= 'push current glyph;'
+	  | 'push glyph;'
+
+resetStack ::= 'reset stack;'
+
+kerningAction ::= 'kerning action:' identifier ';'
+
+contextualKerningActionList ::= contextualKerningAction
+						| contextualKerningActionList contextualKerningAction
+
+contextualKerningAction ::= 'action' identifier openBlock kerningValueList closeBlock
+
+kerningValueList ::= signedInteger
+			 | kerningValueList ',' signedInteger
+
+kerningIndexMatrix ::= 'kerning index matrix' openBlock tupleCount kerningLayoutDirection kerningDirection classDeclarationList leftClassList rightClassList kerningMatrixEntryList closeBlock
+
+kerningMatrix ::= 'kerning matrix' openBlock tupleCount kerningLayoutDirection kerningDirection classDeclarationList leftClassList rightClassList kerningMatrixEntryList closeBlock
+
+kerningList ::= 'kerning list' openBlock tupleCount kerningLayoutDirection kerningDirection kerningPairList closeBlock
+
+kerningDirection ::= /* empty */
+			 | 'kerning is horizontal;'
+			 | 'kerning is vertical;'
+
+tupleCount ::= /* empty */
+	   | unsignedInteger 'tuple;'
+
+kerningLayoutDirection ::= /* empty */
+				   | 'layout is horizontal;'
+				   | 'layout is vertical;'
+
+kerningPairList ::= kerningPair
+			| kerningPairList kerningPair
+
+kerningPair ::= glyphID '+' glyphID '=>' kerningValueList ';'
+
+leftClassList ::= 'left classes' openBlock identifierList closeBlock
+
+rightClassList ::= 'right classes' openBlock identifierList closeBlock
+
+identifierList ::= identifier
+		   | identifierList ',' identifier
+
+kerningMatrixEntryList ::= kerningMatrixEntry
+				   | kerningMatrixEntryList kerningMatrixEntry
+
+kerningMatrixEntry ::= identifier '+' identifier '=>' kerningValueList ';'
+
+justificationTable ::= 'justification table' openBlock layoutDirection widthDeltaSubtable closeBlock
+			   | 'justification table' openBlock layoutDirection widthDeltaSubtable postcompSubtable closeBlock
+			   | 'justification table' openBlock layoutDirection widthDeltaSubtable justificationCategorySubtable closeBlock
+			   | 'justification table' openBlock layoutDirection widthDeltaSubtable justificationCategorySubtable postcompSubtable closeBlock
+
+postcompSubtable ::= 'postcomp subtable' openBlock classDeclarationList namedPostcompActionsList closeBlock
+
+namedPostcompActionsList ::= namedPostcompActions
+					 | namedPostcompActionsList namedPostcompActions
+
+namedPostcompActions ::= 'postcomp actions' identifier openBlock postcompActionList closeBlock
+
+postcompActionList ::= postcompAction
+			   | postcompActionList postcompAction
+
+postcompAction ::= conditionalAddPostcompAction
+		   | unconditionalAddPostcompAction
+		   | decomposePostcompAction
+		   | repeatPostcompAction
+		   | stretchPostcompAction
+
+stretchPostcompAction ::= 'stretch action' identifier ';'
+				  | 'stretch action null;'
+				  | 'stretch action;'
+
+repeatPostcompAction ::= 'repeat action' identifier openBlock 'glyph:' glyphID ';' closeBlock
+				 | 'repeat action null' openBlock 'glyph:' glyphID ';' closeBlock
+				 | 'repeat action' openBlock 'glyph:' glyphID ';' closeBlock
+
+conditionalAddPostcompAction ::= 'replace action' identifier openBlock threshold substituteGlyph addGlyph closeBlock
+						 | 'replace action' identifier openBlock threshold substituteGlyph closeBlock
+						 | 'replace action null' openBlock threshold substituteGlyph addGlyph closeBlock
+						 | 'replace action null' openBlock threshold substituteGlyph closeBlock
+						 | 'replace action' openBlock threshold substituteGlyph addGlyph closeBlock
+						 | 'replace action' openBlock threshold substituteGlyph closeBlock
+
+threshold ::= 'threshold:' fixed ';'
+
+addGlyph ::= 'add glyph:' glyphID ';'
+
+substituteGlyph ::= 'substitute glyph:' glyphID ';'
+
+unconditionalAddPostcompAction ::= 'unconditional add action' identifier openBlock 'glyph:' glyphID ';' closeBlock
+						   | 'unconditional add action null' openBlock 'glyph:' glyphID ';' closeBlock
+						   | 'unconditional add action' openBlock 'glyph:' glyphID ';' closeBlock
+
+decomposePostcompAction ::= decomposeLiteral identifier openBlock lowerLimit upperLimit postcompOrder postcompGlyphs closeBlock
+					| decomposeLiteral 'null' openBlock lowerLimit upperLimit postcompOrder postcompGlyphs closeBlock
+					| decomposeLiteral openBlock lowerLimit upperLimit postcompOrder postcompGlyphs closeBlock
+
+decomposeLiteral ::= 'decompose action'
+
+lowerLimit ::= 'lower limit:' fixed ';'
+
+upperLimit ::= 'upper limit:' fixed ';'
+
+postcompOrder ::= 'order:' unsignedInteger ';'
+
+postcompGlyphs ::= 'glyphs:' glyphIDList ';'
+
+justificationCategorySubtable ::= 'justification category subtable' openBlock classDeclarationList stateDefinitionList justificationTransitionList closeBlock
+
+justificationTransitionList ::= justificationTransition
+						| justificationTransitionList justificationTransition
+
+justificationTransition ::= 'transition' identifier openBlock changeMarkRepeat closeBlock
+					| 'transition' identifier openBlock changeMarkRepeat currentGlyphCategory closeBlock
+					| 'transition' identifier openBlock changeMarkRepeat markGlyphCategory closeBlock
+					| 'transition' identifier openBlock changeMarkRepeat currentGlyphCategory markGlyphCategory closeBlock
+					| 'transition' identifier openBlock changeMarkRepeat markGlyphCategory currentGlyphCategory closeBlock
+
+currentGlyphCategory ::= 'current glyph category:' identifier ';'
+
+markGlyphCategory ::= 'marked glyph category:' identifier ';'
+
+widthDeltaSubtable ::= 'factors subtable' openBlock classDeclarationList widthDeltaCrossReference closeBlock
+
+widthDeltaCrossReference ::= namedWidthDeltaList
+					 | widthDeltaCrossReference namedWidthDeltaList
+
+namedWidthDeltaList ::= 'width deltas' identifier openBlock widthDeltaRecordList closeBlock
+				| 'width deltas' identifier widthDeltaRecord
+
+widthDeltaRecordList ::= namedWidthDeltaRecord
+				 | widthDeltaRecordList namedWidthDeltaRecord
+				 | growWidthDeltas shrinkWidthDeltas
+
+namedWidthDeltaRecord ::= identifier 'category' widthDeltaRecord
+				  | 'null category' widthDeltaRecord
+
+widthDeltaRecord ::= openBlock growWidthDeltas shrinkWidthDeltas closeBlock
+
+growWidthDeltas ::= 'grow deltas' openBlock 'before limit:' fixed '; after limit:' fixed ';' justificationPriority closeBlock
+			| 'grow deltas' openBlock 'before limit:' fixed '; after limit:' fixed ';' justificationPriority unlimitedGapFlag closeBlock
+
+shrinkWidthDeltas ::= 'shrink deltas' openBlock 'before limit:' fixed '; after limit:' fixed ';' justificationPriority closeBlock
+			  | 'shrink deltas' openBlock 'before limit:' fixed '; after limit:' fixed ';' justificationPriority unlimitedGapFlag closeBlock
+
+unlimitedGapFlag ::= 'unlimited gap;'
+
+justificationPriority ::= /* empty */
+				  | 'kashida priority;'
+				  | 'whitespace priority;'
+				  | 'intercharacter priority;'
+				  | 'null priority;'
+
+uniMIFDirective ::= 'unimif;'
+
+rearrangementSubtable ::= 'rearrangement subtable' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList rearrangementTransitionList closeBlock
+				  | 'rearrangement' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList rearrangementTransitionList closeBlock
+
+rearrangementTransitionList ::= rearrangementTransition
+						| rearrangementTransitionList rearrangementTransition
+
+rearrangementTransition ::= 'transition' identifier openBlock stateChange markForRearrangement repeatGlyph rearrangementAction closeBlock
+					| 'transition' identifier openBlock stateChange markForRearrangement rearrangementAction closeBlock
+					| 'transition' identifier openBlock stateChange markForRearrangement repeatGlyph closeBlock
+					| 'transition' identifier openBlock stateChange markForRearrangement closeBlock
+
+markForRearrangement ::= /* empty */
+				 | markAsFirst
+				 | markAsLast
+				 | markAsBoth
+
+markAsFirst ::= 'mark as first;'
+		| 'mark first;'
+		| 'first;'
+
+markAsLast ::= 'mark as last;'
+	   | 'mark last;'
+	   | 'last;'
+
+markAsBoth ::= 'mark as both;'
+	   | 'mark first and last;'
+	   | 'mark both;'
+	   | 'both;'
+
+rearrangementAction ::= 'rearrangement:' REARRANGEMENT ';'
+				| REARRANGEMENT ';'
+
+ligatureSubtable ::= 'ligature list' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList ignoreGlyphsList ligatureList closeBlock
+			 | 'ligature subtable' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList ignoreGlyphsList ligatureList closeBlock
+			 | 'ligature' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList ignoreGlyphsList ligatureList closeBlock
+
+ignoreGlyphsList ::= /* empty */
+			 | 'ignore glyphs' glyphIDList ';'
+			 | 'ignore glyphs' openBlock glyphIDList closeBlock
+
+ligatureList ::= ligature
+		 | ligatureList ligature
+
+ligature ::= glyphID ':=' glyphIDSum ';'
+
+glyphIDSum ::= glyphID '+' glyphID
+	   | glyphIDSum '+' glyphID
+
+contextualSubtable ::= 'contextual subtable' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList contextualTransitionList contextualActionList closeBlock
+			   | 'contextual' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList contextualTransitionList contextualActionList closeBlock
+
+contextualTransitionList ::= contextualTransition
+					 | contextualTransitionList contextualTransition
+
+contextualTransition ::= 'transition' identifier openBlock changeMarkRepeat contextualActionMarked contextualActionCurrent closeBlock
+				 | 'transition' identifier openBlock changeMarkRepeat contextualActionMarked closeBlock
+				 | 'transition' identifier openBlock changeMarkRepeat contextualActionCurrent closeBlock
+				 | 'transition' identifier openBlock changeMarkRepeat closeBlock
+
+contextualActionCurrent ::= 'current glyph substitution:' identifier ';'
+
+contextualActionMarked ::= 'marked glyph substitution:' identifier ';'
+
+contextualActionList ::= contextualAction
+				 | contextualActionList contextualAction
+
+contextualAction ::= 'substitution' identifier openBlock glyphSubstitutionList closeBlock
+
+noncontextualSubtable ::= 'noncontextual subtable' featureSelectorMatch openBlock layoutAndScanDirections glyphSubstitutionList closeBlock
+				  | 'noncontextual' featureSelectorMatch openBlock layoutAndScanDirections glyphSubstitutionList closeBlock
+
+glyphSubstitutionList ::= glyphSubstitution
+				  | glyphSubstitutionList glyphSubstitution
+
+glyphSubstitution ::= glyphID '=>' glyphID ';'
+			  | '<DEL> =>' glyphID ';'
+			  | '* \"[^\"\n\r]+\" =>' glyphID ';'
+			  | glyphID '=> <DEL>;'
+			  | '* \"[^\"\n\r]+\" => <DEL>;'
+			  | '* \"[^\"\n\r]+\" => * \"[^\"\n\r]+\" ;'
+			  | '* \"[^\"\n\r]+\" => *;'
+			  | '* => * \"[^\"\n\r]+\";'
+			  | '^ \"[^\"\n\r]+\" => * \"[^\"\n\r]+\";'
+			  | '^ \"[^\"\n\r]+\" => *;'
+			  | '^ => * \"[^\"\n\r]+\";'
+			  | '* \"[^\"\n\r]+\" => ^ \"[^\"\n\r]+\";'
+			  | '* \"[^\"\n\r]+\" => ^;'
+			  | '* => ^ \"[^\"\n\r]+\";'
+
+insertionSubtable ::= 'insertion subtable' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList insertionTransitionList insertionActionList closeBlock
+			  | 'insertion' featureSelectorMatch openBlock layoutAndScanDirections classDeclarationList stateDefinitionList insertionTransitionList insertionActionList closeBlock
+
+insertionTransitionList ::= insertionTransition
+					| insertionTransitionList insertionTransition
+
+insertionTransition ::= 'transition' identifier openBlock changeMarkRepeat insertionActionMarked insertionActionCurrent closeBlock
+				| 'transition' identifier openBlock changeMarkRepeat insertionActionCurrent insertionActionMarked closeBlock
+				| 'transition' identifier openBlock changeMarkRepeat insertionActionMarked closeBlock
+				| 'transition' identifier openBlock changeMarkRepeat insertionActionCurrent closeBlock
+				| 'transition' identifier openBlock changeMarkRepeat closeBlock
+
+insertionActionMarked ::= 'marked glyph action:' identifier ';'
+
+insertionActionCurrent ::= 'current glyph action:' identifier ';'
+
+insertionActionList ::= /* empty */
+				| insertionAction
+				| insertionActionList insertionAction
+
+insertionAction ::= 'action' identifier openBlock insertionActionGeneral closeBlock
+
+insertionActionGeneral ::= 'insert' glyphIDList 'before glyph;'
+				   | 'insert' glyphIDList 'after glyph;'
+				   | 'insert' glyphIDList 'as kashida before glyph;'
+				   | 'insert' glyphIDList 'as kashida after glyph;'
+				   | 'insert' glyphIDList 'not as kashida before glyph;'
+				   | 'insert' glyphIDList 'not as kashida after glyph;'
+
+changeMarkRepeat ::= stateChange
+			 | stateChange markGlyph
+			 | stateChange repeatGlyph
+			 | stateChange markGlyph repeatGlyph
+
+stateChange ::= 'change state to' identifier ';'
+
+markGlyph ::= 'mark glyph;'
+
+repeatGlyph ::= 'repeat glyph;'
+
+stateDefinitionList ::= stateDefinition
+				| stateDefinitionList stateDefinition
+
+stateDefinition ::= 'state' identifier openBlock classActionMapList closeBlock
+
+classActionMapList ::= classActionMap
+			   | classActionMapList classActionMap
+
+classActionMap ::= classList ':' identifier ';'
+
+classList ::= identifier
+	  | classList ',' identifier
+
+featureDeclaration ::= 'feature' featureIDName openBlock featureOptionList selectorDeclarationList closeBlock
+
+featureOptionList ::= /* empty */
+			  | layoutAndScanDirections
+			  | multipleSelectorsValue
+			  | multipleSelectorsValue layoutAndScanDirections
+			  | layoutAndScanDirections multipleSelectorsValue
+
+multipleSelectorsValue ::= 'multiple selectors are allowed;'
+				   | 'multiple selectors are not allowed;'
+				   | 'multiple settings are allowed;'
+				   | 'multiple settings are not allowed;'
+				   | 'is exclusive;'
+				   | 'is not exclusive;'
+
+selectorDeclarationList ::= selectorDeclaration
+					| selectorDeclarationList selectorDeclaration
+
+selectorDeclaration ::= 'selector' selectorIDName ';'
+				| 'selector' selectorIDName openBlock layoutAndScanDirections onByDefault closeBlock
+				| 'selector' selectorIDName openBlock onByDefault layoutAndScanDirections closeBlock
+				| 'selector' selectorIDName openBlock layoutAndScanDirections closeBlock
+
+layoutAndScanDirections ::= /* empty */
+					| layoutDirection
+					| scanDirection
+					| scanDirection layoutDirection
+					| layoutDirection scanDirection
+
+layoutDirection ::= 'layout is horizontal;'
+			| 'layout is vertical;'
+			| 'layout is both;'
+			| 'layout is both horizontal and vertical;'
+			| 'layout is both vertical and horizontal;'
+			| 'layout is horizontal and vertical;'
+			| 'layout is vertical and horizontal;'
+
+scanDirection ::= /* empty */
+		  | glyphProcessDirection
+		  | glyphScanDirection
+		  | glyphScanDirection glyphProcessDirection
+		  | glyphProcessDirection glyphScanDirection
+
+glyphProcessDirection ::= 'process order is layout;'
+				  | 'process order is logical;'
+
+glyphScanDirection ::= 'forward;'
+			   | 'backward;'
+			   | 'scan glyphs forward;'
+			   | 'scan glyphs backward;'
+
+onByDefault ::= 'default;'
+		| 'on by default;'
+		| 'off by default;'
+
+featureIDName ::= '(' featureIdentifier ')'
+		  | '(' featureIdentifier ', invisible)'
+		  | '(' featureIdentifier ', \"[^\"\n\r]+\")'
+
+selectorIDName ::= '(' selectorIdentifier ')'
+		   | '(' selectorIdentifier ', invisible)'
+		   | '(' selectorIdentifier ', \"[^\"\n\r]+\")'
+
+featureSelectorMatch ::= '(' featureIdentifier ',' selectorIdentifier ')'
+
+featureIdentifier ::= identifier
+			  | unsignedInteger
+
+selectorIdentifier ::= identifier
+			   | '[A-Za-z][A-Za-z0-9_-]*'
+			   | unsignedInteger
+
+constantDeclaration ::= 'const' identifier ':=' unsignedInteger ';'
+
+classDeclarationList ::= /* empty */
+				 | classDeclaration
+				 | classDeclarationList classDeclaration
+
+globalClassDeclaration ::= 'class' identifier openBlock glyphList closeBlock
+
+classDeclaration ::= 'class' identifier openBlock glyphList closeBlock
+			 | triggerGlyphsList
+
+triggerGlyphsList ::= /* empty */
+			  | 'trigger glyphs' openBlock glyphList closeBlock
+			  | 'autogenerate trigger glyphs;'
+
+glyphDeclaration ::= 'glyph' identifier ';'
+			 | 'glyph:' identifier ';'
+
+glyphList ::= glyphIDList
+	  | compoundGlyphList
+
+compoundGlyphList ::= compoundGlyphListPiece
+			  | compoundGlyphList '||' compoundGlyphListPiece
+			  | compoundGlyphList '&&' compoundGlyphListPiece
+			  | compoundGlyphList '--' compoundGlyphListPiece
+			  | compoundGlyphList '~~' compoundGlyphListPiece
+
+compoundGlyphListPiece ::= '(' glyphIDList ')'
+				   | glyphPropertyList
+
+glyphPropertyList ::= '\p{[A-Z][a-z]}'
+			  | '\p{script=\\n\{[A-Za-z][A-Za-z0-9_ ]+\}}'
+			  | '\p{block=\\n\{[A-Za-z][A-Za-z0-9_ ]+\}}'
+
+glyphIDList ::= glyphID
+		| glyphIDList ',' glyphID
+
+glyphID ::= glyphName
+	| '[12]?[0-9]{4}'
+	| unsignedInteger
+	| 'U+[12]?[0-9]{4}'
+	| '\u\{[12]?[0-9]{4}\}'
+	| '\u[12]?[0-9]{4}'
+	| '\g\{[12]?[0-9]{4}\}'
+	| 'U+[12]?[0-9A-F]{4}x?'
+	| '\u\{[12]?[0-9A-F]{4}x?\}'
+	| '\u[12]?[0-9A-F]{4}x?'
+	| '\g\{' unsignedInteger '}'
+	| '\c\{' identifier '}'
+	| '\'[-.0-9A-Z_a-z]+\''
+
+glyphName ::= baseGlyphName
+	  | glyphName glyphNameExtension
+
+baseGlyphName ::= identifier
+		  | glyphNameExtension
+
+glyphNameExtension ::= '.' identifier
+			   | '.[0-9]+[A-Za-z0-9_]+'
+			   | '.-?[0-9]+d?'
+
+fixed ::= unsignedInteger
+  | '-?[0-9]+\.[0-9]*'
+
+identifier ::= '[A-Za-z][A-Za-z0-9_]*'
+	   | 'right'
+	   | 'left'
+	   | 'null'
+	   | '[12]?[0-9A-F]{4}x?'
+	   | '[A-Z][a-z]'
+
+unsignedInteger ::= '-?[0-9]+d?'
+			| '[0-9]+[A-Za-z0-9_]+'
+			| '[12]?[0-9]{4}'
+
+signedInteger ::= '-?[0-9]+d?'
+		  | '[0-9]+[A-Za-z0-9_]+'
+		  | '[12]?[0-9]{4}'
+
+openBlock ::= '{'
+
+closeBlock ::= '}'
+	   | '};'
+
+REARRANGEMENT ::= 'Ax->xA'
+			| 'xD->Dx'
+			| 'AxD->DxA'
+			| 'ABx->xAB'
+			| 'ABx->xBA'
+			| 'xCD->CDx'
+			| 'xCD->DCx'
+			| 'AxCD->CDxA'
+			| 'AxCD->DCxA'
+			| 'ABxD->DxAB'
+			| 'ABxD->DxBA'
+			| 'ABxCD->CDxAB'
+			| 'ABxCD->CDxBA'
+			| 'ABxCD->DCxAB'
+			| 'ABxCD->DcxBA'

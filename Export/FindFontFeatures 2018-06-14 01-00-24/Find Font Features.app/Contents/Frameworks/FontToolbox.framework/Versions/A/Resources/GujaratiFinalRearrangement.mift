@@ -1,0 +1,88 @@
+###############################################################
+#
+#	File:		GujaratiFinalRearrangement.mift
+# 
+#	Contains:	MIF templates for the final rearrangement pass for Gujarati
+# 
+#	Version:	Mac OS X
+# 
+#	Written by:	The Apple Font Group
+# 
+#	Copyright:	© 2003–2016 by Apple Inc. All rights reserved.
+# 
+#	File Ownership:
+# 
+#		DRI:				John Jenkins
+# 
+#		Other Contact:		Julio Gonzalez
+# 
+#		Technology:			Apple Font Tools
+# 
+#	Writers:
+# 
+#		(JHJ)	John Jenkins
+#
+#	$Log: GujaratiFinalRearrangement.mift,v $
+#	Revision 1.2  2006/04/12 22:15:48  jenkins
+#	Purely cosmetic update: changed "Other Contact" from
+#	Chia-Chi Chou to Julio Gonzalez, updated copyright strings,
+#	and removed invalid UTF-8 from files.
+#	
+#	Old Change History (most recent first):
+#
+#		 <1>	 6/19/03	JHJ		Initial check-in.
+#
+###############################################################
+//====================================================
+//	Gujarati MIF
+//	     11. Last rearrangement
+//====================================================
+
+Type          Rearrangement
+Name          NULL
+Namecode      5
+Setting       NULL
+Settingcode   6
+Default       yes
+Orientation   HV
+Forward       yes
+Exclusive     no
+
+ClassCons           $kagujarati $khagujarati $gagujarati $ghagujarati $ngagujarati $cagujarati $chagujarati $jagujarati $jhagujarati $nyagujarati $ttagujarati $tthagujarati $ddagujarati $ddhagujarati $nnagujarati $tagujarati $thagujarati $dagujarati $dhagujarati $nagujarati $pagujarati $phagujarati $bagujarati $bhagujarati $magujarati $yagujarati $ragujarati $lagujarati $llagujarati $vagujarati $shagujarati $ssagujarati $sagujarati $hagujarati $zerowidthjoiner $kassagujarati $janyagujarati $taragujarati $kakagujarati $katagujarati $kayagujarati $karagujarati $kalagujarati $kavagujarati $kasagujarati $khatagujarati $kharagujarati $garagujarati $ghanagujarati $gharagujarati $caragujarati $jajagujarati $jayagujarati $jaragujarati $ttattagujarati $tthatthagujarati $ddanagujarati $ddavagujarati $ddhaddhagujarati $daravagujarati $tatagujarati $sataragujarati $tanagujarati $tharagujarati $dadagujarati $dadhagujarati $damagujarati $dayagujarati $daragujarati $davagujarati $dharagujarati $nanagujarati $naragujarati $patagujarati $paragujarati $pharagujarati $baragujarati $bharagujarati $maragujarati $lalagujarati $varagujarati $shacagujarati $shanagujarati $sharagujarati $ssattagujarati $ssatthagujarati $saragujarati $hamagujarati $hayagujarati $explicithalantgujarati 
+ClassPreCons        $kapreformgujarati $kassapreformgujarati $khapreformgujarati $gapreformgujarati $ghapreformgujarati $capreformgujarati $japreformgujarati $japreformforvagujarati $janyapreformgujarati $nnapreformgujarati $tapreformgujarati $tatapreformgujarati $tanapreformgujarati $tarapreformgujarati $thapreformgujarati $dhapreformgujarati $napreformgujarati $nanapreformgujarati $papreformgujarati $prebagujarati $bhapreformgujarati $mapreformgujarati $yapreformgujarati $lapreformgujarati $llapreformgujarati $prevagujarati $shapreformgujarati $shapreformaltonegujarati $shacapreformgujarati $sharapreformgujarati $ssapreformgujarati $sapreformgujarati $hapreformgujarati 
+ClassPostCons       $napostformgujarati $yapostformgujarati $yapostformforddagujarati $yapostformforddhagujarati $racaretpostformgujarati 
+ClassMatraI         $ivowelsigngujarati $ivowelsignanusvaragujarati $ivowelsignrephgujarati $ivowelsignrephanusvaragujarati 
+ClassHalant         $viramagujarati 
+ClassNukta          $nuktagujarati 
+
+                EOT             OOB             DEL             EOL             ClassCons       ClassPreCons    ClassPostCons   ClassMatraI     ClassHalant     ClassNukta      
+StartOfText     1               1               1               1               2               3               1               1               1               1               
+StartOfLine     1               1               1               1               2               3               1               1               1               1               
+GotCons         8               8               8               8               9               10              11              14              13              12              
+GotPreCons      4               4               4               4               5               6               4               4               4               7               
+GotConsNuk      1               1               15              1               2               3               16              18              17              1               
+GotConsHal      1               1               19              1               21              20              1               1               1               1               
+
+	GoTo          MarkFirst?  MarkLast?  Advance?  DoThis
+1	StartOfText   no          no         yes       none
+2	GotCons       yes         no         yes       none
+3	GotPreCons    yes         no         yes       none
+4	GotPreCons    no          no         yes       none
+5	GotCons       no          no         yes       none
+6	GotPreCons    no          no         yes       none
+7	GotPreCons    no          no         yes       none
+8	GotCons       no          no         yes       none
+9	GotCons       yes         no         yes       none
+10	GotPreCons    yes         no         yes       none
+11	GotCons       no          no         yes       none
+12	GotConsNuk    no          no         yes       none
+13	GotConsHal    no          no         yes       none
+14	StartOfText   no          yes        yes       xD->Dx
+15	GotConsNuk    no          no         yes       none
+16	GotCons       no          no         yes       none
+17	GotConsHal    no          no         yes       none
+18	StartOfText   no          yes        yes       xD->Dx
+19	GotConsHal    no          no         yes       none
+20	GotPreCons    no          no         yes       none
+21	GotCons       no          no         yes       none
+

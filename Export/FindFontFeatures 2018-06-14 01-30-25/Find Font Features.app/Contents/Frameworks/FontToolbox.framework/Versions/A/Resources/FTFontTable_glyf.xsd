@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://developer.apple.com/fonts/"
+            xmlns:ft="http://developer.apple.com/fonts/">
+    <xs:include schemaLocation="/Library/Frameworks/FontToolbox.framework/Resources/FontToolbox.xsd"/>
+    <xs:element name='FTFontTable_glyf'>
+        <xs:complexType>
+            <xs:choice minOccurs='1' maxOccurs='unbounded'>
+                <xs:element ref='ft:compoundGlyph'/>
+                <xs:element ref='ft:emptyGlyph'/>
+                <xs:element ref='ft:simpleGlyph'/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='compoundGlyph'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs='0' maxOccurs='unbounded' ref='ft:glyphComponent'/>
+            </xs:sequence>
+            <xs:attribute name='bottom' use='required' type='xs:integer'/>
+            <xs:attribute name='compoundData' use='optional' type='ft:hexValue'/>
+            <xs:attribute name='glyphName' use='optional' type='ft:glyphName'/>
+            <xs:attribute name='glyphRefID' use='required' type='xs:unsignedShort'/>
+            <xs:attribute name='left' use='required' type='xs:integer'/>
+            <xs:attribute name='right' use='required' type='xs:integer'/>
+            <xs:attribute name='top' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='glyphComponent'>
+        <xs:complexType>
+            <xs:attribute name='compoundFlags' use='optional' type='ft:hexValue'/>
+            <xs:attribute name='glyphName' use='optional' type='ft:glyphName'/>
+            <xs:attribute name='glyphRefID' use='required' type='xs:unsignedShort'/>
+            <xs:attribute name='scale' use='optional' type='xs:decimal'/>
+            <xs:attribute name='xOffset' use='optional' type='xs:integer'/>
+            <xs:attribute name='yOffset' use='optional' type='xs:integer'/>
+            <xs:attribute name='xScale' use='optional' type='xs:decimal'/>
+            <xs:attribute name='yScale' use='optional' type='xs:decimal'/>
+            <xs:attribute name='rotation' use='optional' type='xs:decimal'/>
+            <xs:attribute name='useMetrics' use='optional' type='xs:boolean'/>
+            <xs:attribute name='roundToGrid' use='optional' type='xs:boolean'/>
+            <xs:attribute name='overlaps' use='optional' type='xs:boolean'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='emptyGlyph'>
+        <xs:complexType>
+            <xs:attribute name='glyphName' use='optional' type='ft:glyphName'/>
+            <xs:attribute name='glyphRefID' use='required' type='xs:unsignedShort'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='simpleGlyph'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs='0' maxOccurs='unbounded' ref='ft:glyphContour'/>
+            </xs:sequence>
+            <xs:attribute name='bottom' use='required' type='xs:integer'/>
+            <xs:attribute name='contours' use='optional'/>
+            <xs:attribute name='finalPoints' use='optional' type='ft:hexValue'/>
+            <xs:attribute name='glyphName' use='optional' type='ft:glyphName'/>
+            <xs:attribute name='glyphRefID' use='required' type='xs:unsignedShort'/>
+            <xs:attribute name='hints' use='optional' type='ft:hexValue'/>
+            <xs:attribute name='left' use='required' type='xs:integer'/>
+            <xs:attribute name='nContours' use='optional' type='xs:integer'/>
+            <xs:attribute name='right' use='required' type='xs:integer'/>
+            <xs:attribute name='top' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='glyphContour'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs='1' maxOccurs='unbounded' ref='ft:glyphPoint'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='glyphPoint'>
+        <xs:complexType>
+            <xs:attribute name='index' use='required' type='xs:integer'/>
+            <xs:attribute name='isOnCurve' use='required' type='xs:boolean'/>
+            <xs:attribute name='x' use='required' type='xs:integer'/>
+            <xs:attribute name='y' use='required' type='xs:integer'/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

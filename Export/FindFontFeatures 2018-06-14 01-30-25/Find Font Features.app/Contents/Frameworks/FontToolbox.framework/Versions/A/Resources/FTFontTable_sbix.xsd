@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="sfntTable_sbix">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="strike" maxOccurs="unbounded" minOccurs="1"/>
+				<xs:element ref="masks" maxOccurs="1" minOccurs="0"/>
+				<xs:element ref="blends" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="CARCatalogue" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="CCFData" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="annex" maxOccurs="1" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="version" use="optional"/>
+			<xs:attribute type="xs:unsignedShort" name="flags" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="strikeCount" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="annex">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="strike" maxOccurs="unbounded" minOccurs="1"/>
+				<xs:element ref="masks" maxOccurs="1" minOccurs="0"/>
+				<xs:element ref="blends" maxOccurs="1" minOccurs="0"/>
+                <xs:element ref="CARCatalogue" maxOccurs="1" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute type="xs:unsignedShort" name="version" use="optional"/>
+			<xs:attribute type="xs:unsignedShort" name="flags" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="strikeCount" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="strike">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded" minOccurs="1">
+				<xs:element ref="glyphFilePath"/>
+				<xs:element ref="glyphData"/>
+				<xs:element ref="glyphIdentifier"/>
+				<xs:element ref="duplicateGlyphData"/>
+			</xs:choice>
+			<xs:attribute type="xs:string" name="offset" use="optional"/>
+			<xs:attribute type="xs:unsignedShort" name="pointSize" use="required"/>
+			<xs:attribute type="xs:unsignedShort" name="resolution" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="maskIndex" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="masks">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded" minOccurs="1">
+				<xs:element ref="maskIdentifier"/>
+				<xs:element ref="maskData"/>
+				<xs:element ref="maskFilePath"/>
+			</xs:choice>
+			<xs:attribute type="xs:unsignedInt" name="maskCount" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="blends">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded" minOccurs="1">
+				<xs:element ref="blendIdentifier"/>
+				<xs:element ref="blendData"/>
+				<xs:element ref="blendFilePath"/>
+			</xs:choice>
+			<xs:attribute type="xs:unsignedInt" name="blendCount" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="glyphFilePath">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+			<xs:attribute type="xs:string" name="glyphName" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="maskIndex" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendIndex" use="optional"/>
+			<xs:attribute type="dataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:anyURI" name="path" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="glyphIdentifier">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+			<xs:attribute type="xs:string" name="glyphName" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="maskIndex" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendIndex" use="optional"/>
+			<xs:attribute type="dataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:string" name="identifier" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="glyphData">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+			<xs:attribute type="xs:string" name="glyphName" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="glyphDataOffset" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="dataLength" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="maskIndex" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendIndex" use="optional"/>
+			<xs:attribute type="dataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:hexBinary" name="data" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="duplicateGlyphData">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedShort" name="glyphRefID" use="required"/>
+			<xs:attribute type="xs:string" name="glyphName" use="optional"/>
+			<xs:attribute type="xs:unsignedShort" name="duplicatedGlyphRefID" use="required"/>
+			<xs:attribute type="xs:string" name="duplicatedGlyphName" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+    <xs:element name="CARCatalogue">
+        <xs:complexType>
+            <xs:attribute type="xs:anyURI" name="path" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CCFData">
+        <xs:complexType>
+            <xs:attribute type="xs:anyURI" name="path" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+	<xs:element name="maskIdentifier">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendDataOffset" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="dataLength" use="optional"/>
+			<xs:attribute type="maskDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:string" name="identifier" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="maskData">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="maskDataOffset" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="dataLength" use="optional"/>
+			<xs:attribute type="maskDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:hexBinary" name="data" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="maskFilePath">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="maskDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:anyURI" name="path" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="blendIdentifier">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendDataOffset" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="dataLength" use="optional"/>
+			<xs:attribute type="blendDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:string" name="identifier" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="blendData">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="blendDataOffset" use="optional"/>
+			<xs:attribute type="xs:unsignedInt" name="dataLength" use="optional"/>
+			<xs:attribute type="blendDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:hexBinary" name="data" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="blendFilePath">
+		<xs:complexType>
+			<xs:attribute type="xs:unsignedInt" name="index" use="optional"/>
+			<xs:attribute type="blendModes" name="blendMode" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetX" use="optional"/>
+			<xs:attribute type="xs:short" name="originOffsetY" use="optional"/>
+			<xs:attribute type="blendDataTypes" name="dataType" use="required"/>
+			<xs:attribute type="xs:anyURI" name="path" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="dataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jpg " />
+			<xs:enumeration value="pdf " />
+			<xs:enumeration value="png " />
+			<xs:enumeration value="rgbl" />
+			<xs:enumeration value="tiff" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maskDataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jpg " />
+			<xs:enumeration value="png " />
+			<xs:enumeration value="tiff" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="blendDataTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jpg " />
+			<xs:enumeration value="png " />
+			<xs:enumeration value="tiff" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="blendModes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="blendModeMultiply" />
+			<xs:enumeration value="blendModeDarken" />
+			<xs:enumeration value="blendModeHardLight" />
+			<xs:enumeration value="blendModeSourceAtop" />
+			<xs:enumeration value="blendModeXOR" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
