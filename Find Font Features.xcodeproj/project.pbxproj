@@ -27,7 +27,6 @@
 		B225AA5B1CB9EE0D00AADCDC /* LDSwitchButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDSwitchButtonCell.swift; sourceTree = "<group>"; };
 		B225AA5D1CBC3F2500AADCDC /* FeaturesTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturesTable.swift; sourceTree = "<group>"; };
 		B225AA5F1CBC444400AADCDC /* FontsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTable.swift; sourceTree = "<group>"; };
-		B225AA611CBC52AB00AADCDC /* character set.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "character set.playground"; sourceTree = "<group>"; };
 		B2539A751CB6C575002917DE /* Find Font Features.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Font Features.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2539A781CB6C575002917DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B2539A7A1CB6C575002917DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 				B2539AA11CB6E9BA002917DE /* OTFeatures.swift */,
 				B2539A7A1CB6C575002917DE /* Assets.xcassets */,
 				B2539A7C1CB6C575002917DE /* MainMenu.xib */,
-				B225AA611CBC52AB00AADCDC /* character set.playground */,
 				B2539AA71CB7087A002917DE /* LDSwitchButton.swift */,
 				B2539AA31CB6F5F6002917DE /* LDTableCellButton.swift */,
 				B225AA5B1CB9EE0D00AADCDC /* LDSwitchButtonCell.swift */,

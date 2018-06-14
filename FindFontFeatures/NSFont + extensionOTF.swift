@@ -51,31 +51,21 @@ extension NSFont {
                                             identifier: feature["CTFeatureSelectorIdentifier"] as! Int,
                                             selDefault: feature["CTFeatureSelectorDefault"] as? Int)
                         result.addFeature(fea, fromFont: self)
-                        
-                        //print ("added Font")
-                        
                     }
                 }
-                
             }
             return result
-        } set {
-            print ("set OTFeatures \(newValue)")
         }
     }
-    /*
-     func setOpenTypeFeatures(_ types:OTFFeatures) {
-     
+
+    @objc  func setOpenTypeFeatures(_ types:OTFFeatures) {
+        print ("set OTF")
      }
-     */
+  
     @objc var allChars:String {
         get {
             print("getting AllChars")
             let allFontChars = self.coveredCharacterSet.intersection(CharacterSet.controlCharacters.inverted)
-            //let charset = NSMutableCharacterSet(bitmapRepresentation:  (allFontChars as NSCharacterSet).bitmapRepresentation)
-            
-            //print("charset", allFontChars, charset)
-            //charset.formIntersection (with: CharacterSet.controlCharacters.inverted)
             var result = ""
             for plane : UInt8 in 0...16 {
                 if allFontChars.hasMember(inPlane: plane) {
@@ -93,7 +83,6 @@ extension NSFont {
                     }
                 }
             }
-            print(result)
             return result
         }
     
