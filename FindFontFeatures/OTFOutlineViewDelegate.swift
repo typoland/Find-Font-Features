@@ -73,8 +73,8 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
             return (item as! OTFType).typeSelectors[index]
         }
     }
+    
     func checkFeatureInSelectedFonts (_ item:OTFeature) -> Bool {
-
         for font in selectedFonts {
             for type in OTFFeatures.fromFont(font).types {
                 if (type as! OTFType).typeSelectors.index(of: item) != NSNotFound {

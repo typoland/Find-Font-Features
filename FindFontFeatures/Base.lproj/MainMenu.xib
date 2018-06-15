@@ -15,6 +15,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Find_Font_Features" customModuleProvider="target">
             <connections>
+                <outlet property="axesController" destination="DBs-g6-I89" id="OqB-yI-z10"/>
+                <outlet property="axesMenu" destination="l75-Fp-ufB" id="pjB-on-e3g"/>
                 <outlet property="featuresTableDelegate" destination="Olg-Gc-M3f" id="jhd-aO-n1g"/>
                 <outlet property="featuresView" destination="IR6-cO-ycB" id="Wib-wH-wnp"/>
                 <outlet property="fontsController" destination="BXm-fR-74k" id="BlA-Rs-8kt"/>
@@ -957,10 +959,10 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="B1F-mG-XEu">
-                        <rect key="frame" x="620" y="0.0" width="219" height="349"/>
+                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="B1F-mG-XEu">
+                        <rect key="frame" x="620" y="25" width="219" height="324"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" title="TestText" id="ZBT-2g-ivA">
+                        <textFieldCell key="cell" lineBreakMode="charWrapping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" title="TestText" id="ZBT-2g-ivA">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1008,8 +1010,8 @@
                             </binding>
                         </connections>
                     </textField>
-                    <slider horizontalHuggingPriority="750" id="TRS-uI-nd7">
-                        <rect key="frame" x="606" y="17" width="20" height="233"/>
+                    <slider horizontalHuggingPriority="750" misplaced="YES" id="TRS-uI-nd7">
+                        <rect key="frame" x="606" y="22" width="20" height="233"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <sliderCell key="cell" continuous="YES" alignment="left" minValue="4" maxValue="256" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="k9i-AF-1BW"/>
                         <connections>
@@ -1017,6 +1019,96 @@
                             <binding destination="Voe-Tx-rLC" name="value" keyPath="fontSize" id="cBG-jX-bAE"/>
                         </connections>
                     </slider>
+                    <slider verticalHuggingPriority="750" misplaced="YES" id="tEc-mY-8e8">
+                        <rect key="frame" x="798" y="3" width="41" height="19"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <sliderCell key="cell" continuous="YES" enabled="NO" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Eer-P4-G1Z"/>
+                        <connections>
+                            <action selector="changeAxis:" target="Voe-Tx-rLC" id="wKg-im-eck"/>
+                            <binding destination="DBs-g6-I89" name="enabled" keyPath="canAdd" id="RWg-Ew-NI4">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" previousBinding="RWg-Ew-NI4" id="yOQ-sz-wrc">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="DBs-g6-I89" name="maxValue" keyPath="selection.maxValue" id="R0E-TJ-Nzj"/>
+                            <binding destination="DBs-g6-I89" name="minValue" keyPath="selection.minValue" previousBinding="R0E-TJ-Nzj" id="Ne1-0s-uE0"/>
+                            <binding destination="DBs-g6-I89" name="value" keyPath="selection.currentValue" previousBinding="Ne1-0s-uE0" id="WmA-dh-uls"/>
+                        </connections>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Lhe-O2-HM9">
+                        <rect key="frame" x="766" y="7" width="28" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="hrh-Ou-nZ5">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="8Rn-4Z-YmP"/>
+                            <font key="font" metaFont="miniSystem"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="DBs-g6-I89" name="value" keyPath="selection.defaultValue" id="lco-SJ-eZO">
+                                <dictionary key="options">
+                                    <string key="NSNoSelectionPlaceholder" base64-UTF8="YES">
+ICA
+</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" misplaced="YES" id="l75-Fp-ufB">
+                        <rect key="frame" x="654" y="5" width="102" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="qWr-Y1-gAH" id="iZx-ri-fyJ">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="miniSystem"/>
+                            <menu key="menu" id="l4H-HF-aXJ">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="qWr-Y1-gAH"/>
+                                    <menuItem title="Item 2" id="lKe-bu-trC"/>
+                                    <menuItem title="Item 3" id="hc4-0O-4lj"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <binding destination="DBs-g6-I89" name="content" keyPath="arrangedObjects" id="IAo-na-hZQ"/>
+                            <binding destination="DBs-g6-I89" name="contentObjects" keyPath="arrangedObjects" previousBinding="IAo-na-hZQ" id="Dym-j3-Dko"/>
+                            <binding destination="DBs-g6-I89" name="contentValues" keyPath="arrangedObjects.name" previousBinding="Dym-j3-Dko" id="ES4-g7-gM0"/>
+                            <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" id="umK-O0-Q9G">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="DBs-g6-I89" name="selectedIndex" keyPath="selectionIndex" previousBinding="ES4-g7-gM0" id="0jW-kO-mxC"/>
+                        </connections>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="7c1-2t-RZ8">
+                        <rect key="frame" x="606" y="7" width="43" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="OMY-tO-90c">
+                            <font key="font" metaFont="miniSystem"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <binding destination="DBs-g6-I89" name="displayPatternValue1" keyPath="arrangedObjects.@count" id="GhN-a4-tf7">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayPattern">%{value1}@ axes</string>
+                                    </dictionary>
+                                </binding>
+                            </connections>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" id="VLR-2J-oR2">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="BXm-fR-74k" name="value" keyPath="arrangedObjects.@count" id="28O-vi-Uh2"/>
+                        </connections>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="400.5" y="333"/>
@@ -1036,6 +1128,11 @@
                         <bool key="NSValidatesImmediately" value="YES"/>
                     </dictionary>
                 </binding>
+            </connections>
+        </arrayController>
+        <arrayController objectClassName="Axis" id="DBs-g6-I89" userLabel="Axes Controller">
+            <connections>
+                <binding destination="BXm-fR-74k" name="contentArray" keyPath="selection.axes" id="hzR-2m-Rjs"/>
             </connections>
         </arrayController>
     </objects>

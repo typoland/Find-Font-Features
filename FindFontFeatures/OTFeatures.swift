@@ -25,16 +25,19 @@ import Cocoa
             return "\(name) \(self is OTFeature ?  " from \((self as! OTFeature).parent.name)" : "")\n\tindentifier: \(identifier)\n\tname ID: \(nameID == nil ? String(describing: nameID) : "no" )" + "\n\n\tseleced: \(selected == 1 ? "Yes":"No")\n\tsearch: \(search)" //+ ("\n\tHash:\n\(name.hashValue) \n\(identifier.hashValue)")
         }
     }
+    
     override var hash: Int {
         //print ("hash")
         return self.hashValue // if the only field to determine uniqueness is `identifier`, this hashing method is enough
     }
+    
     override func isEqual(_ object: Any?) -> Bool {
         if let otf = object as? OTF {
             return otf.hashValue == self.hashValue
         }
         return false
     }
+    
     override var hashValue: Int { get {
         return name.hashValue ^ identifier.hashValue ^ (nameID?.hashValue)!
         }
@@ -161,7 +164,6 @@ func == (typeA: OTF, typeB: OTF) -> Bool {
 
 
 class OTFFeatures:NSObject  {
-    
     var types = NSMutableOrderedSet()
     var typesArray:NSArray {
         get {
