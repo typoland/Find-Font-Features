@@ -19,8 +19,23 @@
 		B2539AA61CB6FA64002917DE /* OTFOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA51CB6FA64002917DE /* OTFOutlineViewDelegate.swift */; };
 		B2539AA81CB7087A002917DE /* LDSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA71CB7087A002917DE /* LDSwitchButton.swift */; };
 		B2B0A2501F4AD2BD00D7E2CA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A24F1F4AD2BD00D7E2CA /* AppKit.framework */; };
-		B2B0A2521F4AD7C100D7E2CA /* FontToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */; };
+		B2E7D89320D3EBFE00823286 /* FontToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */; };
+		B2E7D89420D3EBFE00823286 /* FontToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2E7D89520D3EBFE00823286 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2E7D89420D3EBFE00823286 /* FontToolbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B225AA591CB9DF7C00AADCDC /* NSFont + extensionOTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSFont + extensionOTF.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -45,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2B0A2521F4AD7C100D7E2CA /* FontToolbox.framework in Frameworks */,
 				B2B0A2501F4AD2BD00D7E2CA /* AppKit.framework in Frameworks */,
+				B2E7D89320D3EBFE00823286 /* FontToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,7 @@
 				B2539A711CB6C575002917DE /* Sources */,
 				B2539A721CB6C575002917DE /* Frameworks */,
 				B2539A731CB6C575002917DE /* Resources */,
+				B2E7D89520D3EBFE00823286 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
