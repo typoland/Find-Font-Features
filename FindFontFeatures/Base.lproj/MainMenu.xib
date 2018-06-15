@@ -830,12 +830,12 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                             <connections>
-                                                <binding destination="Voe-Tx-rLC" name="editable" keyPath="onlySelectedFontFeatures" id="bwM-9Q-Trt"/>
                                                 <binding destination="Voe-Tx-rLC" name="enabled" keyPath="onlySelectedFontFeatures" previousBinding="bwM-9Q-Trt" id="TRZ-Mr-8Sr">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                     </dictionary>
                                                 </binding>
+                                                <binding destination="Voe-Tx-rLC" name="editable" keyPath="onlySelectedFontFeatures" id="bwM-9Q-Trt"/>
                                             </connections>
                                         </tableColumn>
                                     </tableColumns>
@@ -1010,19 +1010,14 @@
                         <sliderCell key="cell" continuous="YES" enabled="NO" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Eer-P4-G1Z"/>
                         <connections>
                             <action selector="changeAxis:" target="Voe-Tx-rLC" id="wKg-im-eck"/>
-                            <binding destination="DBs-g6-I89" name="enabled" keyPath="canAdd" id="RWg-Ew-NI4">
+                            <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" id="hUE-xR-9NU">
                                 <dictionary key="options">
                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                 </dictionary>
                             </binding>
-                            <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" previousBinding="RWg-Ew-NI4" id="yOQ-sz-wrc">
-                                <dictionary key="options">
-                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                </dictionary>
-                            </binding>
+                            <binding destination="DBs-g6-I89" name="value" keyPath="selection.currentValue" previousBinding="Ne1-0s-uE0" id="WmA-dh-uls"/>
                             <binding destination="DBs-g6-I89" name="maxValue" keyPath="selection.maxValue" id="R0E-TJ-Nzj"/>
                             <binding destination="DBs-g6-I89" name="minValue" keyPath="selection.minValue" previousBinding="R0E-TJ-Nzj" id="Ne1-0s-uE0"/>
-                            <binding destination="DBs-g6-I89" name="value" keyPath="selection.currentValue" previousBinding="Ne1-0s-uE0" id="WmA-dh-uls"/>
                         </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="Lhe-O2-HM9">
@@ -1059,8 +1054,8 @@ ICA
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <binding destination="DBs-g6-I89" name="content" keyPath="arrangedObjects" id="IAo-na-hZQ"/>
                             <binding destination="DBs-g6-I89" name="contentObjects" keyPath="arrangedObjects" previousBinding="IAo-na-hZQ" id="Dym-j3-Dko"/>
+                            <binding destination="DBs-g6-I89" name="content" keyPath="arrangedObjects" id="IAo-na-hZQ"/>
                             <binding destination="DBs-g6-I89" name="contentValues" keyPath="arrangedObjects.name" previousBinding="Dym-j3-Dko" id="ES4-g7-gM0"/>
                             <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" id="umK-O0-Q9G">
                                 <dictionary key="options">
@@ -1086,12 +1081,12 @@ ICA
                             </connections>
                         </textFieldCell>
                         <connections>
+                            <binding destination="BXm-fR-74k" name="value" keyPath="arrangedObjects.@count" id="28O-vi-Uh2"/>
                             <binding destination="DBs-g6-I89" name="hidden" keyPath="canRemove" id="VLR-2J-oR2">
                                 <dictionary key="options">
                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                 </dictionary>
                             </binding>
-                            <binding destination="BXm-fR-74k" name="value" keyPath="arrangedObjects.@count" id="28O-vi-Uh2"/>
                         </connections>
                     </textField>
                 </subviews>

@@ -44,10 +44,10 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     
     @objc var onlySelectedFontFeatures:Bool = false
     /*
-    @objc var selectedFontsAxes:[Axis] {
-        return selectedFont.axes   
-    }
-    */
+     @objc var selectedFontsAxes:[Axis] {
+     return selectedFont.axes
+     }
+     */
     
     @objc var allFeatures:NSArray {
         get {
@@ -63,7 +63,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             return _allFontsFeatures.types.array.sorted(by: { (A, B) -> Bool in
                 (A as! OTFType).name > (B as! OTFType).name
             }) as NSArray
-
+            
         }
     }
     
@@ -92,20 +92,18 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     var _featuresToSearch = Set<OTFeature>()
     
     @IBAction func changeAxis(_ sender:NSSlider) {
-        if let varAxes = axesController.arrangedObjects as? [Axis] {
+        if let varAxes = axesController.arrangedObjects as? [Axis], let oldFont  = CGFont(_selectedFont.fontName as CFString) {
+            var variations : [CFString:CFNumber] = [ : ] //Error in documentation
+            for axis in varAxes {
+                variations[axis.name as CFString] = axis.currentValue as CFNumber
+            }
             
-        Swift.print ("change \(sender.doubleValue), \(varAxes.map{$0.dict} as CFArray)")
-            /*
-            let fontDescriptor = _selectedFont.fontDescriptor.addingAttributes([
-                
-                NSFontDescriptor.AttributeName.variation : varAxes.map{$0.dict} as CFArray
-                
-                
-                ])
-            selectedFont = NSFont(descriptor: fontDescriptor, size: fontSize)
+             if let newFont = oldFont.copy(withVariations: variations as CFDictionary) {
+             willChangeValue(forKey: "selectedFont")
+             selectedFont = CTFontCreateWithGraphicsFont(newFont, fontSize, nil, _selectedFont.fontDescriptor)
+             didChangeValue(forKey: "selectedFont")
+             }
             
-            self.didChangeValue(forKey: "selected.....Font")
- */
         }
     }
     
@@ -126,7 +124,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         }
         defaultFont = _allFonts.object(at: 0) as! NSFont
         self.didChangeValue(forKey: "allFonts")
-                featuresView.reloadData()
+        featuresView.reloadData()
         fontsView.reloadData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(searchFontsWithFeature), name: NSNotification.Name(rawValue: setSearchNotification), object: nil)
@@ -165,7 +163,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             changeFeaturesTable()
             self.didChangeValue(forKey: "_choosenFeaturesSet")
             
-           
+            
             
         }
     }
@@ -179,50 +177,50 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     @objc func searchFontsWithFeature(_ notification:Notification) {
         
         if let button = notification.object as? NSButton {
-        func setSearchFeature (_ feature:OTFeature) {
-            
-            feature.willChangeValue(forKey: "search")
-            feature.willChangeValue(forKey: "toolTip")
-            feature.parent.willChangeValue(forKey: "searchResult")
-            feature.parent.willChangeValue(forKey: "search")
-            print(feature.search)
-            feature.search = Int(button.intValue)
-            print(feature.search)
-            feature.didChangeValue(forKey: "search")
-            feature.didChangeValue(forKey: "toolTip")
-            feature.parent.didChangeValue(forKey: "searchResult")
-            feature.parent.didChangeValue(forKey: "search")
-            
-            if feature.search == 1 {
-                _featuresToSearch.insert(feature)
-                if onlySelectedFontFeatures {
-                    fontsController.addSelectedObjects([feature.fonts])
-                }
-            } else {
-                _featuresToSearch.remove(feature)
-                if onlySelectedFontFeatures {
-                    fontsController.removeSelectedObjects([feature.fonts])
+            func setSearchFeature (_ feature:OTFeature) {
+                
+                feature.willChangeValue(forKey: "search")
+                feature.willChangeValue(forKey: "toolTip")
+                feature.parent.willChangeValue(forKey: "searchResult")
+                feature.parent.willChangeValue(forKey: "search")
+                print(feature.search)
+                feature.search = Int(button.intValue)
+                print(feature.search)
+                feature.didChangeValue(forKey: "search")
+                feature.didChangeValue(forKey: "toolTip")
+                feature.parent.didChangeValue(forKey: "searchResult")
+                feature.parent.didChangeValue(forKey: "search")
+                
+                if feature.search == 1 {
+                    _featuresToSearch.insert(feature)
+                    if onlySelectedFontFeatures {
+                        fontsController.addSelectedObjects([feature.fonts])
+                    }
+                } else {
+                    _featuresToSearch.remove(feature)
+                    if onlySelectedFontFeatures {
+                        fontsController.removeSelectedObjects([feature.fonts])
+                    }
                 }
             }
-        }
             
-        self.willChangeValue(forKey: "allFonts")
-        self.willChangeValue(forKey: "selectedFontsAxesNames")
+            self.willChangeValue(forKey: "allFonts")
+            self.willChangeValue(forKey: "selectedFontsAxesNames")
             
-        let object = (button.superview as! NSTableCellView).objectValue
+            let object = (button.superview as! NSTableCellView).objectValue
             
-        if let feature = object as? OTFeature {
-            setSearchFeature(feature)
-            
-            
-        }   else if let type = object as? OTFType {
-            for feature in type.typeSelectors {
-                setSearchFeature(feature as! OTFeature)
+            if let feature = object as? OTFeature {
+                setSearchFeature(feature)
+                
+                
+            }   else if let type = object as? OTFType {
+                for feature in type.typeSelectors {
+                    setSearchFeature(feature as! OTFeature)
+                }
             }
-        }
-        self.didChangeValue(forKey: "selectedFontsAxesNames")
-        self.didChangeValue(forKey: "allFonts")
-        
+            self.didChangeValue(forKey: "selectedFontsAxesNames")
+            self.didChangeValue(forKey: "allFonts")
+            
         }
     }
     
@@ -233,7 +231,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             print("OK")
             self.willChangeValue(forKey: "selectedFont")
             print ("identifiers", feature.parent.identifier, feature.identifier)
-           
+            
             let fontDescriptor = _selectedFont.fontDescriptor.addingAttributes([
                 NSFontDescriptor.AttributeName.featureSettings: [
                     [
@@ -242,12 +240,12 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                     ]
                 ]
                 
-              
-            ])
+                
+                ])
             
             selectedFont = NSFont(descriptor: fontDescriptor, size: fontSize)
             if let fea = _selectedFont.fontDescriptor.object(forKey: NSFontDescriptor.AttributeName.featureSettings) {
-            
+                
                 print ("feature \(fea)")
                 print ("NSFontFeatureTypeIdentifierKey =", NSFontDescriptor.FeatureKey.typeIdentifier)
                 print ("NSFontFeatureSelectorIdentifierKey =", NSFontDescriptor.FeatureKey.selectorIdentifier)
@@ -255,10 +253,10 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             }
             print ("Fonts:", _allFonts.count, selectedFonts.count)
             self.didChangeValue(forKey: "selectedFont")
-            }
         }
-        
-            
+    }
+    
+    
     
     
     func changeFeaturesTable () {
@@ -282,7 +280,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         self.didChangeValue(forKey: "_choosenFeaturesSet")
         self.didChangeValue(forKey: "selectedFontsAxesNames")
         // Tu nie może bo się pętli self.didChangeValueForKey("allFonts")
-       print ("All fonts:", _allFonts.count, allFonts.count, _featuresToSearch.count)
+        print ("All fonts:", _allFonts.count, allFonts.count, _featuresToSearch.count)
         
     }
     
