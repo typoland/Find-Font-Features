@@ -811,7 +811,7 @@
                                                         <button id="Ya3-ZC-rnJ" customClass="LDSwitchButton" customModule="Find_Font_Features" customModuleProvider="target">
                                                             <rect key="frame" x="2" y="-2" width="58" height="13"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" allowsMixedState="YES" inset="2" id="xfp-K6-pwQ">
+                                                            <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" allowsMixedState="YES" inset="2" id="xfp-K6-pwQ" customClass="SwitchButtonCell">
                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                 <font key="font" metaFont="miniSystem"/>
                                                             </buttonCell>
@@ -825,6 +825,7 @@
                                                         </button>
                                                     </subviews>
                                                     <connections>
+                                                        <binding destination="Voe-Tx-rLC" name="hidden" keyPath="onlySelectedFontFeatures" id="J46-LY-Nbq"/>
                                                         <outlet property="checkButton" destination="Ya3-ZC-rnJ" id="gk8-hE-sjy"/>
                                                     </connections>
                                                 </tableCellView>

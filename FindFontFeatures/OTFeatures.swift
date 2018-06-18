@@ -16,7 +16,7 @@ import Cocoa
     
     @objc var selected:Int = 0
     @objc var search:Int = 0
-    @objc var enabled:Bool {get { return false }}
+    @objc var enabled: Bool { get { return false }}
     
     
     
@@ -38,9 +38,8 @@ import Cocoa
         return false
     }
     
-    override var hashValue: Int { get {
-        return name.hashValue ^ identifier.hashValue ^ (nameID?.hashValue)!
-        }
+    override var hashValue: Int {
+        return name.hashValue ^ identifier.hashValue ^ (nameID?.hashValue ?? 0)
     }
     
     init(name:String, nameID:Int?, identifier:Int) {
@@ -184,11 +183,7 @@ class OTFFeatures:NSObject  {
     
     
     
-    /*
-    override func removeObjectAtIndex(idx: Int) {
-        self.types.removeObjectAtIndex(idx)
-    }
-    */
+
     class func fromAllSystemFonts(_ size: CGFloat) -> OTFFeatures {
         let result = OTFFeatures()
         for fontName in NSFontManager.shared.availableFonts {

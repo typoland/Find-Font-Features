@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+
 @IBDesignable
 class LDSwitchButton :NSButton {
     /*
@@ -30,32 +31,9 @@ class LDSwitchButton :NSButton {
     @IBInspectable var switchGap:CGFloat = 1.5
     @IBInspectable var outlineWidth:CGFloat = 1
     @IBInspectable var margin:CGFloat = 2
+    
     override func draw(_ dirtyRect: NSRect) {
-        //Swift.print(dirtyRect)
         
-        /*
-        struct Colors {
-            let background:NSColor
-            let outline:NSColor
-            let `switch`: NSColor
-            init (background:NSColor, outline:NSColor, `switch`:NSColor) {
-            self.background = background
-                self.outline = outline
-                self.`switch` = `switch`
-            }
-        
-        }
-        
-        let ButtonColors = (
-            enabledOn:Colors = Colors(background:NSColor.whiteColor(), outline:NSColor.lightGrayColor(), switch:NSColor.darkGrayColor())
-            let enabledOff:Colors = Colors(background:NSColor.windowBackgroundColor(), outline:NSColor.lightGrayColor(),switch:NSColor.darkGrayColor())
-            let enabledMix:Colors
-
-            let disabledOn:Colors
-            let disabledOff:Colors
-            let disabledMix:Colors
-        )
-        */
         NSColor.lightGray.set()
         NSBezierPath.defaultLineWidth = outlineWidth
         let shape = NSBezierPath(roundedRect: NSMakeRect(outlineWidth/2, outlineWidth/2, dirtyRect.width-outlineWidth, dirtyRect.height-outlineWidth), xRadius: dirtyRect.height/2-outlineWidth, yRadius: dirtyRect.height/2-outlineWidth)
@@ -114,7 +92,6 @@ class LDSwitchButton :NSButton {
         paragraphStyle.alignment = NSTextAlignment.center
         label.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0,length: label.length))
         
-        //let labelRect:NSRect = dirtyRect
         label.draw(in: labelRect)
         
         

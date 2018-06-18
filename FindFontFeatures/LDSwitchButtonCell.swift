@@ -10,7 +10,6 @@ import Foundation
 import Cocoa
 @IBDesignable
 class LDSwitchButtonCell:NSButtonCell {
-
     
-    
+  
 }
