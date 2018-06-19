@@ -11,10 +11,14 @@ import Cocoa
 
 @IBDesignable
 class LDTableCellButton: NSTableCellView {
+    
     @IBOutlet weak var checkButton:NSButton!
-    override func draw(_ dirtyRect: NSRect) {
-        Swift.print("HERE IS A OBJECT", objectValue)
-        NSColor.blue.set()
-        NSBezierPath(rect: dirtyRect).fill()
+    
+    override func viewWillDraw() {
+        if objectValue is OTFType{
+            checkButton.allowsMixedState = false
+        }
+        //Swift.print ("viewWill Draw", objectValue)
     }
+    
 }

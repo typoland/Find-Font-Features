@@ -58,6 +58,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         //print("Teraz odda dupę, tylko po co?", item, tableColumn?.identifier)
         return item
     }
+    
     func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat {
         if item is OTFeature {
             return 15
@@ -163,7 +164,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
         let feature = (sender.superview as! NSTableCellView).objectValue as! OTFeature
         
         let type = feature.parent
-        type?.selectFeature(feature)
+        type.selectFeature(feature)
         NotificationCenter.default.post(name: Notification.Name(rawValue: setFeatureNotification), object: (sender))
         table.reloadData()
     }

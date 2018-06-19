@@ -49,6 +49,10 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
      }
      */
     
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+    
     @objc var allFeatures:NSArray {
         get {
             if onlySelectedFontFeatures {
@@ -223,7 +227,6 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
             
         }
     }
-    
     
     @objc func changeOTFeaturesInCurrentFont(_ notification:Notification) {
         print ("zmienia fjuczery",   ((notification.object as! NSButton).superview as! NSTableCellView).objectValue!)

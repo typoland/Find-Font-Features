@@ -11,5 +11,5 @@ import Cocoa
 @IBDesignable
 class LDSwitchButtonCell:NSButtonCell {
     
-  
+
 }

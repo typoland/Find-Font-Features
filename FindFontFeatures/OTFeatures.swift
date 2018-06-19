@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-@objc class OTF:NSObject {
+@objc class OTFBaseObject:NSObject {
     @objc var name:String = ""
     var nameID:Int? = 0
    @objc var identifier:Int = 0
@@ -32,14 +32,14 @@ import Cocoa
     }
     
     override func isEqual(_ object: Any?) -> Bool {
-        if let otf = object as? OTF {
+        if let otf = object as? OTFBaseObject {
             return otf.hashValue == self.hashValue
         }
         return false
     }
     
     override var hashValue: Int {
-        return name.hashValue ^ identifier.hashValue ^ (nameID?.hashValue ?? 0)
+        return name.hashValue //^ (nameID?.hashValue ?? 0)
     }
     
     init(name:String, nameID:Int?, identifier:Int) {
@@ -50,10 +50,10 @@ import Cocoa
     }
 }
 
-class OTFeature:OTF {
+class OTFeature:OTFBaseObject {
     
     var selDefault:Int?;
-    var parent:OTFType!
+    var parent:OTFType
     var isOn:Int = 1
     
     @objc var fonts:NSMutableOrderedSet = NSMutableOrderedSet()
@@ -80,20 +80,21 @@ class OTFeature:OTF {
     
     
     init (name:String, parent:OTFType, nameID:Int?, identifier:Int, selDefault:Int?) {
+        self.parent = parent
         super.init(name: name, nameID: nameID, identifier: identifier)
         self.selDefault = selDefault
         if selDefault == 1 {
             self.selected = 1
         }
-        self.parent = parent
+        
     }
 }
 
-@objc class OTFType:OTF {
+@objc class OTFType:OTFBaseObject {
     
     var exclusive:Int?
     var typeSelectors:NSMutableOrderedSet = NSMutableOrderedSet()
-    
+
     override var search:Int {
         get {
             var n = 0
@@ -156,14 +157,16 @@ class OTFeature:OTF {
     }
 }
 
-func == (typeA: OTF, typeB: OTF) -> Bool {
+func == (typeA: OTFBaseObject, typeB: OTFBaseObject) -> Bool {
     return  (typeA.name == typeB.name) && (typeA.nameID == typeB.nameID) && (typeA.identifier == typeB.identifier)
 }
 
 
 
 class OTFFeatures:NSObject  {
+    
     var types = NSMutableOrderedSet()
+    
     var typesArray:NSArray {
         get {
             return self.types.array as NSArray
@@ -222,7 +225,6 @@ class OTFFeatures:NSObject  {
     
     func addOTFType(_ newType:OTFType, fromFont:NSFont) {
         self.types.add(newType)
- 
     }
     /*
     func addObject(anObject: AnyObject) {
@@ -245,14 +247,6 @@ class OTFFeatures:NSObject  {
             }
         }
     }
-    /*
-    func objectAtIndex(index: Int) -> AnyObject {
-        assert(index < count, "The index is out of bounds")
-        return types.objectAtIndex(index)
-    }
-    */
-
-    
 }
 
 
