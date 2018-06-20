@@ -817,26 +817,26 @@
                                                             </buttonCell>
                                                             <connections>
                                                                 <action selector="searchFontWithFeature:" target="Olg-Gc-M3f" id="wpi-LT-0M5"/>
+                                                                <binding destination="Voe-Tx-rLC" name="hidden" keyPath="showOnlySelectedFontFeatures" id="8qa-H8-CLL"/>
                                                                 <binding destination="ft7-vs-oev" name="value" keyPath="objectValue.search" id="cgp-Y6-GP8"/>
                                                                 <binding destination="ft7-vs-oev" name="title" keyPath="objectValue.searchResult" previousBinding="mzm-Ly-Ri1" id="V7v-Gu-o9p"/>
                                                                 <binding destination="ft7-vs-oev" name="alternateTitle" keyPath="objectValue.searchResult" id="mzm-Ly-Ri1"/>
-                                                                <binding destination="Voe-Tx-rLC" name="hidden" keyPath="onlySelectedFontFeatures" id="7la-Eo-tUM"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
                                                     <connections>
-                                                        <binding destination="Voe-Tx-rLC" name="hidden" keyPath="onlySelectedFontFeatures" id="J46-LY-Nbq"/>
+                                                        <binding destination="Voe-Tx-rLC" name="hidden" keyPath="showOnlySelectedFontFeatures" id="AVh-C0-9Bt"/>
                                                         <outlet property="checkButton" destination="Ya3-ZC-rnJ" id="gk8-hE-sjy"/>
                                                     </connections>
                                                 </tableCellView>
                                             </prototypeCellViews>
                                             <connections>
-                                                <binding destination="Voe-Tx-rLC" name="enabled" keyPath="onlySelectedFontFeatures" previousBinding="bwM-9Q-Trt" id="TRZ-Mr-8Sr">
+                                                <binding destination="Voe-Tx-rLC" name="editable" keyPath="showOnlySelectedFontFeatures" id="FIj-Eu-L7g"/>
+                                                <binding destination="Voe-Tx-rLC" name="enabled" keyPath="showOnlySelectedFontFeatures" previousBinding="FIj-Eu-L7g" id="1wX-d0-GTr">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                     </dictionary>
                                                 </binding>
-                                                <binding destination="Voe-Tx-rLC" name="editable" keyPath="onlySelectedFontFeatures" id="bwM-9Q-Trt"/>
                                             </connections>
                                         </tableColumn>
                                     </tableColumns>
@@ -972,7 +972,7 @@
                         </buttonCell>
                         <connections>
                             <action selector="filterFontFeatures:" target="Voe-Tx-rLC" id="7PP-51-uOY"/>
-                            <binding destination="Voe-Tx-rLC" name="value" keyPath="onlySelectedFontFeatures" id="lfb-pu-kcP"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="showOnlySelectedFontFeatures" id="SNG-5r-9kI"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="n5A-2g-566">

@@ -19,6 +19,10 @@
 		B2539AA61CB6FA64002917DE /* OTFOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA51CB6FA64002917DE /* OTFOutlineViewDelegate.swift */; };
 		B2539AA81CB7087A002917DE /* LDSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2539AA71CB7087A002917DE /* LDSwitchButton.swift */; };
 		B2B0A2501F4AD2BD00D7E2CA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A24F1F4AD2BD00D7E2CA /* AppKit.framework */; };
+		B2BA3EB420D9445600B052CF /* OTFType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3EB320D9445600B052CF /* OTFType.swift */; };
+		B2BA3EB620D9457100B052CF /* OTFBaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3EB520D9457100B052CF /* OTFBaseObject.swift */; };
+		B2BA3EB820D9486700B052CF /* OTFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3EB720D9486700B052CF /* OTFeature.swift */; };
+		B2BA3EBA20D9D62C00B052CF /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA3EB920D9D62C00B052CF /* Axis.swift */; };
 		B2E7D89420D3EBFE00823286 /* FontToolbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		B2539AA71CB7087A002917DE /* LDSwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDSwitchButton.swift; sourceTree = "<group>"; };
 		B2B0A24F1F4AD2BD00D7E2CA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B2B0A2511F4AD7C100D7E2CA /* FontToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontToolbox.framework; path = ../../../../../Library/Frameworks/FontToolbox.framework; sourceTree = "<group>"; };
+		B2BA3EB320D9445600B052CF /* OTFType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFType.swift; sourceTree = "<group>"; };
+		B2BA3EB520D9457100B052CF /* OTFBaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFBaseObject.swift; sourceTree = "<group>"; };
+		B2BA3EB720D9486700B052CF /* OTFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFeature.swift; sourceTree = "<group>"; };
+		B2BA3EB920D9D62C00B052CF /* Axis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +97,11 @@
 				B2539A781CB6C575002917DE /* AppDelegate.swift */,
 				B225AA5F1CBC444400AADCDC /* FontsTable.swift */,
 				B225AA5D1CBC3F2500AADCDC /* FeaturesTable.swift */,
+				B2BA3EB920D9D62C00B052CF /* Axis.swift */,
 				B2539AA11CB6E9BA002917DE /* OTFeatures.swift */,
+				B2BA3EB720D9486700B052CF /* OTFeature.swift */,
+				B2BA3EB520D9457100B052CF /* OTFBaseObject.swift */,
+				B2BA3EB320D9445600B052CF /* OTFType.swift */,
 				B2539A7A1CB6C575002917DE /* Assets.xcassets */,
 				B2539A7C1CB6C575002917DE /* MainMenu.xib */,
 				B2539AA71CB7087A002917DE /* LDSwitchButton.swift */,
@@ -185,9 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B225AA5C1CB9EE0D00AADCDC /* LDSwitchButtonCell.swift in Sources */,
+				B2BA3EB820D9486700B052CF /* OTFeature.swift in Sources */,
 				B2539A791CB6C575002917DE /* AppDelegate.swift in Sources */,
 				B2539AA81CB7087A002917DE /* LDSwitchButton.swift in Sources */,
+				B2BA3EB620D9457100B052CF /* OTFBaseObject.swift in Sources */,
+				B2BA3EB420D9445600B052CF /* OTFType.swift in Sources */,
 				B2539AA21CB6E9BA002917DE /* OTFeatures.swift in Sources */,
+				B2BA3EBA20D9D62C00B052CF /* Axis.swift in Sources */,
 				B2539AA61CB6FA64002917DE /* OTFOutlineViewDelegate.swift in Sources */,
 				B225AA5E1CBC3F2500AADCDC /* FeaturesTable.swift in Sources */,
 				B225AA601CBC444400AADCDC /* FontsTable.swift in Sources */,

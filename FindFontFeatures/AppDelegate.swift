@@ -9,14 +9,10 @@ var debugCounter = 0
 import Cocoa
 import AppKit
 
-
-
-
-
-
 var fontSelectionChangedContext = "FontSelectionChangedContext"
 
 @NSApplicationMain
+
 @objc class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
@@ -30,11 +26,12 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     
     var _tableFontSize:CGFloat = 15
     @objc var fontSize:CGFloat  = 32
+    
     var _allFontsFeatures: OTFFeatures = OTFFeatures()
     @objc var _choosenFeaturesSet: OTFFeatures = OTFFeatures()
     
-    var _allFonts:NSMutableOrderedSet = NSMutableOrderedSet()
-    @objc var selectedFonts:NSMutableOrderedSet = NSMutableOrderedSet()
+    var _allFonts:Set<NSFont> = []
+    @objc var selectedFonts:Set<NSFont> = []
     
     var _selectedFont:NSFont!
     @objc var selectedFont:NSFont!
@@ -42,30 +39,25 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     
     @objc var defaultFont:NSFont!
     
-    @objc var onlySelectedFontFeatures:Bool = false
-    /*
-     @objc var selectedFontsAxes:[Axis] {
-     return selectedFont.axes
-     }
-     */
-    
+    @objc var showOnlySelectedFontFeatures:Bool = false
+  
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
     
     @objc var allFeatures:NSArray {
         get {
-            if onlySelectedFontFeatures {
+            if showOnlySelectedFontFeatures {
                 let result = OTFFeatures()
-                for font in selectedFonts {
-                    result.types.union(OTFFeatures.fromFont(font as! NSFont).types)
+                for font in selectedFonts as Set<NSFont> {
+                    result.types = result.types.union(OTFFeatures.fromFont(font).types)
                 }
-                return result.types.array.sorted(by: { (A, B) -> Bool in
-                    (A as! OTFType).name > (B as! OTFType).name
+                return (Array(result.types)).sorted(by: { (A, B) -> Bool in
+                    A.name > B.name
                 }) as NSArray
             }
-            return _allFontsFeatures.types.array.sorted(by: { (A, B) -> Bool in
-                (A as! OTFType).name > (B as! OTFType).name
+            return Array(_allFontsFeatures.types).sorted(by: { (A, B) -> Bool in
+                A.name > B.name
             }) as NSArray
             
         }
@@ -74,17 +66,15 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     
     @objc var allFonts:NSArray {
         get {
-            
             if _featuresToSearch.count > 0  {
-                
-                let filter = NSMutableOrderedSet()
+                var filter:Set<NSFont> = []// NSMutableOrderedSet()
                 for feature in _featuresToSearch {
-                    filter.addObjects(from: feature.fonts.array)
+                    filter = filter.union(feature.fonts)  //addObjects(from: Array(feature.fonts))
                 }
-                return filter.array as NSArray
+                return Array(filter) as NSArray
             }
-            else {return _allFonts.array.sorted(by: { (objectA, objectB) -> Bool in
-                (objectA as! NSFont).fontName.lowercased() < (objectB as! NSFont).fontName.lowercased()
+            else {return Array(_allFonts).sorted(by: { (objectA, objectB) -> Bool in
+                objectA.fontName.lowercased() < objectB.fontName.lowercased()
             }) as NSArray}
         }
     }
@@ -102,11 +92,11 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                 variations[axis.name as CFString] = axis.currentValue as CFNumber
             }
             
-             if let newFont = oldFont.copy(withVariations: variations as CFDictionary) {
-             willChangeValue(forKey: "selectedFont")
-             selectedFont = CTFontCreateWithGraphicsFont(newFont, fontSize, nil, _selectedFont.fontDescriptor)
-             didChangeValue(forKey: "selectedFont")
-             }
+            if let newFont = oldFont.copy(withVariations: variations as CFDictionary) {
+                willChangeValue(forKey: "selectedFont")
+                selectedFont = CTFontCreateWithGraphicsFont(newFont, fontSize, nil, _selectedFont.fontDescriptor)
+                didChangeValue(forKey: "selectedFont")
+            }
             
         }
     }
@@ -120,13 +110,16 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         self.willChangeValue(forKey: "allFonts")
         
         for type in _allFontsFeatures.types {
-            for feature in (type as! OTFType).typeSelectors {
-                for font in (feature as! OTFeature).fonts {
-                    _allFonts.add(font)
+            Swift.print(type.name)
+            for feature in type.typeSelectors {
+                Swift.print(feature.name)
+                for font in feature.fonts {
+                    Swift.print(font.displayName)
+                    _allFonts.insert(font)
                 }
             }
         }
-        defaultFont = _allFonts.object(at: 0) as! NSFont
+        defaultFont = _allFonts.first
         self.didChangeValue(forKey: "allFonts")
         featuresView.reloadData()
         fontsView.reloadData()
@@ -152,7 +145,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         if context == &fontSelectionChangedContext {
             self.willChangeValue(forKey: "allFeatures")
             self.willChangeValue(forKey: "selectedFont")
-            selectedFonts = NSMutableOrderedSet(array: fontsController.selectedObjects as! [NSFont])
+            selectedFonts = Set( fontsController.selectedObjects as! [NSFont])
             
             if fontsController.selectedObjects.count != 1 {
                 _selectedFont = defaultFont
@@ -197,12 +190,12 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                 
                 if feature.search == 1 {
                     _featuresToSearch.insert(feature)
-                    if onlySelectedFontFeatures {
+                    if showOnlySelectedFontFeatures {
                         fontsController.addSelectedObjects([feature.fonts])
                     }
                 } else {
                     _featuresToSearch.remove(feature)
-                    if onlySelectedFontFeatures {
+                    if showOnlySelectedFontFeatures {
                         fontsController.removeSelectedObjects([feature.fonts])
                     }
                 }
@@ -219,7 +212,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                 
             }   else if let type = object as? OTFType {
                 for feature in type.typeSelectors {
-                    setSearchFeature(feature as! OTFeature)
+                    setSearchFeature(feature)
                 }
             }
             self.didChangeValue(forKey: "selectedFontsAxesNames")
@@ -267,14 +260,14 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         // Tu nie może bo się pętli self.willChangeValueForKey("allFonts")
         self.willChangeValue(forKey: "selectedFontsAxesNames")
         self.willChangeValue(forKey: "_choosenFeaturesSet")
-        if onlySelectedFontFeatures {
+        
+        if showOnlySelectedFontFeatures {
             _choosenFeaturesSet = OTFFeatures()
             for font in selectedFonts {
-                _choosenFeaturesSet.addFontFeatures((font as! NSFont).openTypeFeatures, fromFont: font as! NSFont)
+                _choosenFeaturesSet.addFontFeatures(font.openTypeFeatures, fromFont: font)
             }
         } else {
-            _choosenFeaturesSet = OTFFeatures.fromTypes( _allFontsFeatures)
-            //= OTFFeatures.( _allFontsFeatures
+            _choosenFeaturesSet = _allFontsFeatures
         }
         
         //featuresView.reloadData()
@@ -298,7 +291,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     @IBAction func filterFontFeatures (_ sender:AnyObject) {
         self.willChangeValue(forKey: "selectedFontsAxes")
         self.willChangeValue(forKey: "onlySelectedFontFeatures")
-        onlySelectedFontFeatures = ((sender as! NSControl).intValue  == 1)
+        showOnlySelectedFontFeatures = ((sender as! NSControl).intValue  == 1)
         self.didChangeValue(forKey: "onlySelectedFontFeatures")
         self.willChangeValue(forKey: "_choosenFeaturesSet")
         changeFeaturesTable()
