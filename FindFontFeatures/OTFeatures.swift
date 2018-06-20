@@ -17,20 +17,13 @@ class OTFFeatures:NSObject  {
     
     var typesArray:NSArray {
         get {
-            return [OTFType](self.types) as NSArray
+            return [OTFType](self.types).sorted(by: { (A, B) -> Bool in
+                 A.identifier < B.identifier// && A.name > B.name
+            }) as NSArray
         }
     }
     
-    /*
-    class func fromFeatures(_ features:OTFFeatures) -> OTFFeatures {
-        let result = OTFFeatures()
-        for feature in features.types {
-            result.types.insert(feature)
-        }
-        return result
-    }
-    */
-    
+
     class func fromAllSystemFonts(_ size: CGFloat) -> OTFFeatures {
         let result = OTFFeatures()
         for fontName in NSFontManager.shared.availableFonts {
@@ -44,7 +37,7 @@ class OTFFeatures:NSObject  {
     }
     
     class func fromFont(_ font : NSFont) -> OTFFeatures {
-                return font.openTypeFeatures
+            return font.openTypeFeatures
     }
     
     func removeAllObjects() {
@@ -56,19 +49,19 @@ class OTFFeatures:NSObject  {
         for type in fontFeatures.types {
             self.types.insert(type)
             for selector in type.features {
-                self.addFeature(selector , fromFont: font)
+                self.addFeature(selector , from: font)
             }
         }
     }
 
     
-    func addFeature(_ feature:OTFeature, fromFont: NSFont) {
+    func addFeature(_ feature:OTFeature, from font: NSFont) {
         if types.contains(feature.parent) {
             let type = feature.parent
             feature.parent.features.insert(feature)
            
             if type.features.contains(feature) {
-                feature.fonts.insert(fromFont)
+                feature.fonts.insert(font)
             }
         }
     }

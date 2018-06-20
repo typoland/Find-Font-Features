@@ -24,7 +24,7 @@ extension NSFont {
     @objc var axes:[Axis] {
         
         var result :[Axis] = []
-
+        
         let variation = CTFontCopyVariation(self as CTFont) as? [Int:Double] ?? [:]
         //print ("VARIATION", variation)
         if let descriptor = CTFontCopyVariationAxes(self as CTFont) as? [[String:Any]] { //CTLine
@@ -63,33 +63,25 @@ extension NSFont {
                     result.types.insert(otfType)
                     
                     for feature in featureType["CTFeatureTypeSelectors"] as! [[String:AnyObject]] {
-                        
-                        var name = feature["CTFeatureSelectorName"] as? String
-                        if name == nil {
-                            
-                            name = String(format: "<no feature name>" )
-                            
-                            
-                        }
-                        
-                        let fea = OTFeature(name:name!,
-                                            parent: otfType,
-                                            nameID: feature["CTFeatureSelectorNameID"] as? Int,
-                                            identifier: feature["CTFeatureSelectorIdentifier"] as! Int,
-                                            selDefault: feature["CTFeatureSelectorDefault"] as? Int)
+                        let fea = OTFeature(
+                            name:feature["CTFeatureSelectorName"] as? String ?? "<no feature name>",
+                            parent: otfType,
+                            nameID: feature["CTFeatureSelectorNameID"] as? Int ?? 0,
+                            identifier: feature["CTFeatureSelectorIdentifier"] as? Int ?? 0,
+                            selDefault: feature["CTFeatureSelectorDefault"] as? Int ?? 0)
                         //Swift.print("Any featyres??", fea.name)
-                        result.addFeature(fea, fromFont: self)
+                        result.addFeature(fea, from: self)
                     }
                 }
             }
             return result
         }
     }
-
+    
     @objc  func setOpenTypeFeatures(_ types:OTFFeatures) {
         print ("set OTF")
-     }
-  
+    }
+    
     @objc var allChars:String {
         get {
             print("getting AllChars")
@@ -113,7 +105,7 @@ extension NSFont {
             }
             return result
         }
-    
+        
     }
     @objc func setAllChars (_ sender:Any) {
         print ("setting allchars")

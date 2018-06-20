@@ -42,7 +42,7 @@ class OTFeature:OTFBaseObject {
     }
     
     
-    init (name:String, parent:OTFType, nameID:Int?, identifier:Int, selDefault:Int?) {
+    init (name:String, parent:OTFType, nameID:Int, identifier:Int, selDefault:Int) {
         self.parent = parent
         super.init(name: name, nameID: nameID, identifier: identifier)
         self.selDefault = selDefault

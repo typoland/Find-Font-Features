@@ -21,15 +21,14 @@ import AppKit
             for feature in features {
                 n += feature.search
             }
-            //print ("get search", n, typefeatures.count)
             if n == 0 {
                 return 0
             } else if n == features.count {
                 return 1
             }
-            //print("returning -1)")
             return -1
         }
+        
         set (value) {
             for feature in features {
                 feature.willChangeValue(forKey: "search")
@@ -60,14 +59,13 @@ import AppKit
     init(name:String, nameID:Int?, identifier:Int, exclusive:Int?) {
         super.init(name: name, nameID: nameID, identifier: identifier)
         self.exclusive = exclusive
-        //self.typefeatures = NSMutableOrderedSet()
         self.name = name
     }
     
     
-    func selectFeature(_ feature:OTFeature)  {
+    func selectFeature(_ fea:OTFeature)  {
         for feature in features {
-            if (feature == feature) || (feature.identifier == feature.identifier) {
+            if (feature == fea) || (feature.identifier == fea.identifier) {
                 feature.selected = 1
             } else {
                 feature.selected = 0
