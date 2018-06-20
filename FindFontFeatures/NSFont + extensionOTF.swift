@@ -77,7 +77,7 @@ extension NSFont {
                                             nameID: feature["CTFeatureSelectorNameID"] as? Int,
                                             identifier: feature["CTFeatureSelectorIdentifier"] as! Int,
                                             selDefault: feature["CTFeatureSelectorDefault"] as? Int)
-                        Swift.print("Any featyres??", fea.name)
+                        //Swift.print("Any featyres??", fea.name)
                         result.addFeature(fea, fromFont: self)
                     }
                 }

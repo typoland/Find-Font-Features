@@ -55,7 +55,7 @@ class OTFFeatures:NSObject  {
     func addFontFeatures(_ fontFeatures:OTFFeatures, fromFont font :NSFont ){
         for type in fontFeatures.types {
             self.types.insert(type)
-            for selector in type.typeSelectors {
+            for selector in type.features {
                 self.addFeature(selector , fromFont: font)
             }
         }
@@ -65,9 +65,9 @@ class OTFFeatures:NSObject  {
     func addFeature(_ feature:OTFeature, fromFont: NSFont) {
         if types.contains(feature.parent) {
             let type = feature.parent
-            feature.parent.typeSelectors.insert(feature)
+            feature.parent.features.insert(feature)
            
-            if type.typeSelectors.contains(feature) {
+            if type.features.contains(feature) {
                 feature.fonts.insert(fromFont)
             }
         }

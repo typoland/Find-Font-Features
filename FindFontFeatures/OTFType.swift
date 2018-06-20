@@ -12,29 +12,29 @@ import AppKit
 @objc class OTFType:OTFBaseObject {
     
     var exclusive:Int?
-    var typeSelectors: Set<OTFeature> = []
+    var features: Set<OTFeature> = []
     
     
     override var search:Int {
         get {
             var n = 0
-            for feature in typeSelectors {
+            for feature in features {
                 n += feature.search
             }
-            //print ("get search", n, typeSelectors.count)
+            //print ("get search", n, typefeatures.count)
             if n == 0 {
                 return 0
-            } else if n == typeSelectors.count {
+            } else if n == features.count {
                 return 1
             }
             //print("returning -1)")
             return -1
         }
         set (value) {
-            for selector in typeSelectors {
-                selector.willChangeValue(forKey: "search")
-                selector.search = value
-                selector.didChangeValue(forKey: "search")
+            for feature in features {
+                feature.willChangeValue(forKey: "search")
+                feature.search = value
+                feature.didChangeValue(forKey: "search")
             }
         }
     }
@@ -44,10 +44,9 @@ import AppKit
             var fonts:Set<NSFont> = []
             var inSearch:Set<NSFont> = []
             
-            for feature in  typeSelectors {
-                if (feature ).search == 1 {
+            for feature in features {
+                if feature.search == 1 {
                     inSearch = inSearch.union(feature.fonts)
-
                 }
                 fonts = fonts.union(inSearch)
             }
@@ -61,17 +60,17 @@ import AppKit
     init(name:String, nameID:Int?, identifier:Int, exclusive:Int?) {
         super.init(name: name, nameID: nameID, identifier: identifier)
         self.exclusive = exclusive
-        //self.typeSelectors = NSMutableOrderedSet()
+        //self.typefeatures = NSMutableOrderedSet()
         self.name = name
     }
     
     
     func selectFeature(_ feature:OTFeature)  {
-        for selector in typeSelectors {
-            if (feature == selector) || (feature.identifier == selector.identifier) {
-                selector.selected = 1
+        for feature in features {
+            if (feature == feature) || (feature.identifier == feature.identifier) {
+                feature.selected = 1
             } else {
-                selector.selected = 0
+                feature.selected = 0
             }
         }
     }

@@ -38,7 +38,7 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         
         if item is OTFType {
-            return (item as! OTFType).typeSelectors.count
+            return (item as! OTFType).features.count
         } else if item is OTFeature {
             return 0
         }
@@ -72,14 +72,14 @@ class OTFOutlineViewDelegate:NSObject ,  NSOutlineViewDelegate, NSOutlineViewDat
             return otfFeatures.typesArray[index]
         } else {
             //let keys = (item as! LDOpenTypeFeaturesType).featuresString]
-            return Array((item as! OTFType).typeSelectors)[index]
+            return Array((item as! OTFType).features)[index]
         }
     }
     
     func checkFeatureInSelectedFonts (_ item:OTFeature) -> Bool {
         for font in selectedFonts {
             for type in OTFFeatures.fromFont(font).types {
-                if type.typeSelectors.contains(item){
+                if type.features.contains(item){
                     print("znalazł")
                     return true
                 }

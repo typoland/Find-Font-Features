@@ -40,7 +40,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     @objc var defaultFont:NSFont!
     
     @objc var showOnlySelectedFontFeatures:Bool = false
-  
+    
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
@@ -48,18 +48,19 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
     @objc var allFeatures:NSArray {
         get {
             if showOnlySelectedFontFeatures {
-                let result = OTFFeatures()
+                var result:Set<OTFType> = []
                 for font in selectedFonts as Set<NSFont> {
-                    result.types = result.types.union(OTFFeatures.fromFont(font).types)
+                    result = result.union(OTFFeatures.fromFont(font).types)
                 }
-                return (Array(result.types)).sorted(by: { (A, B) -> Bool in
-                    A.name > B.name
+                return (Array(result)).sorted(by: { (A, B) -> Bool in
+                    A.identifier > B.identifier
                 }) as NSArray
             }
+            else {
             return Array(_allFontsFeatures.types).sorted(by: { (A, B) -> Bool in
-                A.name > B.name
+                A.identifier > B.identifier
             }) as NSArray
-            
+            }
         }
     }
     
@@ -73,9 +74,13 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                 }
                 return Array(filter) as NSArray
             }
-            else {return Array(_allFonts).sorted(by: { (objectA, objectB) -> Bool in
-                objectA.fontName.lowercased() < objectB.fontName.lowercased()
-            }) as NSArray}
+            else {
+                Swift.print("How many fonts? ",_allFonts.count)
+                return Array(_allFonts).sorted(by: { (objectA, objectB) -> Bool in
+                    objectA.fontName.lowercased() < objectB.fontName.lowercased()
+                }) as NSArray
+                
+            }
         }
     }
     
@@ -110,11 +115,8 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
         self.willChangeValue(forKey: "allFonts")
         
         for type in _allFontsFeatures.types {
-            Swift.print(type.name)
-            for feature in type.typeSelectors {
-                Swift.print(feature.name)
+            for feature in type.features {
                 for font in feature.fonts {
-                    Swift.print(font.displayName)
                     _allFonts.insert(font)
                 }
             }
@@ -211,7 +213,7 @@ var fontSelectionChangedContext = "FontSelectionChangedContext"
                 
                 
             }   else if let type = object as? OTFType {
-                for feature in type.typeSelectors {
+                for feature in type.features {
                     setSearchFeature(feature)
                 }
             }
